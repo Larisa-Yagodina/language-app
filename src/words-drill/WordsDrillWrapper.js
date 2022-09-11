@@ -7,9 +7,7 @@ import {initialPartOfSpeech} from "../serverData/InitialPartOfSpeech";
 import ChooseOption from "../searchAndFilter/ChooseOption";
 import {initialDefinitions} from "../serverData/InitialDefinitions";
 import ChooseNextOption from "../searchAndFilter/ChooseNextOption";
-import CheckBox from "../searchAndFilter/CheckBox";
 import {initialWords} from "../serverData/InitialWords";
-import {Login} from "@mui/icons-material";
 
 function WordsDrillWrapper() {
 
