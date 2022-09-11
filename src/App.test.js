@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import GrammarThemesDrillWrapper from './grammar-themes-drill/GrammarThemesDrillWrapper';
 
 test('renders learn react link', () => {
-  render(<App />);
+  render(<GrammarThemesDrillWrapper />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
