@@ -12,12 +12,11 @@ import Logout from '@mui/icons-material/Logout';
 import { Routes, Route, Link } from "react-router-dom";
 import GrammarThemesDrillWrapper from "../grammar-themes-drill/GrammarThemesDrillWrapper";
 import WordsDrillWrapper from "../words-drill/WordsDrillWrapper";
-import InterestsIcon from '@mui/icons-material/Interests';
-import InsightsIcon from '@mui/icons-material/Insights';
 import KeyIcon from '@mui/icons-material/Key';
 import ListIcon from '@mui/icons-material/List';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+import GrammarRoute from "../training-route/GrammarRoute";
 
 export default function MainMenu() {
 
@@ -113,12 +112,12 @@ export default function MainMenu() {
                             Learn new words
                         </MenuItem>
                     </Link>
-                    <Link to="/grammar" style={{ textDecoration: 'none', color: 'black'}}>
+                    <Link to="/grammar_route" style={{ textDecoration: 'none', color: 'black'}}>
                         <MenuItem>
                             <ListItemIcon>
                                 <KeyIcon fontSize="small"/>
                             </ListItemIcon>
-                            Grammar
+                            Grammar route
                         </MenuItem>
                     </Link>
                     <Divider/>
@@ -133,7 +132,7 @@ export default function MainMenu() {
             <Routes>
                 <Route path="/speak_fluent-drill" element={<GrammarThemesDrillWrapper/>}/>
                 <Route path="/new_words_drill" element={<WordsDrillWrapper/>}/>
-                <Route path="/grammar"/>
+                <Route path="/grammar_route" element={<GrammarRoute />}/>
                 <Route path="/"/>
             </Routes>
         </div>
