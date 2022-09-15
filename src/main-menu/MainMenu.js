@@ -16,7 +16,9 @@ import KeyIcon from '@mui/icons-material/Key';
 import ListIcon from '@mui/icons-material/List';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+import GrammarTheory from "../grammar-theory/GrammarTheory";
 import GrammarRoute from "../training-route/GrammarRoute";
+import AllRoutes from "./routes/AllRoutes";
 
 export default function MainMenu() {
 
@@ -129,12 +131,7 @@ export default function MainMenu() {
                         </MenuItem>
                 </Menu>
             </nav>
-            <Routes>
-                <Route path="/speak_fluent-drill" element={<GrammarThemesDrillWrapper/>}/>
-                <Route path="/new_words_drill" element={<WordsDrillWrapper/>}/>
-                <Route path="/grammar_route" element={<GrammarRoute />}/>
-                <Route path="/"/>
-            </Routes>
+            <AllRoutes />
         </div>
     );
 }

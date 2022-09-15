@@ -12,14 +12,14 @@ export const initialGrammar = [
         id: "fsldkjf323235",
         title: 'What is Grammar',
         russianTitle: 'Что такое грамматика',
-        theory: '<p>Грамматика — это правила, которые помогают соединять между собой слова ...</p>  <p>Например, ...</p>',
+        theory: 'Грамматика — это правила, которые помогают соединять между собой слова ...  Например, ...',
         description: '',
     },
     {
         id: "lkdj34234kjkj",
         title: 'sentence structure ',
         russianTitle: 'Как строить предложения',
-        theory: '<p>Предложение — это законченная фраза ...</p>  <p>Например, ...</p>', // тут будет текст теории
+        theory: 'Предложение — это законченная фраза ...  Например, ...', // тут будет текст теории
         description: ''
     },
     {
@@ -46,14 +46,14 @@ export const initialGrammar = [
     {
         id: "023984lskdjf",
         title: 'conditional 3',
-        russianTitle: 'Условные предложения 1',
+        russianTitle: 'Условные предложения 3',
         theory: '',
         description: ''
     },
     {
         id: "sldkfj238975",
         title: 'modal verbs',
-        russianTitle: 'Условные предложения 1',
+        russianTitle: 'Модальные глаголы',
         theory: '',
         description: ''
     },
@@ -61,70 +61,70 @@ export const initialGrammar = [
         id: "fjkl3k480s9fsdf",
         title: 'What is Tense',
         russianTitle: 'Что такое «время»',
-        theory: '<p>Время (tense) — это ...</p>  <p>Например, ...</p>', // тут будет текст теории
+        theory: 'Время (tense) — это ...  Например, ...', // тут будет текст теории
         description: ''
     },
     {
         id: "sdlkjf3487",
         title: 'present simple',
         russianTitle: 'Настоящее простое время',
-        theory: '<p>Настоящее время — это ...</p>  <p>Например, ...</p>',
+        theory: 'Настоящее время — это ...  Например, ...',
         description: ''
     },
     {
         id: "sdlkfjl3427fdjf",
         title: 'present simple (positive statement)',
         russianTitle: 'Настоящее простое (утверждения)',
-        theory: '<p>Утвердительные предложения в Present simple — это ...</p>  <p>Например, ...</p>',
+        theory: 'Утвердительные предложения в Present simple — это ...  Например, ...',
         description: ''
     },
     {
         id: "lksj347924sdfh",
         title: 'present simple (negative statement)',
         russianTitle: 'Настоящее простое (отрицания)',
-        theory: '<p>Отрицательные предложения в Present simple — это ...</p>  <p>Например, ...</p>', // тут будет текст теории
+        theory: 'Отрицательные предложения в Present simple — это ...  Например, ...', // тут будет текст теории
         description: ''
     },
     {
         id: "dlfkj234jlkj34",
         title: 'present simple (question)',
         russianTitle: 'Настоящее простое (вопросы)',
-        theory: '<p>Вопросы в Present simple — это ...</p>  <p>Например, ...</p>', // тут будет текст теории
+        theory: 'Вопросы в Present simple — это ...  Например, ...', // тут будет текст теории
         description: ''
     },
     {
         id: "flksj38472983",
         title: 'future simple',
         russianTitle: 'Настоящее простое (вопросы)',
-        theory: '<p>Вопросы в Present simple — это ...</p>  <p>Например, ...</p>', // тут будет текст теории
+        theory: 'Вопросы в Present simple — это ...  Например, ...', // тут будет текст теории
         description: ''
     },
     {
         id: "fklj342342kj",
         title: 'past simple',
         russianTitle: 'Настоящее простое (вопросы)',
-        theory: '<p>Вопросы в Present simple — это ...</p>  <p>Например, ...</p>', // тут будет текст теории
+        theory: 'Вопросы в Present simple — это ...  Например, ...', // тут будет текст теории
         description: ''
     },
     {
         id: "flkj2342jh",
         title: 'present continuous',
         russianTitle: 'Настоящее продолженное',
-        theory: '<p>Настоящее продолженное время — это ...</p>  <p>Например, ...</p>', // тут будет текст теории
+        theory: 'Настоящее продолженное время — это ...  Например, ...', // тут будет текст теории
         description: ''
     },
     {
         id: "slkj234234",
         title: 'present perfect',
         russianTitle: 'Настоящее совершенное',
-        theory: '<p>Настоящее совершенное время — это ...</p>  <p>Например, ...</p>', // тут будет текст теории
+        theory: 'Настоящее совершенное время — это ...  Например, ...', // тут будет текст теории
         description: ''
     },
     {
         id: "flkj3423423",
         title: 'imperative mood',
         russianTitle: 'Повелительное наклонение',
-        theory: '<p>Повелительное наклонение — это ...</p>  <p>Например, ...</p>', // тут будет текст теории
+        theory: 'Повелительное наклонение — это ...  Например, ...', // тут будет текст теории
         description: ''
     },
 ]

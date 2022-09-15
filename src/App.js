@@ -3,7 +3,7 @@ import MainMenu from "./main-menu/MainMenu";
 
 const App = () => {
     return (
-        <div>
+        <div style={{ margin: 12 }}>
 
             <MainMenu />
         </div>
