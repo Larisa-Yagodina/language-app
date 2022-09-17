@@ -5,6 +5,7 @@ import WordsDrillWrapper from "../../words-drill/WordsDrillWrapper";
 import GrammarRoute from "../../training-route/GrammarRoute";
 import GrammarTheory from "../../grammar-theory/GrammarTheory";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
+import GrammarRouteList from "../../training-route/GrammarRouteList";
 
 const AllRoutes = () => {
 
@@ -15,7 +16,7 @@ const AllRoutes = () => {
         <Routes>
             <Route path="/speak_fluent-drill" element={<GrammarThemesDrillWrapper/>}/>
             <Route path="/new_words_drill" element={<WordsDrillWrapper/>}/>
-            <Route path="/grammar_route" element={<GrammarRoute />}/>
+            <Route path="/grammar_route" element={<GrammarRouteList />}/>
 
             {userLearningRoute[0].userRoute.map(theme =>
                 <>

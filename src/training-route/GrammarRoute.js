@@ -20,7 +20,7 @@ function GrammarRoute() {
                         <div key={theme.id}>
                             <li>
                                 <MenuItem>
-                                    <Link to={theme.link}>
+                                    <Link to={theme.link} style={{ textDecoration: 'none', color: 'black'}}>
                                         {theme.name}
                                     </Link>
                                 </MenuItem>
@@ -30,7 +30,7 @@ function GrammarRoute() {
                                     {theme.subThemes.map(subTheme =>
                                         <li>
                                             <MenuItem key={subTheme.id}>
-                                                <Link to={subTheme.link}>
+                                                <Link to={subTheme.link} style={{ textDecoration: 'none', color: 'black'}}>
 
                                                     {subTheme.name}
                                                 </Link>
@@ -41,13 +41,6 @@ function GrammarRoute() {
                     )}
                 </ol>
             </nav>
-            {/*<Routes>*/}
-            {/*    <Route path='/how-to-make-sentences' element={<GrammarTheory partOfGrammarId='lkdj34234kjkj'/>}/>*/}
-
-            {/*    {userLearningRoute[0].userRoute.map(theme =>*/}
-            {/*        <Route path={theme.link} element={<GrammarTheory partOfGrammarId={theme.partOfGrammarId}/>}/>*/}
-            {/*        )}*/}
-            {/*</Routes>*/}
         </div>
     );
 };

@@ -21,7 +21,7 @@ export const initialTrainingRoute = [
                 partOfGrammarId: "lkdj34234kjkj",
                 theory: '<p>Предложение — это ...</p>  <p>Например, ...</p>',
                 isOpen: true,
-                isStudied: false,
+                isStudied: true,
                 subThemes: [],
             },
             {
@@ -31,7 +31,7 @@ export const initialTrainingRoute = [
                 partOfGrammarId: 'fjkl3k480s9fsdf',
                 theory: '<p>Время (tense) — это ...</p>  <p>Например, ...</p>',
                 isOpen: true,
-                isStudied: false,
+                isStudied: true,
                 subThemes: [],
             },
             {
@@ -63,6 +63,40 @@ export const initialTrainingRoute = [
                         name: 'Present simple (question)',
                         link: '/question-in-present-simple',
                         partOfGrammarId: "dlfkj234jlkj34",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                ]
+            },
+            {
+                id: 'sdflkj234867s9d8',
+                name: 'Present perfect',
+                link: '/present-perfect',
+                partOfGrammarId: "slkj234234",
+                isOpen: true,
+                isStudied: false,
+                subThemes: [
+                    {
+                        id: 'aslkj340sd9f8',
+                        name: 'Present perfect (positive statement)',
+                        link: '/positive-in-present-perfect',
+                        partOfGrammarId: "sldkfj3247987",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'sdfkjl3029384',
+                        name: 'Present perfect (negative statement)',
+                        link: '/negative-in-present-perfect',
+                        partOfGrammarId: "dkfwher9237fsdf",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'ddlkfj234987324',
+                        name: 'Present perfect (question)',
+                        link: '/question-in-present-perfect',
+                        partOfGrammarId: "djwlkej2387fsj3",
                         isOpen: true,
                         isStudied: false,
                     },
