@@ -3,94 +3,164 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Checkbox from '@mui/material/Checkbox';
-import Avatar from '@mui/material/Avatar';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {initialTrainingRoute} from "../serverData/InitialTrainingRoute";
 import {Link} from "react-router-dom";
+import { FormControlLabel, FormGroup, Grid, Paper, styled, Switch} from "@mui/material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import IconButton from "@mui/material/IconButton";
+
+
+
+const styleRight = {
+    position: "absolute", /* блок занимает ширину содержимого, max-width её ограничивает */
+    top: "15%", /* отступ сверху */
+    right: '2%', // отступ справа
+}
+
 
 export default function CheckboxListSecondary() {
-    const [checked, setChecked] = React.useState([1]);
+
     const userId = 'dlkfjl3487f9s';
     const [userLearningRoute, setUserLearningRoute] = useState(initialTrainingRoute.filter(el => el.userId === userId));
 
-    const handleToggle = (value) => () => {
-
-        const currentIndex = checked.indexOf(value);
-        const newChecked = [...checked];
-
-        if (currentIndex === -1) {
-            newChecked.push(value);
-        } else {
-            newChecked.splice(currentIndex, 1);
+    const handleToggle = (id) => () => {
+        const newRoute = [...userLearningRoute];
+        for (let el of userLearningRoute[0].userRoute) {
+            if (el.id === id) el.isStudied = !el.isStudied;
+            if (el.subThemes.length > 0) {
+                for (let elm of el.subThemes) {
+                    if (elm.id === id) elm.isStudied = !elm.isStudied;
+                }
+            }
         }
-
-        setChecked(newChecked);
+        setReFilter(reFilter + 1)
+        setUserLearningRoute(newRoute);
     };
 
-    return (
-        <div>
-            <h2>Route of learning English</h2>
-            <List dense sx={{width: '100%', maxWidth: 'auto', bgcolor: 'background.paper'}}>
-<ol>
-                {userLearningRoute[0].userRoute.map((value) => {
-                    const labelId = value.id;
-                    return (
-                        <div>
-                            <li>
-                            <ListItem
-                                key={value.id}
-                                secondaryAction={
-                                    <Checkbox
-                                        edge="end"
-                                        onChange={handleToggle(value.isStudied)}
-                                        checked={value.isStudied}
-                                        inputProps={{'aria-labelledby': labelId}}
-                                    />
-                                }
-                                disablePadding
-                            >
-                                <ListItemButton>
-                                    <Link to={value.link} style={{textDecoration: 'none', color: 'black'}}>
-                                        <ListItemText id={labelId} primary={value.name}/>
-                                    </Link>
-                                </ListItemButton>
-                            </ListItem>
-                            </li>
-                            <ul>
-                                {value.subThemes.map((subTheme) => {
-                                    const labelId = subTheme.id;
-                                    return (
-                                        <li>
-                                            <ListItem
-                                                key={subTheme.id}
-                                                secondaryAction={
-                                                    <Checkbox
-                                                        edge="end"
-                                                        onChange={handleToggle(subTheme.isStudied)}
-                                                        checked={subTheme.isStudied}
-                                                        inputProps={{'aria-labelledby': labelId}}
-                                                    />
+    const [openAll, setOpenAll] = React.useState(false);
+    const [reFilter, setReFilter] = useState(1)
+    const handleChange = (event) => {
+        setOpenAll(event.target.checked);
+        setReFilter(reFilter + 1)
+    };
+
+    const filterRoute = () => {
+        const newRoute = initialTrainingRoute.filter(el => el.userId === userId)[0].userRoute.filter(el => openAll ? true : el.isStudied === openAll);
+        const newUserRoutes = initialTrainingRoute.map(el => el.userId === userId ? {...el, userRoute: newRoute} : el);
+        setUserLearningRoute(newUserRoutes.filter(el => el.userId === userId))
+    }
+
+        useEffect(() => {
+            filterRoute()
+        }, [reFilter])
+
+    const openSubThemes = (id) => {
+        const newRoute = userLearningRoute[0].userRoute.map(el => el.id === id ? {...el, isOpenSubThemes: !el.isOpenSubThemes} : el)
+        const newUserRoutes = initialTrainingRoute.map(el => el.userId === userId ? {...el, userRoute: newRoute} : el);
+        setUserLearningRoute(newUserRoutes.filter(el => el.userId === userId))
+    }
+
+
+        return (
+            <div>
+                <h2>Route of learning English</h2>
+                <div style={styleRight}>
+                    <FormGroup>
+                        <FormControlLabel
+                            value="start"
+                            control={
+                                <Switch
+                                    color="success"
+                                    checked={openAll}
+                                    onChange={handleChange}
+                                    aria-label="route switch"
+                                />}
+                            label="All"
+                            labelPlacement="end"
+                        />
+                    </FormGroup>
+                </div>
+
+                <List dense sx={{width: '100%', maxWidth: 'auto', bgcolor: 'background.paper'}}>
+                    <ol>
+                        {userLearningRoute[0].userRoute.map((value) => {
+                            const labelId = value.id;
+                            return (
+                                <div>
+                                    <li>
+                                        <ListItem
+                                            key={value.id}
+                                            secondaryAction={
+                                                <Checkbox
+                                                    color="success"
+                                                    edge="end"
+                                                    onChange={handleToggle(value.id)}
+                                                    checked={value.isStudied}
+                                                    inputProps={{'aria-labelledby': labelId}}
+                                                />
+                                            }
+                                            disablePadding
+                                        >
+                                            <ListItemButton>
+                                                <Link to={value.link} style={{textDecoration: 'none', color: 'black'}}>
+                                                    <ListItemText id={labelId} primary={value.name}/>
+                                                </Link>
+                                                {' '}
+                                                { value.subThemes.length > 0 &&
+                                                    <IconButton
+                                                        aria-label="expand row"
+                                                        size="small"
+                                                        onClick={() => openSubThemes(value.id)}
+                                                    >
+                                                        {value.isOpenSubThemes ? <KeyboardArrowUpIcon/> : <KeyboardArrowDownIcon/>}
+                                                    </IconButton>
                                                 }
-                                                disablePadding
-                                            >
-                                                <ListItemButton>
-                                                    <Link to={subTheme.link}
-                                                          style={{textDecoration: 'none', color: 'black'}}>
-                                                        <ListItemText id={labelId} primary={subTheme.name}/>
-                                                    </Link>
-                                                </ListItemButton>
-                                            </ListItem>
-                                        </li>
-                                    );
-                                })}
-                            </ul>
-                        </div>
-                    );
-                })}
-</ol>
-            </List>
-        </div>
-    );
-}
+
+                                            </ListItemButton>
+                                        </ListItem>
+
+
+                                    </li>
+                                    { value.isOpenSubThemes &&
+                                        <ul>
+                                            {value.subThemes.map((subTheme) => {
+                                                const labelId = subTheme.id;
+                                                return (
+                                                    <li>
+                                                        {/*<ListItem*/}
+                                                        {/*    key={subTheme.id}*/}
+                                                        {/*    secondaryAction={*/}
+                                                        {/*        <Checkbox*/}
+                                                        {/*            edge="end"*/}
+                                                        {/*            color="success"*/}
+                                                        {/*            onChange={handleToggle(subTheme.id)}*/}
+                                                        {/*            checked={subTheme.isStudied}*/}
+                                                        {/*            inputProps={{'aria-labelledby': labelId}}*/}
+                                                        {/*        />*/}
+                                                        {/*    }*/}
+                                                        {/*    disablePadding*/}
+                                                        {/*>*/}
+                                                        <ListItemButton>
+                                                            <Link to={subTheme.link}
+                                                                  style={{textDecoration: 'none', color: 'black'}}>
+                                                                <ListItemText id={labelId} primary={subTheme.name}/>
+                                                            </Link>
+                                                        </ListItemButton>
+                                                        {/*</ListItem>*/}
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
+                                    }
+                                </div>
+                            );
+                        })}
+                    </ol>
+                </List>
+            </div>
+        )
+            ;
+    }

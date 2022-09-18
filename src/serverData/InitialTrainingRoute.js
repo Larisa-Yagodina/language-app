@@ -13,6 +13,7 @@ export const initialTrainingRoute = [
                 isOpen: true,
                 isStudied: false,
                 subThemes: [],
+                isOpenSubThemes: true,
             },
             {
                 id: '23480fjslkdjf',
@@ -23,6 +24,7 @@ export const initialTrainingRoute = [
                 isOpen: true,
                 isStudied: true,
                 subThemes: [],
+                isOpenSubThemes: true,
             },
             {
                 id: 'dfj237s0f8hj4j2l',
@@ -33,6 +35,7 @@ export const initialTrainingRoute = [
                 isOpen: true,
                 isStudied: true,
                 subThemes: [],
+                isOpenSubThemes: true,
             },
             {
                 id: 'sdflkj234867s9d8',
@@ -41,6 +44,7 @@ export const initialTrainingRoute = [
                 partOfGrammarId: "sdlkjf3487",
                 isOpen: true,
                 isStudied: false,
+                isOpenSubThemes: true,
                 subThemes: [
                     {
                         id: 'aslkj340sd9f8',
@@ -69,15 +73,16 @@ export const initialTrainingRoute = [
                 ]
             },
             {
-                id: 'sdflkj234867s9d8',
+                id: 'sdfj2l347sdf723j',
                 name: 'Present perfect',
                 link: '/present-perfect',
                 partOfGrammarId: "slkj234234",
                 isOpen: true,
                 isStudied: false,
+                isOpenSubThemes: true,
                 subThemes: [
                     {
-                        id: 'aslkj340sd9f8',
+                        id: 'djfl2308fsdfj',
                         name: 'Present perfect (positive statement)',
                         link: '/positive-in-present-perfect',
                         partOfGrammarId: "sldkfj3247987",
@@ -85,7 +90,7 @@ export const initialTrainingRoute = [
                         isStudied: false,
                     },
                     {
-                        id: 'sdfkjl3029384',
+                        id: 'fdslkj2l3987fsdj2',
                         name: 'Present perfect (negative statement)',
                         link: '/negative-in-present-perfect',
                         partOfGrammarId: "dkfwher9237fsdf",
@@ -93,7 +98,7 @@ export const initialTrainingRoute = [
                         isStudied: false,
                     },
                     {
-                        id: 'ddlkfj234987324',
+                        id: 'sdfj2l3k4987sfj32',
                         name: 'Present perfect (question)',
                         link: '/question-in-present-perfect',
                         partOfGrammarId: "djwlkej2387fsj3",
@@ -109,6 +114,7 @@ export const initialTrainingRoute = [
                 partOfGrammarId: "sdlfkj23498s7f",
                 isOpen: true,
                 isStudied: false,
+                isOpenSubThemes: true,
                 subThemes: [
                     {
                         id: 'kjsdf2834792837',
