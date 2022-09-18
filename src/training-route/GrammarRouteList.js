@@ -16,7 +16,7 @@ import IconButton from "@mui/material/IconButton";
 
 const styleRight = {
     position: "absolute", /* блок занимает ширину содержимого, max-width её ограничивает */
-    top: "15%", /* отступ сверху */
+    top: "12%", /* отступ сверху */
     right: '2%', // отступ справа
 }
 
@@ -66,7 +66,7 @@ export default function CheckboxListSecondary() {
 
         return (
             <div>
-                <h2>Route of learning English</h2>
+                <h2>Study route</h2>
                 <div style={styleRight}>
                     <FormGroup>
                         <FormControlLabel
