@@ -16,7 +16,7 @@ import IconButton from "@mui/material/IconButton";
 
 const styleRight = {
     position: "absolute", /* блок занимает ширину содержимого, max-width её ограничивает */
-    top: "12%", /* отступ сверху */
+    top: "10%", /* отступ сверху */
     right: '2%', // отступ справа
 }
 
@@ -83,7 +83,6 @@ export default function CheckboxListSecondary() {
                         />
                     </FormGroup>
                 </div>
-
                 <List dense sx={{width: '100%', maxWidth: 'auto', bgcolor: 'background.paper'}}>
                     <ol>
                         {userLearningRoute[0].userRoute.map((value) => {
