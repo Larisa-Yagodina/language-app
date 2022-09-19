@@ -67,11 +67,11 @@ export const initialThemes = [
         title: 'asking',
         description: ''
     },
-    // {
-    //     id: uuidv4(),
-    //     title: '',
-    //     description: ''
-    // },
+    {
+        id: 'fj234d9fsj3jfsd',
+        title: 'making stories',
+        description: ''
+    },
     // {
     //     id: uuidv4(),
     //     title: '',
