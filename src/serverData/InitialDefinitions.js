@@ -1,4 +1,3 @@
-import {v4 as uuidv4} from 'uuid';
 
 export const initialDefinitions = [
     {
@@ -84,6 +83,102 @@ export const initialDefinitions = [
         transcription: '/spiːk/',
         definition: 'Говорить слова, использовать голос, или разговаривать с кем-то',
         partOfSpeech: 's;ldkf2394',
+        themes: [],
+        status: 'todo'
+    },
+    {
+        id: 'dlkfj2398fdslkj398',
+        title: 'Вставать с постели или заставлять кого-то вставать с постели',
+        english: 'get (someone) up',
+        wordId: "sdkfjl348203948skdf",
+        russian: ['вставать', 'подниматься', 'просыпаться'],
+        transcription: '/ɡet/ + /ʌp/',
+        definition: 'Вставать с постели или заставлять кого-то вставать с постели',
+        partOfSpeech: 'ksdljf29387',
+        themes: [],
+        status: 'todo'
+    },
+    {
+        id: 'dfjk2398sdfkj398f',
+        title: 'Ответить на телефонный звонок',
+        english: 'pick up',
+        wordId: "dfgj239r7sdfj237f",
+        russian: ['взять трубку', 'снять трубку', 'подойти к телефону', 'ответить на звонок'],
+        transcription: '/pɪk/ + /ʌp/',
+        definition: 'Ответить на телефонный звонок',
+        partOfSpeech: 'ksdljf29387',
+        themes: [],
+        status: 'todo'
+    },
+    {
+        id: 'fjkj3487f9shk3jr7sd',
+        title: 'Взять, забрать или принести кого-то или что-то откуда-то',
+        english: 'pick up',
+        wordId: "dfgj239r7sdfj237f",
+        russian: ['взять', 'забрать', 'принести', 'привезти'],
+        transcription: '/pɪk/ + /ʌp/',
+        definition: 'Взять, забрать или принести кого-то или что-то откуда-то',
+        partOfSpeech: 'ksdljf29387',
+        themes: [],
+        status: 'todo'
+    },
+    {
+        id: 'fjl23kjf8se9df83hfslkd',
+        title: 'Получить что-то просто так или спрашивая, прикладывая усилия или покупая.',
+        english: 'pick up',
+        wordId: "dfgj239r7sdfj237f",
+        russian: ['снять', 'взять', 'получить',],
+        transcription: '/pɪk/ + /ʌp/',
+        definition: 'Получить что-то просто так или спрашивая, прикладывая усилия или покупая.',
+        partOfSpeech: 'ksdljf29387',
+        themes: [],
+        status: 'todo'
+    },
+    {
+        id: 'sdfdl348f7sjh34kjhsd',
+        title: 'Получить информацию о чем-то, потому что вы хотите узнать больше об этом, или впервые узнать факт или часть информации.',
+        english: 'find (something) out',
+        wordId: "sdfj3098fsdkj235",
+        russian: ['узнать', 'выяснить', 'разобраться', 'обнаружить'],
+        transcription: '/faɪnd/ +  /aʊt/',
+        definition: 'Получить информацию о чем-то, потому что вы хотите узнать больше об этом, или впервые узнать факт или часть информации.',
+        partOfSpeech: 'ksdljf29387',
+        themes: [],
+        status: 'todo'
+    },
+    {
+        id: 'elkrjelr89384eljeru',
+        title: '',
+        english: '',
+        wordId: "",
+        russian: ['', '', '', ''],
+        transcription: '// +  //',
+        definition: '',
+        partOfSpeech: 'ksdljf29387',
+        themes: [],
+        status: 'todo'
+    },
+    {
+        id: 'elkrjelr89384eljeru',
+        title: '',
+        english: '',
+        wordId: "",
+        russian: ['', '', '', ''],
+        transcription: '// +  //',
+        definition: '',
+        partOfSpeech: 'ksdljf29387',
+        themes: [],
+        status: 'todo'
+    },
+    {
+        id: 'elkrjelr89384eljeru',
+        title: '',
+        english: '',
+        wordId: "",
+        russian: ['', '', '', ''],
+        transcription: '// +  //',
+        definition: '',
+        partOfSpeech: 'ksdljf29387',
         themes: [],
         status: 'todo'
     },
