@@ -9,15 +9,11 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import { Routes, Route, Link } from "react-router-dom";
-import GrammarThemesDrillWrapper from "../grammar-themes-drill/GrammarThemesDrillWrapper";
-import WordsDrillWrapper from "../words-drill/WordsDrillWrapper";
+import { Link } from "react-router-dom";
 import KeyIcon from '@mui/icons-material/Key';
 import ListIcon from '@mui/icons-material/List';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
-import GrammarTheory from "../grammar-theory/GrammarTheory";
-import GrammarRoute from "../training-route/GrammarRoute";
 import AllRoutes from "./routes/AllRoutes";
 
 export default function MainMenu() {
@@ -47,8 +43,8 @@ export default function MainMenu() {
                             <ListIcon sx={{width: 32, height: 32}}>
                             </ListIcon>
                         </IconButton>
-                        {/*<Link to="/speak_fluent-drill" style={{ textDecoration: 'none', color: 'black'}}>*/}
-                        <Typography sx={{minWidth: 100}}>Learn and Train</Typography>
+                        {/*<Link to="/speak_fluent-sentence-drill" style={{ textDecoration: 'none', color: 'black'}}>*/}
+                        <Typography sx={{minWidth: 100}}> English UP </Typography>
                         {/*</Link>*/}
                     </>
                 </Box>

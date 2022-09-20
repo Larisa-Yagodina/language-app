@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import {Route, Routes} from "react-router-dom";
-import GrammarThemesDrillWrapper from "../../grammar-themes-drill/GrammarThemesDrillWrapper";
-import WordsDrillWrapper from "../../words-drill/WordsDrillWrapper";
-import GrammarTheory from "../../grammar-theory/GrammarTheory";
+import GrammarThemesDrillWrapper from "../../no-theory-drills/grammar-themes-drill/GrammarThemesDrillWrapper";
+import WordsDrillWrapper from "../../no-theory-drills/words-drill/WordsDrillWrapper";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
-import GrammarRouteList from "../../training-route/GrammarRouteList";
-import GrammarTheoryWrapper from "../../grammar-theory/GrammarTheoryWrapper";
+import GrammarRouteList from "../../study-route/route/GrammarRouteList";
+import GrammarTheoryWrapper from "../../study-route/grammar-theory/GrammarTheoryWrapper";
 
 
 const AllRoutes = () => {
@@ -22,10 +21,11 @@ const AllRoutes = () => {
 
             {userLearningRoute[0].userRoute.map(theme =>
                 <>
-                <Route Key={theme.id}  path={theme.link} element={<GrammarTheoryWrapper partOfGrammarId={theme.partOfGrammarId} />}/>
-            {theme.subThemes.length > 0 ?
+                <Route key={theme.id} path={theme.link} element={<GrammarTheoryWrapper key={theme.id} partOfGrammarId={theme.partOfGrammarId} />}/>
+
+                    {theme.subThemes.length > 0 ?
                 theme.subThemes.map(subTheme =>
-                <Route Key={subTheme.id} path={subTheme.link} element={<GrammarTheoryWrapper partOfGrammarId={subTheme.partOfGrammarId} />}/>)
+                <Route key={subTheme.id} path={subTheme.link} element={<GrammarTheoryWrapper key={subTheme.id} partOfGrammarId={subTheme.partOfGrammarId} />}/>)
                     : null
             }
                 </>

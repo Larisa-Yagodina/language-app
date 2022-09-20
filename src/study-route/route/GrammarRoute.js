@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {initialTrainingRoute} from "../serverData/InitialTrainingRoute";
+import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
 import MenuItem from "@mui/material/MenuItem";
 import {Link} from "react-router-dom";
 
@@ -43,6 +43,6 @@ function GrammarRoute() {
             </nav>
         </div>
     );
-};
+}
 
 export default GrammarRoute;

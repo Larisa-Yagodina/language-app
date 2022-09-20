@@ -1,12 +1,12 @@
-import '../App.css';
+import '../../App.css';
 import React, {useEffect, useState} from "react";
-import ChoseSpeed from "../searchAndFilter/ChoseSpeed";
-import {initialSentences} from "../serverData/InitialSentences";
-import GrammarThemesDrill from "./GrammarThemesDrill";
-import {initialGrammar} from "../serverData/InitialGrammar";
-import {initialThemes} from "../serverData/InitialThemes";
-import ChooseOption from "../searchAndFilter/ChooseOption";
-import ChooseNextOption from "../searchAndFilter/ChooseNextOption";
+import ChoseSpeed from "../../searchAndFilter/ChoseSpeed";
+import {initialSentences} from "../../serverData/InitialSentences";
+import SentenceDrill from "../sentence-drill/SentenceDrill";
+import {initialGrammar} from "../../serverData/InitialGrammar";
+import {initialThemes} from "../../serverData/InitialThemes";
+import ChooseOption from "../../searchAndFilter/ChooseOption";
+import ChooseNextOption from "../../searchAndFilter/ChooseNextOption";
 
 function GrammarThemesDrillWrapper() {
 
@@ -148,7 +148,7 @@ function GrammarThemesDrillWrapper() {
             />}
             <br/>
             <br/>
-            <GrammarThemesDrill
+            <SentenceDrill
                 randomIndex={randomIndex}
                 openTranslation={openTranslation}
                 sentences={sentences}

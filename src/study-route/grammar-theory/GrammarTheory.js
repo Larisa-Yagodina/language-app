@@ -1,9 +1,5 @@
 import React, {useState} from 'react';
-import {initialGrammar} from "../serverData/InitialGrammar";
-import {Link, Route} from "react-router-dom";
-import MenuItem from "@mui/material/MenuItem";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ListItemIcon from "@mui/material/ListItemIcon";
+import {initialGrammar} from "../../serverData/InitialGrammar";
 import {ListItem} from "@mui/material";
 
 const explanation = {
@@ -38,7 +34,8 @@ function GrammarTheory (props) {
 
                 <>
                 {grammar[0].theory.map(el => <>
-                <p style={
+                <p key={el.id}
+                    style={
                 el.styleIs === "text" ? explanation :
                     el.styleIs === "example" ? example :
                         el.styleIs === "forming" ? forming : using}>
@@ -46,7 +43,7 @@ function GrammarTheory (props) {
                 {el.list !== undefined &&
                 el.list.map((elm, i) =>
 
-                    <ListItem style={list}>{elm}{ i === el.list.length - 1 ? '.' : ';'}</ListItem>
+                    <ListItem key={i} style={list}>{elm}{ i === el.list.length - 1 ? '.' : ';'}</ListItem>
 
                 )
                 }

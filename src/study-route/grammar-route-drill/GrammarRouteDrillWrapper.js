@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import ChoseSpeed from "../searchAndFilter/ChoseSpeed";
-import {initialSentences} from "../serverData/InitialSentences";
-import GrammarThemesDrill from "../grammar-themes-drill/GrammarThemesDrill";
+import ChoseSpeed from "../../searchAndFilter/ChoseSpeed";
+import {initialSentences} from "../../serverData/InitialSentences";
+import SentenceDrill from "../../no-theory-drills/sentence-drill/SentenceDrill";
 
 function GrammarRouteDrillWrapper({partOfGrammarId}) {
 
@@ -51,8 +51,6 @@ function GrammarRouteDrillWrapper({partOfGrammarId}) {
         }, chosenSpeed / 2)
     }, [waitingTimer])
 
-    let random;
-
     useEffect(() => {
         // таймер пересоздаётся каждый раз, когда обновляется chosenSpeed
         const id = setInterval(() => {
@@ -83,7 +81,7 @@ function GrammarRouteDrillWrapper({partOfGrammarId}) {
             <ChoseSpeed choosenSpeed={chosenSpeed} speedRange={speedRange} setChosenSpeed={setChosenSpeed}/>
 
             <br/>
-            <GrammarThemesDrill
+            <SentenceDrill
                 randomIndex={randomIndex}
                 openTranslation={openTranslation}
                 sentences={sentences}

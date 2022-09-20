@@ -1,13 +1,13 @@
-import '../App.css';
+import '../../App.css';
 import React, {useEffect, useState} from "react";
-import ChoseSpeed from "../searchAndFilter/ChoseSpeed";
-import {initialSentences} from "../serverData/InitialSentences";
-import WordsDrill from "./WordsDrill";
-import {initialPartOfSpeech} from "../serverData/InitialPartOfSpeech";
-import ChooseOption from "../searchAndFilter/ChooseOption";
-import {initialDefinitions} from "../serverData/InitialDefinitions";
-import ChooseNextOption from "../searchAndFilter/ChooseNextOption";
-import {initialWords} from "../serverData/InitialWords";
+import ChoseSpeed from "../../searchAndFilter/ChoseSpeed";
+import {initialSentences} from "../../serverData/InitialSentences";
+import {initialPartOfSpeech} from "../../serverData/InitialPartOfSpeech";
+import ChooseOption from "../../searchAndFilter/ChooseOption";
+import {initialDefinitions} from "../../serverData/InitialDefinitions";
+import ChooseNextOption from "../../searchAndFilter/ChooseNextOption";
+import {initialWords} from "../../serverData/InitialWords";
+import SentenceDrill from "../sentence-drill/SentenceDrill";
 
 function WordsDrillWrapper() {
 
@@ -73,9 +73,6 @@ function WordsDrillWrapper() {
         }, chosenSpeed / 2)
     }, [waitingTimer])
 
-    //let [random, setRandom] = useState(0);
-
-    console.log(sentences)
 
     // таймер — показывает предложения одно за другим
     useEffect(() => {
@@ -170,7 +167,7 @@ function WordsDrillWrapper() {
 
             <br/>
             <br/>
-            <WordsDrill
+            <SentenceDrill
                 randomIndex={randomIndex}
                 openTranslation={openTranslation}
                 sentences={sentences}

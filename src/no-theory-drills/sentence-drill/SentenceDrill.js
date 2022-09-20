@@ -1,11 +1,13 @@
 import {Box, CircularProgress} from "@mui/material";
 
-const WordsDrill = ({randomIndex, openTranslation, sentences}) => {
+const SentenceDrill = ({randomIndex, openTranslation, sentences}) => {
 
     return (
         <div>
+
             {randomIndex !== null && (sentences[randomIndex] !== undefined) ?
                 <h2>{sentences[randomIndex].russian}</h2> :
+                // Это - крутящаяся штука, если нет предложений
                 <Box sx={{ width: '100%' }}>
                     <CircularProgress />
                 </Box>
@@ -15,4 +17,4 @@ const WordsDrill = ({randomIndex, openTranslation, sentences}) => {
     );
 };
 
-export default WordsDrill;
+export default SentenceDrill;
