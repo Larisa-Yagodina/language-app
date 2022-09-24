@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import ChoseSpeed from "../../searchAndFilter/ChoseSpeed";
-import {initialSentences} from "../../serverData/InitialSentences";
-import SentenceDrill from "../../no-theory-drills/sentence-drill/SentenceDrill";
+import ChoseSpeed from "../../../searchAndFilter/ChoseSpeed";
+import {initialSentences} from "../../../serverData/InitialSentences";
+import SentenceDrill from "../../../no-theory-drills/sentence-drill/SentenceDrill";
 
 function GrammarRouteDrillWrapper({partOfGrammarId}) {
 

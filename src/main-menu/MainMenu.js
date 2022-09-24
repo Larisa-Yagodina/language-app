@@ -118,6 +118,14 @@ export default function MainMenu() {
                             Grammar route
                         </MenuItem>
                     </Link>
+                    <Link to="/themes_route" style={{ textDecoration: 'none', color: 'black'}}>
+                        <MenuItem>
+                            <ListItemIcon>
+                                <KeyIcon fontSize="small"/>
+                            </ListItemIcon>
+                            Themes route
+                        </MenuItem>
+                    </Link>
                     <Divider/>
                         <MenuItem>
                             <ListItemIcon>

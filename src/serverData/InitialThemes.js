@@ -1,4 +1,3 @@
-import {v4 as uuidv4} from 'uuid';
 
 
 export const initialThemes = [
@@ -8,88 +7,120 @@ export const initialThemes = [
         description: ''
     },
     {
+        id: "fkjrf80s9df83",
+        title: 'for all occasions',
+        description: ''
+    },
+    {
+        id: "dkfj3iusd9f3j",
+        title: 'restaurant',
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
+    },
+    {
         id: "sldkjf34820934",
         title: 'relationships',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: 'lsdkjf203984',
         title: 'travel',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: "lkdjf23948",
         title: 'job',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: 'sldjflkj232342',
         title: 'hotel',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: "slkdjflk34234",
         title: 'family',
-        description: ''
+        description: '',
+        wordsDefinitionsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: "slkdjf23423",
         title: 'movie',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: "ewir2kj342lkj",
         title: 'friendship',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: "ldkj234jk",
         title: 'dates',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: "lskdjlk2342kj",
         title: 'skin care',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
+    },
+    {
+        id: "flkj3f8s9d83j2",
+        title: 'hair care',
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: "sldkjf234234",
         title: 'describes',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: "lskdjf23423",
         title: 'transport',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: "lskdjflk3242",
         title: 'asking',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     {
         id: 'fj234d9fsj3jfsd',
         title: 'making stories',
-        description: ''
+        description: '',
+        wordsDefinitions: [''],
+        setExpressions: [''],
     },
     // {
     //     id: uuidv4(),
     //     title: '',
-    //     description: ''
-    // },
-    // {
-    //     id: uuidv4(),
-    //     title: '',
-    //     description: ''
-    // },
-    // {
-    //     id: uuidv4(),
-    //     title: '',
-    //     description: ''
-    // },
-    // {
-    //     id: uuidv4(),
-    //     title: '',
-    //     description: ''
+    //     description: '',
+    //     wordsDefinitions: [''],
+    //     setExpressions: [''],
     // },
 ]

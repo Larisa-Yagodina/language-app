@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {initialGrammar} from "../../serverData/InitialGrammar";
+import {initialGrammar} from "../../../serverData/InitialGrammar";
 import {ListItem} from "@mui/material";
 
 const explanation = {

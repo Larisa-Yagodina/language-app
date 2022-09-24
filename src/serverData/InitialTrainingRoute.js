@@ -142,8 +142,106 @@ export const initialTrainingRoute = [
                     },
                 ]
             },
+        ],
+        userThemesRoute: [
+            {
+                id: 'dfkjl23r7sdf823j',
+                name: 'For all occasions',
+                link: '/for-all-occasions',
+                partOfGrammarId: "",
+                isOpen: true,
+                isStudied: false,
+                isOpenSubThemes: true,
+                subThemes: [
+                    {
+                        id: 'sldkjf2398f0s9dfk',
+                        name: 'Clarify possible misunderstandings',
+                        link: '/clarify-possible-misunderstandings',
+                        partOfGrammarId: "",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'dflkj98fs098kjfd',
+                        name: 'How to be polite',
+                        link: '/how-to-be-polite',
+                        partOfGrammarId: "",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'kj38f0s98fj23f8dsdf',
+                        name: 'Set expressions',
+                        link: '/set expressions',
+                        partOfGrammarId: "",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                ]
+            },
+            {
+                id: 'dlj23r80s9d8flkj3',
+                name: 'Arranging travel & situations on the way',
+                link: '/arranging-travel',
+                partOfGrammarId: "",
+                isOpen: true,
+                isStudied: false,
+                isOpenSubThemes: true,
+                subThemes: [
+                    {
+                        id: 'fslkj387fs98d72',
+                        name: 'Renting a car',
+                        link: '/renting-a-car',
+                        partOfGrammarId: "",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'dlkj2387fs98d2j34h',
+                        name: 'On the border',
+                        link: '/on-the-border',
+                        partOfGrammarId: "",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'sdflkj23987sdfjh287',
+                        name: 'At the hotel',
+                        link: '/at-the-hotel',
+                        partOfGrammarId: "",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                ]
+            },
+            {
+                id: '34hk2cfudydf234',
+                name: 'Vacation itself',
+                link: '/vacation itself',
+                partOfGrammarId: "",
+                isOpen: true,
+                isStudied: false,
+                isOpenSubThemes: true,
+                subThemes: [
+                    {
+                        id: 'fdkjsh23oufsdf',
+                        name: 'Restaurant',
+                        link: '/restaurant',
+                        partOfGrammarId: "dkfj3iusd9f3",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: '23fjsdjf23oiuf',
+                        name: 'Asking for directions.',
+                        link: '/asking-for-directions.',
+                        partOfGrammarId: "",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                ]
+            },
         ]
-
     },
     {
         id: 'sdlkj348203948667',

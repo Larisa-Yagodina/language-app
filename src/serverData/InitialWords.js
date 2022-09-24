@@ -58,17 +58,17 @@ export const initialWords = [
     },
     {
         id: 'sdflkj2398fsdkj23',
-        title: '',
-        english: '',
-        partOfSpeech: '',
-        themes: [],
+        title: 'substitution',
+        english: 'substitution',
+        partOfSpeech: '42fs8dfh234k',
+        themes: ['dkfj3iusd9f3j'],
     },
     {
         id: 'sdfjk2398fsdjf37fajs',
-        title: '',
-        english: '',
-        partOfSpeech: '',
-        themes: [],
+        title: 'intolerance',
+        english: 'intolerance',
+        partOfSpeech: '42fs8dfh234k',
+        themes: ['dkfj3iusd9f3j', ],
     },
     {
         id: 'j239r8sdkj37fksdj3',
@@ -78,3 +78,34 @@ export const initialWords = [
         themes: [],
     },
 ];
+
+// __-free
+// option
+// takeaway
+// sensitivity
+// allergy
+// offer
+// ordinary
+// delicious
+// cabernet
+// blend
+// full bodied,
+// balanced,
+// with hints
+// ribeye
+// medium rare
+// recommendation
+// temperature (steak cooked)
+// both
+// shrimp
+// scampi
+// appetizer
+// share
+// possible
+// mashed potatoes
+// some
+// order (заказать)
+// meal
+// right away
+// still water
+// sparkling water

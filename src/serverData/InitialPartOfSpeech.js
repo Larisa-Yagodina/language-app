@@ -23,4 +23,10 @@ export const initialPartOfSpeech = [
         value: 'irregular verbs',
         description: ''
     },
+    {
+        id: "42fs8dfh234k",
+        title: 'Nouns',
+        value: 'nouns',
+        description: ''
+    },
 ];

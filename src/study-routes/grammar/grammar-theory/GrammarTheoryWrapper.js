@@ -9,26 +9,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import GrammarTheory from "./GrammarTheory";
 import GrammarRouteDrillWrapper from "../grammar-route-drill/GrammarRouteDrillWrapper";
+import TabPanel from "../../utils/TabPanel";
 
-function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
-            {...other}
-        >
-            {value === index && (
-                <Box sx={{ p: 3 }}>
-                    <div>{children}</div>
-                </Box>
-            )}
-        </div>
-    );
-}
 
 TabPanel.propTypes = {
     children: PropTypes.node,
