@@ -64,6 +64,13 @@ export const initialWords = [
         themes: ['dkfj3iusd9f3j'],
     },
     {
+        id: 'fskj398fskj2df98sa',
+        title: 'substitute',
+        english: 'substitute',
+        partOfSpeech: 'sdlkj2398fsd',
+        themes: ['dkfj3iusd9f3j'],
+    },
+    {
         id: 'sdfjk2398fsdjf37fajs',
         title: 'intolerance',
         english: 'intolerance',
@@ -71,7 +78,35 @@ export const initialWords = [
         themes: ['dkfj3iusd9f3j', ],
     },
     {
-        id: 'j239r8sdkj37fksdj3',
+        id: 'sdlkjo2387skj3',
+        title: '-free',
+        english: '-free',
+        partOfSpeech: 'fj398fsd7fj32',
+        themes: [],
+    },
+    {
+        id: 'sdflkj2098sdkj2h',
+        title: 'option',
+        english: 'option',
+        partOfSpeech: '42fs8dfh234k',
+        themes: [],
+    },
+    {
+        id: 'xlkjw098slakdgf',
+        title: 'sensitivity',
+        english: 'sensitivity',
+        partOfSpeech: '42fs8dfh234k',
+        themes: [],
+    },
+    {
+        id: 'dkjhw987dsjhske',
+        title: 'takeaway',
+        english: 'takeaway',
+        partOfSpeech: '42fs8dfh234k',
+        themes: [''],
+    },
+    {
+        id: 'dlkj987dskj3hosu',
         title: '',
         english: '',
         partOfSpeech: '',
@@ -79,10 +114,16 @@ export const initialWords = [
     },
 ];
 
-// __-free
-// option
-// takeaway
-// sensitivity
+// correct? - верно? правильно?
+// then - тогда, в таком случае (Then, I`ll take a cappuccino)
+// make - готовить еду
+// as well
+// as - в качестве (she started working as a teacher)
+// -based (основанный на) (plant-based - основанный на растительных ингредиентах)
+// first (сначала, сперва) (But I`d like to talk to you first - но сперва я хочу поговорить)
+// Few (мало) (I have few friends - у меня мало друзей)
+// A few (несколько) (I have a few friends - у меня несколько друзей)
+// meal - прием пищи (Enjoy your meal, приятного аппетита) (My meal wes great yesterday - Вчера был классный ужин / обед))
 // allergy
 // offer
 // ordinary
@@ -109,3 +150,4 @@ export const initialWords = [
 // right away
 // still water
 // sparkling water
+// sure - Уверенность в том, что вы что-то знаете или что-то истинно или правильно

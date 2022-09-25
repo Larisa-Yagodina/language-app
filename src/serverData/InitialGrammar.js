@@ -4,7 +4,7 @@ import {v4 as uuidv4} from 'uuid';
 export const initialGrammar = [
     {
         id: "fjlk234jdflskdjf",
-        title: 'all grammar',
+        title: 'all theory-and-drill-showing',
         russianTitle: 'Вся грамматика',
         description: '',
     },

@@ -18,6 +18,12 @@ export const initialPartOfSpeech = [
         description: ''
     },
     {
+        id: "sdlkj2398fsd",
+        title: 'Verbs',
+        value: 'verbs',
+        description: ''
+    },
+    {
         id: "s;ldkf2394",
         title: 'Irregular verbs',
         value: 'irregular verbs',
@@ -27,6 +33,12 @@ export const initialPartOfSpeech = [
         id: "42fs8dfh234k",
         title: 'Nouns',
         value: 'nouns',
+        description: ''
+    },
+    {
+        id: "fj398fsd7fj32",
+        title: 'Suffix',
+        value: 'suffix',
         description: ''
     },
 ];

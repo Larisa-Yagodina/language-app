@@ -4,7 +4,7 @@ import GrammarThemesDrillWrapper from "../../no-theory-drills/grammar-themes-dri
 import WordsDrillWrapper from "../../no-theory-drills/words-drill/WordsDrillWrapper";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
 import GrammarRouteListWrapper from "../../study-routes/routes/GrammarRouteListWrapper";
-import GrammarTheoryWrapper from "../../study-routes/grammar/grammar-theory/GrammarTheoryWrapper";
+import GrammarTheoryWrapper from "../../study-routes/theory-and-drill-showing/grammar-theory/GrammarTheoryWrapper";
 import ThemesRouteListWrapper from "../../study-routes/routes/ThemesRouteListWrapper";
 import ThemeMainWrapper from "../../study-routes/themes/ThemeMainWrapper";
 

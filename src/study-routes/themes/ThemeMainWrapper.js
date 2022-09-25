@@ -7,12 +7,13 @@ import MenuItem from "@mui/material/MenuItem";
 import {Link} from "react-router-dom";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import GrammarRouteDrillWrapper from "../grammar/grammar-route-drill/GrammarRouteDrillWrapper";
-import GrammarTheory from "../grammar/grammar-theory/GrammarTheory";
+import GrammarRouteDrillWrapper from "../theory-and-drill-showing/grammar-route-drill/GrammarRouteDrillWrapper";
+import GrammarTheory from "../theory-and-drill-showing/grammar-theory/GrammarTheory";
 import TabPanel from "../utils/TabPanel";
 import Words from "./Words";
 import SetExpressions from "./SetExpressions";
 import Drill from "./Drill";
+import {initialThemes} from "../../serverData/InitialThemes";
 
 
 TabPanel.propTypes = {
@@ -36,6 +37,8 @@ export default function ThemeMainWrapper(props) {
         setValue(newValue);
     };
 
+    console.log(props)
+
     return (
         <div>
             <Box sx={{ width: '100%' }}>
@@ -49,19 +52,23 @@ export default function ThemeMainWrapper(props) {
                                 </ListItemIcon>
                             </Link>
                         </MenuItem>
-                        <Tab label="Words" {...a11yProps(1)} />
-                        <Tab label="Set expressions" {...a11yProps(2)} />
-                        <Tab label="Drill" {...a11yProps(3)} />
+                        <Tab label="Useful phrases" {...a11yProps(1)} />
+                        <Tab label="Words" {...a11yProps(2)} />
+                        <Tab label="Set expressions" {...a11yProps(3)} />
+                        <Tab label="Drill" {...a11yProps(4)} />
                     </Tabs>
                 </Box>
 
                 <TabPanel value={value} index={1}>
-                    <Words />
+                    <GrammarTheory theory={initialThemes.filter(el => el.id === props.partOfGrammarId)}/>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    <SetExpressions />
+                    <Words />
                 </TabPanel>
                 <TabPanel value={value} index={3}>
+                    <SetExpressions />
+                </TabPanel>
+                <TabPanel value={value} index={4}>
                     <Drill />
                 </TabPanel>
 

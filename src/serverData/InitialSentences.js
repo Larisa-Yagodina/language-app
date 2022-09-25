@@ -178,8 +178,8 @@ export const initialSentences = [
         grammar: [],
         themes: ["lskdjlk2342kj"],
         partOfSpeech: [],
-        words: [],
-        definition: [],
+        words: ['sdlkjo2387skj3', ],
+        definition: ['elkrjelr89384eljeru', ],
     },
     {
         id: uuidv4(),
@@ -318,8 +318,8 @@ export const initialSentences = [
         grammar: [],
         themes: ["lskdjlk2342kj"],
         partOfSpeech: [],
-        words: [],
-        definition: [],
+        words: ['sdlkjo2387skj3', ],
+        definition: ['elkrjelr89384eljeru'],
     },
     {
         id: uuidv4(),
@@ -1199,7 +1199,7 @@ export const initialSentences = [
         grammar: [''],
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
-        words: ['sdflkj2398fsdkj23', ],
+        words: ['elkrjelr89384eljeru', ],
         definition: ['elkrjelr89384eljeru',],
         expressions: ['lkj3erf098sk3', ]
     },
@@ -1320,8 +1320,8 @@ export const initialSentences = [
         grammar: [''],
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
-        words: ['', ],
-        definition: ['',],
+        words: ['sdfjk2398fsdjf37fajs', ],
+        definition: ['elkrjelr89384eljeru',],
         expressions: ['', ]
     },
     {
@@ -1331,8 +1331,8 @@ export const initialSentences = [
         grammar: [''],
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
-        words: ['', ],
-        definition: ['',],
+        words: ['sdflkj2398fsdkj23', ],
+        definition: ['elkrjelr89384eljeru',],
         expressions: ['', ]
     },
     {
@@ -1353,8 +1353,8 @@ export const initialSentences = [
         grammar: [''],
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
-        words: ['', ],
-        definition: ['',],
+        words: ['xlkjw098slakdgf', ],
+        definition: ['sdflkj398s0d98j3',],
         expressions: ['', ]
     },
     {
@@ -1364,30 +1364,8 @@ export const initialSentences = [
         grammar: [''],
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
-        words: ['', ],
-        definition: ['',],
-        expressions: ['', ]
-    },
-    {
-        id: uuidv4(),
-        english: 'I was also hoping that you could recommend one of the salads as a starter?',
-        russian: 'Я хотела попросить, чтобы вы порекомендовали один из салатов в качестве первого блюда',
-        grammar: [''],
-        themes: ['dkfj3iusd9f3j'],
-        partOfSpeech: [''],
-        words: ['', ],
-        definition: ['',],
-        expressions: ['', ]
-    },
-    {
-        id: uuidv4(),
-        english: 'I would like to order some wine and a sparkling water as well.',
-        russian: 'Еще я бы хотела заказать вина и газированную воду.',
-        grammar: [''],
-        themes: ['dkfj3iusd9f3j'],
-        partOfSpeech: [''],
-        words: ['', ],
-        definition: ['',],
+        words: ['dkjhw987dsjhske', ],
+        definition: ['sdflkj398s0d98j3',],
         expressions: ['', ]
     },
     {
@@ -1408,8 +1386,8 @@ export const initialSentences = [
         grammar: [''],
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
-        words: ['', ],
-        definition: ['',],
+        words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h', ],
+        definition: ['elkrjelr89384eljeru', 'sdflkj398s0d98j3', ],
         expressions: ['', ]
     },
     {
@@ -1419,8 +1397,8 @@ export const initialSentences = [
         grammar: [''],
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
-        words: ['', ],
-        definition: ['',],
+        words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h', ],
+        definition: ['elkrjelr89384eljeru', 'sdflkj398s0d98j3'],
         expressions: ['', ]
     },
     {
@@ -1430,8 +1408,8 @@ export const initialSentences = [
         grammar: [''],
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
-        words: ['', ],
-        definition: ['',],
+        words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h', ],
+        definition: ['elkrjelr89384eljeru', 'sdflkj398s0d98j3'],
         expressions: ['', ]
     },
     {
@@ -1445,7 +1423,222 @@ export const initialSentences = [
         definition: ['',],
         expressions: ['', ]
     },
+    {
+        id: uuidv4(),
+        english: 'Chicory is a good coffee substitution.',
+        russian: 'Цикорий - хорошая замена кофе.',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j', 'fkjrf80s9df83'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Are you ready to order your meal? / Are you ready to order?',
+        russian: 'Вы готовы сделать заказ?',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Yes, but I have a few questions',
+        russian: 'Да, но сначала у меня есть несколько вопросов',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Could I ask a few questions? Yes, of course, please, go ahead.',
+        russian: 'Могу я задать пару вопросов? Да, конечно, задавайте',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'I have a gluten intolerance.',
+        russian: 'У меня непереносимость глютена',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['sdfjk2398fsdjf37fajs', ],
+        definition: ['elkrjelr89384eljeru',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Do you offer gluten-free pasta? / Do you have gluten-free pasta?',
+        russian: 'Есть ли у вас паста без глютена?',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['sdlkjo2387skj3', ],
+        definition: ['elkrjelr89384eljeru',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Yes, actually, we offer a gluten-free, rice-based penne pasta as a substitution with any of our pasta dishes.',
+        russian: 'Да, на самом деле, у нас есть безглютеновая паста пенне (перья) на рисовой основе в качестве замены любому из наших блюд из макарон.',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['sdlkjo2387skj3', ],
+        definition: ['elkrjelr89384eljeru',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Oh, excellent. That`s great to hear.',
+        russian: 'О, отлично. Рада это слышать.',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'I was also hoping that you could recommend one of the salads as a starter?',
+        russian: 'Я также хотела попросить, чтобы вы порекомендовали один из салатов в качестве первого блюда',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'I have an allergy to onions.',
+        russian: 'У меня аллергия на лук',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'May I ask if you have a sensitivity to garlic too, or just onions?',
+        russian: 'Могу я спросить, у вас также есть аллергия на чеснок, или только на лук?',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['xlkjw098slakdgf', ],
+        definition: ['sdflkj398s0d98j3',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Ah, no - it`s just onion, thanks',
+        russian: 'А, нет - только на лук',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Of course. Our caprese salad doesn`t have onions... And we can make the house salad without onions as well',
+        russian: 'Конечно. В нашем салате капрезе нет лука... Но мы можем приготовить домашний салат без лука.',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Then, I`ll take a house salad, no onions, with balsamic vinaigrette, and the gluten-free pasta option, please.',
+        russian: 'Тогда я возьму домашний салат без лука с бальзамическим соусом и эту пасту без глютена, пожалуйста.',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h', ],
+        definition: ['elkrjelr89384eljeru', 'sdflkj398s0d98j3'],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'A house salad, no onions, and gluten-free penne puttanesca, correct?',
+        russian: 'Домашний салат без лука и пенне путтанеска без глютена, правильно?',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['sdlkjo2387skj3', ],
+        definition: ['elkrjelr89384eljeru',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Oh, and a glass of chianti and a small bottle of sparkling water, please.',
+        russian: 'О, и бокал кьянти и маленькую бутылочку газированной воды, пожалуйста.',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Would you like your wine with your meal, or right away? Right away, please.',
+        russian: 'Вы хотите вино во время еды или прямо сейчас? Прямо сейчас, пожалуйста.',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'I would like to order some wine and a sparkling water as well.',
+        russian: 'Еще я бы хотела заказать вина и газированную воду.',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: '',
+        russian: '',
+        grammar: [''],
+        themes: ['dkfj3iusd9f3j'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
 ];
+
+
+
+
+
+
 
 
 

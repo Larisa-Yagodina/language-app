@@ -26,7 +26,7 @@ function GrammarThemesDrillWrapper() {
 
     const [option, setOption] = useState('')
 
-    const [chosenGrammar, setChosenGrammar] = useState("all grammar")
+    const [chosenGrammar, setChosenGrammar] = useState("all theory-and-drill-showing")
     const [grammar, setGrammar] = useState(initialGrammar);
 
     const [chosenTheme, setChosenTheme] = useState("all themes");
@@ -106,7 +106,7 @@ function GrammarThemesDrillWrapper() {
 
     // выбор грамматики
     useEffect(() => {
-        if (chosenGrammar === "all grammar") {
+        if (chosenGrammar === "all theory-and-drill-showing") {
             setSentences(initialSentences);
         } else {
             setSentences(initialSentences.filter(el => el.grammar.includes(chosenGrammar)));

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {initialGrammar} from "../../../serverData/InitialGrammar";
 import {ListItem} from "@mui/material";
 
 const explanation = {
@@ -25,15 +24,15 @@ const list = {
 
 function GrammarTheory (props) {
 
-    const [grammar, setGrammar] = useState(initialGrammar.filter(el => el.id === props.partOfGrammarId))
+    const [theory, setTheory] = useState(props.theory)
 
     return (
         <div style={{ margin: 20 }}>
 
-            <h3 style={{textAlign: 'center'}}>{grammar[0].russianTitle}</h3>
+            <h3 style={{textAlign: 'center'}}>{theory[0].russianTitle}</h3>
 
                 <>
-                {grammar[0].theory.map(el => <>
+                {theory[0].theory.map(el => <>
                 <p key={el.id}
                     style={
                 el.styleIs === "text" ? explanation :
@@ -43,7 +42,7 @@ function GrammarTheory (props) {
                 {el.list !== undefined &&
                 el.list.map((elm, i) =>
 
-                    <ListItem key={i} style={list}>{elm}{ i === el.list.length - 1 ? '.' : ';'}</ListItem>
+                    <ListItem key={i} style={list}> {elm}{ i === el.list.length - 1 ? '.' : ';'} </ListItem>
 
                 )
                 }
