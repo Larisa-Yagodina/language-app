@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import {ListItem} from "@mui/material";
 
 const explanation = {
-    fontSize: '17px',
+    fontSize: '18px',
     fontWeight: '600',
 }
 const example = {
-    fontSize: '17px',
-    fontWeight: '400',
+    fontSize: '18px',
+    fontWeight: '600',
 }
 const forming = {
     fontSize: '22px',
@@ -15,7 +15,7 @@ const forming = {
     textAlign: 'center',
 }
 const using = {
-    fontSize: '17px',
+    fontSize: '18px',
     fontWeight: '400',
 }
 const list = {
@@ -42,7 +42,7 @@ function GrammarTheory (props) {
                 {el.list !== undefined &&
                 el.list.map((elm, i) =>
 
-                    <ListItem key={i} style={list}> {elm}{ i === el.list.length - 1 ? '.' : ';'} </ListItem>
+                    <ListItem key={i} style={list}> {elm} </ListItem>
 
                 )
                 }

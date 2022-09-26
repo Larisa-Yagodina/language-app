@@ -52,10 +52,9 @@ export default function ThemeMainWrapper(props) {
                                 </ListItemIcon>
                             </Link>
                         </MenuItem>
-                        <Tab label="Useful phrases" {...a11yProps(1)} />
-                        <Tab label="Words" {...a11yProps(2)} />
-                        <Tab label="Set expressions" {...a11yProps(3)} />
-                        <Tab label="Drill" {...a11yProps(4)} />
+                        <Tab label="Explanations" {...a11yProps(1)} />
+                        <Tab label="Words and phrases" {...a11yProps(2)} />
+                        <Tab label="Drill" {...a11yProps(3)} />
                     </Tabs>
                 </Box>
 
@@ -68,9 +67,7 @@ export default function ThemeMainWrapper(props) {
                 <TabPanel value={value} index={3}>
                     <SetExpressions />
                 </TabPanel>
-                <TabPanel value={value} index={4}>
-                    <Drill />
-                </TabPanel>
+
 
             </Box>
         </div>
