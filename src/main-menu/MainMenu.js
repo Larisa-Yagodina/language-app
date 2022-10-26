@@ -9,12 +9,16 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import KeyIcon from '@mui/icons-material/Key';
 import ListIcon from '@mui/icons-material/List';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import AllRoutes from "./routes/AllRoutes";
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import FaceRetouchingNaturalIcon from '@mui/icons-material/FaceRetouchingNatural';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
 
 export default function MainMenu() {
 
@@ -87,55 +91,76 @@ export default function MainMenu() {
                     <MenuItem>
                         <Avatar/> My account
                     </MenuItem>
-                        <MenuItem>
-                            <ListItemIcon>
-                            <Settings fontSize="small"/>
-                            </ListItemIcon>
-                            Settings
-                        </MenuItem>
-                    <Divider/>
-                    <Link to="/speak_fluent-drill" style={{ textDecoration: 'none', color: 'black'}}>
                     <MenuItem>
                         <ListItemIcon>
-                            <AutoGraphIcon fontSize="small"/>
+                            <Settings fontSize="small"/>
                         </ListItemIcon>
-                        Think fast, speak fluently
+                        Settings
                     </MenuItem>
+                    <Divider/>
+                    <Link to="/speak_fluent-drill" style={{textDecoration: 'none', color: 'black'}}>
+                        <MenuItem>
+                            <ListItemIcon>
+                                <AutoGraphIcon fontSize="small"/>
+                            </ListItemIcon>
+                            My lessons
+                        </MenuItem>
                     </Link>
-                    <Link to="/new_words_drill" style={{ textDecoration: 'none', color: 'black'}}>
+                    <Link to="/want_to_get_used_to" style={{textDecoration: 'none', color: 'black'}}>
+                        <MenuItem>
+                            <ListItemIcon>
+                                <FaceRetouchingNaturalIcon fontSize="small"/>
+                            </ListItemIcon>
+                            Want to get used to
+                        </MenuItem>
+                    </Link>
+                    <Divider/>
+                    <Link to="/new_words_drill" style={{textDecoration: 'none', color: 'black'}}>
                         <MenuItem>
                             <ListItemIcon>
                                 <PlaylistAddCheckIcon fontSize="small"/>
                             </ListItemIcon>
-                            Learn new words
+                            Words
                         </MenuItem>
                     </Link>
-                    <Link to="/grammar_route" style={{ textDecoration: 'none', color: 'black'}}>
+                    <Link to="/grammar_route" style={{textDecoration: 'none', color: 'black'}}>
                         <MenuItem>
                             <ListItemIcon>
                                 <KeyIcon fontSize="small"/>
                             </ListItemIcon>
-                            Grammar route
+                            Grammar
                         </MenuItem>
                     </Link>
-                    <Link to="/themes_route" style={{ textDecoration: 'none', color: 'black'}}>
+                    <Link to="/themes_route" style={{textDecoration: 'none', color: 'black'}}>
                         <MenuItem>
                             <ListItemIcon>
-                                <KeyIcon fontSize="small"/>
+                                <ConnectWithoutContactIcon fontSize="small"/>
                             </ListItemIcon>
-                            Themes route
+                            Themes
                         </MenuItem>
                     </Link>
                     <Divider/>
-                        <MenuItem>
-                            <ListItemIcon>
-                                <Logout fontSize="small"/>
-                            </ListItemIcon>
-                            Logout
-                        </MenuItem>
+                    <MenuItem>
+                        <ListItemIcon>
+                            <InfoOutlinedIcon fontSize="small"/>
+                        </ListItemIcon>
+                        How to do drills
+                    </MenuItem>
+                    <MenuItem>
+                        <ListItemIcon>
+                            <ContactSupportOutlinedIcon fontSize="small"/>
+                        </ListItemIcon>
+                        To get help
+                    </MenuItem>
+                    <MenuItem>
+                        <ListItemIcon>
+                            <Logout fontSize="small"/>
+                        </ListItemIcon>
+                        Logout
+                    </MenuItem>
                 </Menu>
             </nav>
-            <AllRoutes />
+            <AllRoutes/>
         </div>
     );
 }

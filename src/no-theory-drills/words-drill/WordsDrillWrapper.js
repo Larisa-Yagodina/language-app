@@ -2,16 +2,17 @@ import '../../App.css';
 import React, {useEffect, useState} from "react";
 import ChoseSpeed from "../../searchAndFilter/ChoseSpeed";
 import {initialSentences} from "../../serverData/InitialSentences";
-import {initialPartOfSpeech} from "../../serverData/InitialPartOfSpeech";
+import {initialPartOfSpeech} from "../../serverData/Words/InitialPartOfSpeech";
 import ChooseOption from "../../searchAndFilter/ChooseOption";
-import {initialDefinitions} from "../../serverData/InitialDefinitions";
+import {initialDefinitions} from "../../serverData/Words/InitialDefinitions";
 import ChooseNextOption from "../../searchAndFilter/ChooseNextOption";
-import {initialWords} from "../../serverData/InitialWords";
+import {initialWords} from "../../serverData/Words/InitialWords";
 import SentenceDrill from "../sentence-drill/SentenceDrill";
+import {logDOM} from "@testing-library/react";
 
 function WordsDrillWrapper() {
 
-    const [chosenSpeed, setChosenSpeed] = useState(5000);
+    const [chosenSpeed, setChosenSpeed] = useState(15000);
     const [speedRange, setSpeedRange] = useState([
             {
                 value: 4000,
@@ -115,19 +116,23 @@ function WordsDrillWrapper() {
         if (chosenPartOfSpeech === "ldkjf203948") {
             setSentences(initialSentences)
             setChosenWord('sdlk23234klsdfk')
+            setChosenDefinition('')
         } else {
             setWords(initialWords.filter(el => el.partOfSpeech.includes(chosenPartOfSpeech)));
             setSentences(initialSentences.filter(el => el.partOfSpeech.includes(chosenPartOfSpeech)));
             setChosenWord('sdlk23234klsdfk')
+            setChosenDefinition('')
         }
         setChosenSpeed(chosenSpeed + 1)
         setWaitingTimer(waitingTimer + 1)
     }, [chosenPartOfSpeech])
 
+
     // когда выбрано слово - фильтруем дефиниции
     useEffect(() => {
         if (chosenWord !== 'sdlk23234klsdfk') {
             setDefinitions(initialDefinitions.filter(el => el.wordId === chosenWord))
+            setChosenDefinition('')
             setSentences(initialSentences.filter(el => el.words.includes(chosenWord)))
         }
         setChosenSpeed(chosenSpeed + 1)
@@ -143,13 +148,18 @@ function WordsDrillWrapper() {
          setWaitingTimer(waitingTimer + 1)
      }, [chosenDefinition])
 
-    console.log(sentences)
+   const showWordForDefinition = () => {
+        return (
+            <i>{words.filter(el => el.id === chosenWord)[0] ? words.filter(el => el.id === chosenWord)[0].title : "Определение"}:</i>
+        )
+   }
 
     return (
         <div className="App">
 
             <h3> Learn new words </h3>
             <br/>
+            <div style={{background: 'white', height: '130px'}}>
             <ChoseSpeed speedRange={speedRange} setChosenSpeed={setChosenSpeed}/>
             {/*<CheckBox label={"in progress words"} />*/}
             <ChooseOption options={partsOfSpeech} setOption={setChosenPartOfSpeech}/>
@@ -164,14 +174,31 @@ function WordsDrillWrapper() {
                 onSelect={setChosenDefinition}
                 lable={"Definitions"}
             />}
+            </div>
 
-            <br/>
-            <br/>
+            <div style={{background: 'white', height: '150px'}}>
             <SentenceDrill
                 randomIndex={randomIndex}
                 openTranslation={openTranslation}
                 sentences={sentences}
             />
+            </div>
+            {chosenDefinition &&
+                <div style={{textAlign: 'left', marginTop: '20px'}}>
+                    {showWordForDefinition()}
+                    <br/>
+                    <br/>
+                    {definitions.filter(el => el.id === chosenDefinition)[0].definition}
+                </div>
+            }
+            {definitions.length === 1 &&
+                <div style={{textAlign: 'left', marginTop: '20px'}}>
+                    {showWordForDefinition()}
+                    <br/>
+                    <br/>
+                    {definitions[0].definition}
+                </div>
+            }
         </div>
     );
 }

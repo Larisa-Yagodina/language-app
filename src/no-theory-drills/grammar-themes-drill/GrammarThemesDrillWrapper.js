@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import ChoseSpeed from "../../searchAndFilter/ChoseSpeed";
 import {initialSentences} from "../../serverData/InitialSentences";
 import SentenceDrill from "../sentence-drill/SentenceDrill";
-import {initialGrammar} from "../../serverData/InitialGrammar";
+import {initialRoute} from "../../serverData/InitialRoute";
 import {initialThemes} from "../../serverData/InitialThemes";
 import ChooseOption from "../../searchAndFilter/ChooseOption";
 import ChooseNextOption from "../../searchAndFilter/ChooseNextOption";
@@ -19,6 +19,7 @@ function GrammarThemesDrillWrapper() {
             {value: 12000, name: "very slow"}
         ]
     );
+
     const [options, setOptions] = useState([
         {id: "slkd203984", title: "Grammar"},
         {id: 'sldkjf394823', title: "Themes"},
@@ -27,7 +28,7 @@ function GrammarThemesDrillWrapper() {
     const [option, setOption] = useState('')
 
     const [chosenGrammar, setChosenGrammar] = useState("all theory-and-drill-showing")
-    const [grammar, setGrammar] = useState(initialGrammar);
+    const [grammar, setGrammar] = useState(initialRoute);
 
     const [chosenTheme, setChosenTheme] = useState("all themes");
     const [themes, setThemes] = useState(initialThemes);

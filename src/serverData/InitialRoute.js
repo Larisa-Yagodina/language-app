@@ -1,7 +1,7 @@
 import {v4 as uuidv4} from 'uuid';
 
 
-export const initialGrammar = [
+export const initialRoute = [
     {
         id: "fjlk234jdflskdjf",
         title: 'all theory-and-drill-showing',
