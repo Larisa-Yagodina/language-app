@@ -106,12 +106,12 @@ export default function MainMenu() {
                             My lessons
                         </MenuItem>
                     </Link>
-                    <Link to="/want_to_get_used_to" style={{textDecoration: 'none', color: 'black'}}>
+                    <Link to="/my-vocabulary" style={{textDecoration: 'none', color: 'black'}}>
                         <MenuItem>
                             <ListItemIcon>
                                 <FaceRetouchingNaturalIcon fontSize="small"/>
                             </ListItemIcon>
-                            Want to get used to
+                            My vocabulary
                         </MenuItem>
                     </Link>
                     <Divider/>
@@ -144,13 +144,13 @@ export default function MainMenu() {
                         <ListItemIcon>
                             <InfoOutlinedIcon fontSize="small"/>
                         </ListItemIcon>
-                        How to do drills
+                        Drill tips
                     </MenuItem>
                     <MenuItem>
                         <ListItemIcon>
                             <ContactSupportOutlinedIcon fontSize="small"/>
                         </ListItemIcon>
-                        To get help
+                        Help
                     </MenuItem>
                     <MenuItem>
                         <ListItemIcon>

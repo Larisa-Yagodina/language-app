@@ -10,7 +10,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import GrammarTheory from "./GrammarTheory";
 import GrammarRouteDrillWrapper from "../grammar-route-drill/GrammarRouteDrillWrapper";
 import TabPanel from "../../utils/TabPanel";
-import {initialRoute} from "../../../serverData/InitialRoute";
+import {initialGrammar} from "../../../serverData/InitialGrammar";
 
 
 TabPanel.propTypes = {
@@ -53,7 +53,7 @@ export default function GrammarTheoryWrapper(props) {
             </Box>
 
             <TabPanel value={value} index={1}>
-                <GrammarTheory theory={initialRoute.filter(el => el.id === props.partOfGrammarId)}/>
+                <GrammarTheory theory={initialGrammar.filter(el => el.id === props.partOfGrammarId)}/>
             </TabPanel>
             <TabPanel value={value} index={2}>
                 <GrammarRouteDrillWrapper partOfGrammarId={props.partOfGrammarId}/>
