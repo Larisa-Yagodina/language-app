@@ -163,7 +163,7 @@ function WordsDrillWrapper() {
 
             <h3> Learn new words </h3>
             <br/>
-            <div style={{background: 'white', height: '130px'}}>
+            <div style={{background: 'white', height: '190px'}}>
                 <ChoseSpeed speedRange={speedRange} setChosenSpeed={setChosenSpeed}/>
                 {/*<CheckBox label={"in progress words"} />*/}
                 <ChooseOption options={partsOfSpeech} setOption={setChosenPartOfSpeech}/>
@@ -181,7 +181,7 @@ function WordsDrillWrapper() {
                     />}
             </div>
 
-            <div style={{background: 'white', height: '150px'}}>
+            <div style={{background: 'white', height: '160px'}}>
                 <SentenceDrill
                     randomIndex={randomIndex}
                     openTranslation={openTranslation}
@@ -189,7 +189,7 @@ function WordsDrillWrapper() {
                 />
             </div>
             {chosenDefinition &&
-                <div style={{textAlign: 'left', marginTop: '20px'}}>
+                <div style={{textAlign: 'left', marginTop: '30px'}}>
                     {showWordForDefinition()}
                     <br/>
 
@@ -198,7 +198,7 @@ function WordsDrillWrapper() {
                 </div>
             }
             {definitions.length === 1 &&
-                <div style={{textAlign: 'left', marginTop: '20px'}}>
+                <div style={{textAlign: 'left', marginTop: '30px'}}>
                     {showWordForDefinition()}
                     <br/>
 

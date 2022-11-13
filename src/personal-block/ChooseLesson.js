@@ -12,7 +12,7 @@ const parent = {
 const blockWrapper = {
     width: '300px',
     height: '500px',
-    top: '20%',
+    top: 0,
     right: 0,
     bottom: 0,
     left: 0,
@@ -21,12 +21,12 @@ const blockWrapper = {
 
 const block = {
     width: '300px',
-    height: '150px',
-    top: '20%',
+    height: '120px',
+    top: 0,
     right: 0,
     bottom: 0,
     left: 0,
-    margin: 'auto',
+    margin: '100px auto',
     textAlign: 'center',
 }
 
