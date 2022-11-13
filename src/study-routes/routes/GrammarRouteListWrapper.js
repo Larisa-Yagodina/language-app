@@ -1,19 +1,7 @@
 import * as React from 'react';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Checkbox from '@mui/material/Checkbox';
 import {useEffect, useState} from "react";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
-import {Link} from "react-router-dom";
-import {FormControlLabel, FormGroup, Switch} from "@mui/material";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import IconButton from "@mui/material/IconButton";
-import RouteList from "./util/RouteList";
-
-
+import RouteList from "./RouteList";
 
 export default function GrammarRouteListWrapper() {
 
@@ -60,9 +48,9 @@ export default function GrammarRouteListWrapper() {
         setUserLearningRoute(newUserRoutes.filter(el => el.userId === userId))
     }
 
-
     return (
         <RouteList
+            mainUrl={'/grammar_route'}
             title={"Grammar route"}
             openSubThemes={openSubThemes}
             openAll={openAll}

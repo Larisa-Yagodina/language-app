@@ -12,7 +12,7 @@ const SentenceDrill = ({randomIndex, openTranslation, sentences}) => {
                     <CircularProgress />
                 </Box>
             }
-            {!openTranslation ? <br/> : <h3>{(sentences[randomIndex] !== undefined) ? sentences[randomIndex].english : ""}</h3>}
+            {!openTranslation ? <br/> : <h3 style={{whiteSpace: 'pre-line'}}>{(sentences[randomIndex] !== undefined) ? sentences[randomIndex].english : ""}</h3>}
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Markdown from "markdown-to-jsx";
 
 
-function GrammarTheory (props) {
+function TheoryShowingMarkdown (props) {
 
 
     let fileName = props.theory[0].theory;
@@ -10,7 +10,7 @@ function GrammarTheory (props) {
 
 
     useEffect(( ) => {
-        import(`/src/markdown/grammar/${fileName}`)
+        import(`/src/markdown/${props.option}/${fileName}`)
             .then(res => {
                 fetch(res.default)
                     .then(res => res.text())
@@ -28,4 +28,4 @@ function GrammarTheory (props) {
     );
 }
 
-export default GrammarTheory;
+export default TheoryShowingMarkdown;

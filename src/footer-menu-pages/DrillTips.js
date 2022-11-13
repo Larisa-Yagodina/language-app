@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default  function Words () {
+const DrillTips = () => {
     return (
         <div>
-            Words
+            Frill tips
         </div>
     );
 };
 
+export default DrillTips;

@@ -7,10 +7,12 @@ import MenuItem from "@mui/material/MenuItem";
 import {Link} from "react-router-dom";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import GrammarTheory from "./GrammarTheory";
-import GrammarRouteDrillWrapper from "../grammar-route-drill/GrammarRouteDrillWrapper";
+import TheoryShowingMarkdown from "./TheoryShowingMarkdown";
+import DrillWrapper from "../drill/DrillWrapper";
 import TabPanel from "../../utils/TabPanel";
 import {initialGrammar} from "../../../serverData/InitialGrammar";
+import {initialThemes} from "../../../serverData/InitialThemes";
+import {useState} from "react";
 
 
 TabPanel.propTypes = {
@@ -26,12 +28,15 @@ function a11yProps(index) {
     };
 }
 
-export default function GrammarTheoryWrapper(props) {
+export default function TheoryWrapper(props) {
+
     const [value, setValue] = React.useState(1);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    const [data, setData] = useState(props.option === 'grammar' ? initialGrammar : initialThemes)
 
     return (
         <div>
@@ -41,7 +46,7 @@ export default function GrammarTheoryWrapper(props) {
 
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                     <MenuItem>
-                        <Link to={'/grammar_route'}>
+                        <Link to={ props.option === 'grammar' ? '/grammar_route' : '/themes_route'}>
                             <ListItemIcon>
                                 <ArrowBackIosIcon fontSize="small"/>
                             </ListItemIcon>
@@ -53,10 +58,10 @@ export default function GrammarTheoryWrapper(props) {
             </Box>
 
             <TabPanel value={value} index={1}>
-                <GrammarTheory theory={initialGrammar.filter(el => el.id === props.partOfGrammarId)}/>
+                <TheoryShowingMarkdown option={props.option} theory={data.filter(el => el.id === props.partOfGrammarId)}/>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <GrammarRouteDrillWrapper partOfGrammarId={props.partOfGrammarId}/>
+                <DrillWrapper option={props.option} partOfGrammarId={props.partOfGrammarId}/>
             </TabPanel>
         </Box>
         </div>

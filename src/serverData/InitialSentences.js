@@ -1621,12 +1621,47 @@ export const initialSentences = [
         definition: ['',],
         expressions: ['', ]
     },
+
+
+    {
+        id: uuidv4(),
+        english: 'I have an allergy to onions.',
+        russian: 'У меня аллергия на лук.',
+        grammar: [''],
+        themes: ['lkjf02398sdlkj2'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'I have a gluten intolerance.',
+        russian: 'У меня непереносимость глютена.',
+        grammar: [''],
+        themes: ['lkjf02398sdlkj2'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
+    {
+        id: uuidv4(),
+        english: 'Do you offer (have) gluten-free pizza?',
+        russian: 'У вас есть пицца без глютена?',
+        grammar: [''],
+        themes: ['lkjf02398sdlkj2'],
+        partOfSpeech: [''],
+        words: ['', ],
+        definition: ['',],
+        expressions: ['', ]
+    },
     {
         id: uuidv4(),
         english: '',
         russian: '',
         grammar: [''],
-        themes: ['dkfj3iusd9f3j'],
+        themes: [''],
         partOfSpeech: [''],
         words: ['', ],
         definition: ['',],

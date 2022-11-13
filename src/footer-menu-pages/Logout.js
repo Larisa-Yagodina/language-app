@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default  function SetExpressions () {
+const Logout = () => {
     return (
         <div>
-            Set Expressions
+            Logout
         </div>
     );
 };
 
+export default Logout;

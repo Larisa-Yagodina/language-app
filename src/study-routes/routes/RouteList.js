@@ -21,7 +21,7 @@ const styleRight = {
     marginRight: 0,
 }
 
-export default function RouteList ({openSubThemes, openAll, handleChange, route, handleToggle, title}) {
+export default function RouteList ({openSubThemes, openAll, handleChange, route, handleToggle, title, mainUrl}) {
 
 
     return (
@@ -48,8 +48,12 @@ export default function RouteList ({openSubThemes, openAll, handleChange, route,
                     </FormGroup>
                 </div>
             </div>
+
             <List dense sx={{width: '100%', maxWidth: 'auto', bgcolor: 'background.paper'}}>
                 <ol>
+
+                    {/*    ТЕМЫ     */}
+
                     {route.map((value) => {
                         const labelId = value.id;
                         return (
@@ -69,7 +73,7 @@ export default function RouteList ({openSubThemes, openAll, handleChange, route,
                                         disablePadding
                                     >
                                         <ListItemButton>
-                                            <Link to={value.link} style={{textDecoration: 'none', color: 'black'}}>
+                                            <Link to={mainUrl + value.link} style={{textDecoration: 'none', color: 'black'}}>
                                                 <ListItemText id={labelId} primary={value.name}/>
                                             </Link>
                                             {' '}
@@ -89,32 +93,21 @@ export default function RouteList ({openSubThemes, openAll, handleChange, route,
 
 
                                 </li>
+
+                                {/*    ВЛОЖЕННЫЕ ПОДТЕМЫ     */}
+
                                 {value.isOpenSubThemes &&
                                     <ul>
                                         {value.subThemes.map((subTheme) => {
                                             const labelId = subTheme.id;
                                             return (
                                                 <li>
-                                                    {/*<ListItem*/}
-                                                    {/*    key={subTheme.id}*/}
-                                                    {/*    secondaryAction={*/}
-                                                    {/*        <Checkbox*/}
-                                                    {/*            edge="end"*/}
-                                                    {/*            color="success"*/}
-                                                    {/*            onChange={handleToggle(subTheme.id)}*/}
-                                                    {/*            checked={subTheme.isStudied}*/}
-                                                    {/*            inputProps={{'aria-labelledby': labelId}}*/}
-                                                    {/*        />*/}
-                                                    {/*    }*/}
-                                                    {/*    disablePadding*/}
-                                                    {/*>*/}
                                                     <ListItemButton>
-                                                        <Link to={subTheme.link}
+                                                        <Link to={mainUrl + subTheme.link}
                                                               style={{textDecoration: 'none', color: 'black'}}>
                                                             <ListItemText id={labelId} primary={subTheme.name}/>
                                                         </Link>
                                                     </ListItemButton>
-                                                    {/*</ListItem>*/}
                                                 </li>
                                             );
                                         })}

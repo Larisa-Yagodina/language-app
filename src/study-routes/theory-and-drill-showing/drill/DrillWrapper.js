@@ -3,7 +3,7 @@ import ChoseSpeed from "../../../searchAndFilter/ChoseSpeed";
 import {initialSentences} from "../../../serverData/InitialSentences";
 import SentenceDrill from "../../../no-theory-drills/sentence-drill/SentenceDrill";
 
-function GrammarRouteDrillWrapper({partOfGrammarId}) {
+function DrillWrapper({partOfGrammarId, option}) {
 
     const [chosenSpeed, setChosenSpeed] = useState(5000);
     const [speedRange, setSpeedRange] = useState([
@@ -15,7 +15,10 @@ function GrammarRouteDrillWrapper({partOfGrammarId}) {
         ]
     );
 
-    const [sentences, setSentences] = useState(initialSentences.filter(el => el.grammar.includes(partOfGrammarId)));
+    const [sentences, setSentences] = useState(initialSentences.filter(el => option === 'grammar' ?
+        el.grammar.includes(partOfGrammarId) :
+        el.themes.includes(partOfGrammarId)
+    ));
     const [randomIndex, setRandomIndex] = useState(null);
 
     const [openTranslation, setOpenTranslation] = useState(false);
@@ -90,5 +93,5 @@ function GrammarRouteDrillWrapper({partOfGrammarId}) {
     );
 }
 
-export default GrammarRouteDrillWrapper;
+export default DrillWrapper;
 

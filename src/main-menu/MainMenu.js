@@ -98,7 +98,7 @@ export default function MainMenu() {
                         Settings
                     </MenuItem>
                     <Divider/>
-                    <Link to="/speak_fluent-drill" style={{textDecoration: 'none', color: 'black'}}>
+                    <Link to="/my-lessons" style={{textDecoration: 'none', color: 'black'}}>
                         <MenuItem>
                             <ListItemIcon>
                                 <AutoGraphIcon fontSize="small"/>
@@ -106,12 +106,12 @@ export default function MainMenu() {
                             My lessons
                         </MenuItem>
                     </Link>
-                    <Link to="/my-vocabulary" style={{textDecoration: 'none', color: 'black'}}>
+                    <Link to="/phrases-to-remember" style={{textDecoration: 'none', color: 'black'}}>
                         <MenuItem>
                             <ListItemIcon>
                                 <FaceRetouchingNaturalIcon fontSize="small"/>
                             </ListItemIcon>
-                            My vocabulary
+                            Phrases to remember
                         </MenuItem>
                     </Link>
                     <Divider/>
@@ -140,24 +140,33 @@ export default function MainMenu() {
                         </MenuItem>
                     </Link>
                     <Divider/>
+
+                    <Link to="/drill-tips" style={{textDecoration: 'none', color: 'black'}}>
                     <MenuItem>
                         <ListItemIcon>
                             <InfoOutlinedIcon fontSize="small"/>
                         </ListItemIcon>
                         Drill tips
                     </MenuItem>
+                    </Link>
+
+                    <Link to="/help" style={{textDecoration: 'none', color: 'black'}}>
                     <MenuItem>
                         <ListItemIcon>
                             <ContactSupportOutlinedIcon fontSize="small"/>
                         </ListItemIcon>
                         Help
                     </MenuItem>
+                    </Link>
+
+                    <Link to="/logout" style={{textDecoration: 'none', color: 'black'}}>
                     <MenuItem>
                         <ListItemIcon>
                             <Logout fontSize="small"/>
                         </ListItemIcon>
                         Logout
                     </MenuItem>
+                    </Link>
                 </Menu>
             </nav>
             <AllRoutes/>

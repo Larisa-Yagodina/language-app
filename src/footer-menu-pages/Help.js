@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default  function Drill () {
+const Help = () => {
     return (
         <div>
-            Drill
+            Help
         </div>
     );
 };
 
+export default Help;

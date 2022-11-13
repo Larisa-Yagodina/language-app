@@ -8,7 +8,6 @@ import {initialDefinitions} from "../../serverData/Words/InitialDefinitions";
 import ChooseNextOption from "../../searchAndFilter/ChooseNextOption";
 import {initialWords} from "../../serverData/Words/InitialWords";
 import SentenceDrill from "../sentence-drill/SentenceDrill";
-import {logDOM} from "@testing-library/react";
 
 function WordsDrillWrapper() {
 
@@ -80,11 +79,11 @@ function WordsDrillWrapper() {
         // таймер пересоздаётся каждый раз, когда обновляется chosenSpeed
         const id = setInterval(() => {
                 if (sentences.length > 5) { // если предложений много, показываем рандомно
-                setRandomIndex(getRandomIndex());
-                setOpenTranslation(false)
-                setTimeout(() => {
-                    setOpenTranslation(true)
-                }, chosenSpeed / 2)
+                    setRandomIndex(getRandomIndex());
+                    setOpenTranslation(false)
+                    setTimeout(() => {
+                        setOpenTranslation(true)
+                    }, chosenSpeed / 2)
                 } else {  // если предложений мало, показываем по порядку
                     setRandomIndex(getNextIndex());
                     setOpenTranslation(false)
@@ -99,6 +98,7 @@ function WordsDrillWrapper() {
         };
     }, [chosenSpeed]);
 
+
     // выбор части речи
     const [partsOfSpeech, setPartsOfSpeech] = useState(initialPartOfSpeech);
     const [chosenPartOfSpeech, setChosenPartOfSpeech] = useState('ldkjf203948')
@@ -108,7 +108,7 @@ function WordsDrillWrapper() {
     const [chosenWord, setChosenWord] = useState('sdlk23234klsdfk')
 
     // выбор дефиниции
-    const [definitions, setDefinitions] = useState(initialDefinitions);
+    const [definitions, setDefinitions] = useState('');
     const [chosenDefinition, setChosenDefinition] = useState('')
 
     // выбрана часть речи — фильтруем слова и предложения в зависимости от части речи
@@ -140,19 +140,23 @@ function WordsDrillWrapper() {
     }, [chosenWord])
 
     // когда выбрана дефиниция - фильтруем предложения для дефиниции
-     useEffect(() => {
-         if (chosenDefinition !== '') {
-             setSentences(initialSentences.filter(el => el.definition.includes(chosenDefinition)))
-         }
-         setChosenSpeed(chosenSpeed + 1)
-         setWaitingTimer(waitingTimer + 1)
-     }, [chosenDefinition])
+    useEffect(() => {
+        if (chosenDefinition !== '') {
+            setSentences(initialSentences.filter(el => el.definition.includes(chosenDefinition)))
+        }
+        setChosenSpeed(chosenSpeed + 1)
+        setWaitingTimer(waitingTimer + 1)
+    }, [chosenDefinition])
 
-   const showWordForDefinition = () => {
+    useEffect(() => {
+        setDefinitions('')
+    }, [chosenPartOfSpeech])
+
+    const showWordForDefinition = () => {
         return (
             <i>{words.filter(el => el.id === chosenWord)[0] ? words.filter(el => el.id === chosenWord)[0].title : "Определение"}:</i>
         )
-   }
+    }
 
     return (
         <div className="App">
@@ -160,33 +164,35 @@ function WordsDrillWrapper() {
             <h3> Learn new words </h3>
             <br/>
             <div style={{background: 'white', height: '130px'}}>
-            <ChoseSpeed speedRange={speedRange} setChosenSpeed={setChosenSpeed}/>
-            {/*<CheckBox label={"in progress words"} />*/}
-            <ChooseOption options={partsOfSpeech} setOption={setChosenPartOfSpeech}/>
-            {chosenPartOfSpeech !== "ldkjf203948" && <ChooseNextOption
-                list={words}
-                onSelect={setChosenWord}
-                lable={"Words"}
-            />}
-            <br/>
-            {chosenPartOfSpeech !== "ldkjf203948" && chosenWord !== 'sdlk23234klsdfk' && definitions.length > 1 && <ChooseNextOption
-                list={definitions}
-                onSelect={setChosenDefinition}
-                lable={"Definitions"}
-            />}
+                <ChoseSpeed speedRange={speedRange} setChosenSpeed={setChosenSpeed}/>
+                {/*<CheckBox label={"in progress words"} />*/}
+                <ChooseOption options={partsOfSpeech} setOption={setChosenPartOfSpeech}/>
+                {chosenPartOfSpeech !== "ldkjf203948" && <ChooseNextOption
+                    list={words}
+                    onSelect={setChosenWord}
+                    lable={"Words"}
+                />}
+                <br/>
+                {chosenPartOfSpeech !== "ldkjf203948" && chosenWord !== 'sdlk23234klsdfk' && definitions.length > 1 &&
+                    <ChooseNextOption
+                        list={definitions}
+                        onSelect={setChosenDefinition}
+                        lable={"Definitions"}
+                    />}
             </div>
 
             <div style={{background: 'white', height: '150px'}}>
-            <SentenceDrill
-                randomIndex={randomIndex}
-                openTranslation={openTranslation}
-                sentences={sentences}
-            />
+                <SentenceDrill
+                    randomIndex={randomIndex}
+                    openTranslation={openTranslation}
+                    sentences={sentences}
+                />
             </div>
             {chosenDefinition &&
                 <div style={{textAlign: 'left', marginTop: '20px'}}>
                     {showWordForDefinition()}
                     <br/>
+
                     <br/>
                     {definitions.filter(el => el.id === chosenDefinition)[0].definition}
                 </div>
@@ -195,6 +201,7 @@ function WordsDrillWrapper() {
                 <div style={{textAlign: 'left', marginTop: '20px'}}>
                     {showWordForDefinition()}
                     <br/>
+
                     <br/>
                     {definitions[0].definition}
                 </div>
