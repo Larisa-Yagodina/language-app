@@ -3,14 +3,13 @@ export const initialTrainingRoute = [
         id: 'lksdjfl34134',
         userId: 'dlkfjl3487f9s',
         userRoute: [
-
             {
                 id: 'fj234kljfd9s7f',
                 name: 'Что такое грамматика',
                 link: '/what-is-theory-and-drill-showing',
                 partOfGrammarId: 'fsldkjf323235',
                 isOpen: true,
-                isStudied: false,
+                isStudied: true,
                 subThemes: [],
                 isOpenSubThemes: true,
             },
@@ -29,7 +28,6 @@ export const initialTrainingRoute = [
                 name: 'Что такое «время»',
                 link: '/what-is-tense',
                 partOfGrammarId: 'fjkl3k480s9fsdf',
-                theory: '<p>Время (tense) — это ...</p>  <p>Например, ...</p>',
                 isOpen: true,
                 isStudied: true,
                 subThemes: [],
@@ -41,7 +39,7 @@ export const initialTrainingRoute = [
                 link: '/present-simple',
                 partOfGrammarId: "sdlkjf3487",
                 isOpen: true,
-                isStudied: false,
+                isStudied: true,
                 isOpenSubThemes: true,
                 subThemes: [
                     {
@@ -50,7 +48,7 @@ export const initialTrainingRoute = [
                         link: '/positive-in-present-simple',
                         partOfGrammarId: "sdlkfjl3427fdjf",
                         isOpen: true,
-                        isStudied: false,
+                        isStudied: true,
                     },
                     {
                         id: 'sdfkjl3029384',
@@ -76,7 +74,7 @@ export const initialTrainingRoute = [
                 link: '/present-perfect',
                 partOfGrammarId: "slkj234234",
                 isOpen: true,
-                isStudied: false,
+                isStudied: true,
                 isOpenSubThemes: true,
                 subThemes: [
                     {

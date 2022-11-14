@@ -77,6 +77,28 @@ const AllRoutes = () => {
                 </>
             )}
 
+            {userLearningRoute.userRoute.map(theme =>
+                <>
+                    <Route key={theme.id + 'my-lessons'} path={`/my-lessons${theme.link}`}
+                           element={<TheoryWrapper
+                               option={'lesson'}
+                               key={theme.id + 'lessons'}
+                               partOfGrammarId={theme.partOfGrammarId}
+                           />}/>
+
+                    {theme.subThemes.length > 0 ?
+                        theme.subThemes.map(subTheme =>
+                            <Route key={subTheme.id + 'my-lessons'} path={`/my-lessons${subTheme.link}`}
+                                   element={<TheoryWrapper
+                                       option={'lessons'}
+                                       key={subTheme.id}
+                                       partOfGrammarId={subTheme.partOfGrammarId}
+                                   />}/>)
+                        : null
+                    }
+                </>
+            )}
+
             <Route path="/"/>
             {/*<Route path="*" element={<App />} />*/}
 
