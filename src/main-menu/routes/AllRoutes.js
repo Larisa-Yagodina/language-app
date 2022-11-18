@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 import {Route, Routes} from "react-router-dom";
 import WordsDrillWrapper from "../../no-theory-drills/words-drill/WordsDrillWrapper";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
-import GrammarRouteListWrapper from "../../study-routes/routes/GrammarRouteListWrapper";
 import TheoryWrapper from "../../study-routes/theory-and-drill-showing/theory/TheoryWrapper";
-import ThemesRouteListWrapper from "../../study-routes/routes/ThemesRouteListWrapper";
 import ChooseLesson from "../../personal-block/ChooseLesson";
 import AddNewPhraseToRemember from "../../personal-block/AddNewPraseToRemember";
 import DrillTips from "../../footer-menu-pages/DrillTips";
 import Help from "../../footer-menu-pages/Help";
 import Logout from "../../footer-menu-pages/Logout";
+import ThemesWrapper from "../../study-routes/routes/ThemesWrapper";
+import GrammarWrapper from "../../study-routes/routes/GrammarWrapper";
 
 
 const AllRoutes = () => {
@@ -23,8 +23,8 @@ const AllRoutes = () => {
             <Route path="/phrases-to-remember" element={<AddNewPhraseToRemember />}/>
 
             <Route path="/new_words_drill" element={<WordsDrillWrapper/>}/>
-            <Route path="/grammar_route" element={<GrammarRouteListWrapper/>}/>
-            <Route path="/themes_route" element={<ThemesRouteListWrapper/>}/>
+            <Route path="/grammar_route" element={<GrammarWrapper />}/>
+            <Route path="/themes_route" element={<ThemesWrapper />}/>
 
             <Route path="/drill-tips" element={<DrillTips />}/>
             <Route path="/help" element={<Help/>}/>
@@ -32,13 +32,14 @@ const AllRoutes = () => {
             <Route path="*" element={<ChooseLesson />}/>
 
             {/* Грамматика */}
-            {userLearningRoute.userRoute.map(theme =>
+            {userLearningRoute.userRoute.filter(el => el.isGrammar).map(theme =>
                 <>
                     <Route key={theme.id} path={`/grammar_route${theme.link}`}
                            element={<TheoryWrapper
                                option={'grammar'}
                                key={theme.id}
                                partOfGrammarId={theme.partOfGrammarId}
+                               urlLink={`/grammar_route${theme.link}`}
                            />}/>
 
                     {theme.subThemes.length > 0 ?
@@ -48,6 +49,7 @@ const AllRoutes = () => {
                                        option={'grammar'}
                                        key={subTheme.id}
                                        partOfGrammarId={subTheme.partOfGrammarId}
+                                       urlLink={`/grammar_route${subTheme.link}`}
                                    />}/>)
                         : null
                     }
@@ -55,13 +57,14 @@ const AllRoutes = () => {
             )}
 
             {/* Темы */}
-            {userLearningRoute.userThemesRoute.map(theme =>
+            {userLearningRoute.userRoute.filter(el => !el.isGrammar).map(theme =>
                 <>
                     <Route key={theme.id} path={`/themes_route${theme.link}`}
                            element={<TheoryWrapper
                                option={'themes'}
                                key={theme.id}
                                partOfGrammarId={theme.partOfGrammarId}
+                               urlLink={`/themes_route${theme.link}`}
                            />}/>
 
                     {theme.subThemes.length > 0 ?
@@ -71,17 +74,19 @@ const AllRoutes = () => {
                                        option={'themes'}
                                        key={subTheme.id}
                                        partOfGrammarId={subTheme.partOfGrammarId}
+                                       urlLink={`/themes_route${subTheme.link}`}
                                    />}/>)
                         : null
                     }
                 </>
             )}
 
+            {/* Уроки */}
             {userLearningRoute.userRoute.map(theme =>
                 <>
                     <Route key={theme.id + 'my-lessons'} path={`/my-lessons${theme.link}`}
                            element={<TheoryWrapper
-                               option={'lesson'}
+                               option={'lesson' + '-' + (theme.isGrammar ? 'grammar' : 'themes')}
                                key={theme.id + 'lessons'}
                                partOfGrammarId={theme.partOfGrammarId}
                            />}/>
@@ -90,8 +95,8 @@ const AllRoutes = () => {
                         theme.subThemes.map(subTheme =>
                             <Route key={subTheme.id + 'my-lessons'} path={`/my-lessons${subTheme.link}`}
                                    element={<TheoryWrapper
-                                       option={'lessons'}
-                                       key={subTheme.id}
+                                       option={'lesson' + '-' + (theme.isGrammar ? 'grammar' : 'themes')}
+                                       key={subTheme.id + 'lessons'}
                                        partOfGrammarId={subTheme.partOfGrammarId}
                                    />}/>)
                         : null

@@ -1,10 +1,10 @@
-
 export const initialGrammar = [
     {
         id: "fjlk234jdflskdjf",
         title: 'all theory-and-drill-showing',
         russianTitle: 'Вся грамматика',
         description: '',
+        test: [],
     },
     {
         id: "fsldkjf323235",
@@ -12,138 +12,170 @@ export const initialGrammar = [
         russianTitle: 'Что такое грамматика',
         theory: 'what_is_grammar.md',
         description: '',
+        test: [{
+            question: "Что такое грамматика?",
+            answers: ['Это 1', 'Это 2', 'Это 3'],
+            rightAnswer: 'Это 1'
+        }, {
+            question: "Зачем нужна грамматика?",
+            answers: ['Для 1', 'Для 2', 'Для 3'],
+            rightAnswer: 'Для 1'
+        }, {
+            question: "Для чего помогает грамматика?",
+            answers: ['Для 5', 'Для 6', 'Для 7'],
+            rightAnswer: 'Для 5'
+        }]
     },
     {
         id: "lkdj34234kjkj",
         title: 'sentence structure ',
         russianTitle: 'Как строить предложения',
         theory: 'how_to_create_sentences.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "sdlfkj23498s7f",
         title: 'conditionals',
         russianTitle: 'Условные предложения',
         theory: 'conditionals.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "kjsdf2834792837",
         title: 'conditional 1',
         russianTitle: 'Условные предложения 1',
         theory: 'first_conditionals.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "lsdjf298374",
         title: 'conditional 2',
         russianTitle: 'Условные предложения 2',
         theory: 'second-conditional.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "023984lskdjf",
         title: 'conditional 3',
         russianTitle: 'Условные предложения 3',
         theory: 'third-conditional.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "sldkfj238975",
         title: 'modal verbs',
         russianTitle: 'Модальные глаголы',
         theory: 'modal_verbs.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "fjkl3k480s9fsdf",
         title: 'What is Tense',
         russianTitle: 'Что такое «время»',
         theory: 'what_is_tense.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "sdlkjf3487",
         title: 'present simple',
         russianTitle: 'Настоящее простое время',
         theory: 'present_simple.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "sdlkfjl3427fdjf",
         title: 'present simple (positive statement)',
         russianTitle: 'Настоящее простое (утверждения)',
         theory: 'present_simple_positive.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "lksj347924sdfh",
         title: 'present simple (negative statement)',
         russianTitle: 'Настоящее простое (отрицания)',
         theory: 'present_simple_negative.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "dlfkj234jlkj34",
         title: 'present simple (question)',
         russianTitle: 'Настоящее простое (вопросы)',
         theory: 'present_simple_question.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "flksj38472983",
         title: 'future simple',
         russianTitle: 'Будущее простое время',
         theory: 'future_simple.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "fklj342342kj",
         title: 'past simple',
         russianTitle: 'Прошедшее простое время',
         theory: 'past_simple.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "flkj2342jh",
         title: 'present continuous',
         russianTitle: 'Настоящее продолженное',
         theory: 'present_continuous.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "slkj234234",
         title: 'present perfect',
         russianTitle: 'Настоящее совершенное',
         theory: 'present_perfect.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "sldkfj3247987",
         title: 'present perfect (positive statement)',
         russianTitle: 'Настоящее совершенное (утвердительное)',
         theory: 'present_perfect_positive.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "dkfwher9237fsdf",
         title: 'present perfect (negative statement)',
         russianTitle: 'Настоящее совершенное (отрицательное)',
         theory: 'present_perfect_negative.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "djwlkej2387fsj3",
         title: 'present perfect (questions)',
         russianTitle: 'Настоящее совершенное (вопросы)',
         theory: 'present_perfect_questions.md',
-        description: ''
+        description: '',
+        test: [],
     },
     {
         id: "flkj3423423",
         title: 'imperative mood',
         russianTitle: 'Повелительное наклонение',
         theory: "imperative_mood.md",
-        description: ''
+        description: '',
+        test: [],
     },
 ]

@@ -23,6 +23,7 @@ const styleRight = {
 
 export default function RouteList ({openSubThemes, openAll, handleChange, route, handleToggle, title, mainUrl}) {
 
+    console.log(route)
 
     return (
         <div>
@@ -90,8 +91,6 @@ export default function RouteList ({openSubThemes, openAll, handleChange, route,
 
                                         </ListItemButton>
                                     </ListItem>
-
-
                                 </li>
 
                                 {/*    ВЛОЖЕННЫЕ ПОДТЕМЫ     */}
@@ -102,12 +101,26 @@ export default function RouteList ({openSubThemes, openAll, handleChange, route,
                                             const labelId = subTheme.id;
                                             return (
                                                 <li>
+                                                    <ListItem
+                                                        key={value.id}
+                                                        secondaryAction={
+                                                            <Checkbox
+                                                                color="success"
+                                                                edge="end"
+                                                                onChange={handleToggle(subTheme.id)}
+                                                                checked={subTheme.isStudied}
+                                                                inputProps={{'aria-labelledby': labelId}}
+                                                            />
+                                                        }
+                                                        disablePadding
+                                                    >
                                                     <ListItemButton>
                                                         <Link to={mainUrl + subTheme.link}
                                                               style={{textDecoration: 'none', color: 'black'}}>
                                                             <ListItemText id={labelId} primary={subTheme.name}/>
                                                         </Link>
                                                     </ListItemButton>
+                                                    </ListItem>
                                                 </li>
                                             );
                                         })}

@@ -12,6 +12,7 @@ export const initialTrainingRoute = [
                 isStudied: true,
                 subThemes: [],
                 isOpenSubThemes: true,
+                isGrammar: true,
             },
             {
                 id: '23480fjslkdjf',
@@ -22,6 +23,7 @@ export const initialTrainingRoute = [
                 isStudied: true,
                 subThemes: [],
                 isOpenSubThemes: true,
+                isGrammar: true,
             },
             {
                 id: 'dfj237s0f8hj4j2l',
@@ -32,6 +34,7 @@ export const initialTrainingRoute = [
                 isStudied: true,
                 subThemes: [],
                 isOpenSubThemes: true,
+                isGrammar: true,
             },
             {
                 id: 'sdflkj234867s9d8',
@@ -41,6 +44,7 @@ export const initialTrainingRoute = [
                 isOpen: true,
                 isStudied: true,
                 isOpenSubThemes: true,
+                isGrammar: true,
                 subThemes: [
                     {
                         id: 'aslkj340sd9f8',
@@ -56,7 +60,7 @@ export const initialTrainingRoute = [
                         link: '/negative-in-present-simple',
                         partOfGrammarId: "lksj347924sdfh",
                         isOpen: true,
-                        isStudied: false,
+                        isStudied: true,
                     },
                     {
                         id: 'ddlkfj234987324',
@@ -64,90 +68,19 @@ export const initialTrainingRoute = [
                         link: '/question-in-present-simple',
                         partOfGrammarId: "dlfkj234jlkj34",
                         isOpen: true,
-                        isStudied: false,
+                        isStudied: true,
                     },
                 ]
             },
-            {
-                id: 'sdfj2l347sdf723j',
-                name: 'Present perfect',
-                link: '/present-perfect',
-                partOfGrammarId: "slkj234234",
-                isOpen: true,
-                isStudied: true,
-                isOpenSubThemes: true,
-                subThemes: [
-                    {
-                        id: 'djfl2308fsdfj',
-                        name: 'Present perfect (positive statement)',
-                        link: '/positive-in-present-perfect',
-                        partOfGrammarId: "sldkfj3247987",
-                        isOpen: true,
-                        isStudied: false,
-                    },
-                    {
-                        id: 'fdslkj2l3987fsdj2',
-                        name: 'Present perfect (negative statement)',
-                        link: '/negative-in-present-perfect',
-                        partOfGrammarId: "dkfwher9237fsdf",
-                        isOpen: true,
-                        isStudied: false,
-                    },
-                    {
-                        id: 'sdfj2l3k4987sfj32',
-                        name: 'Present perfect (question)',
-                        link: '/question-in-present-perfect',
-                        partOfGrammarId: "djwlkej2387fsj3",
-                        isOpen: true,
-                        isStudied: false,
-                    },
-                ]
-            },
-            {
-                id: 'dlkfj348723984',
-                name: 'Conditionals',
-                link: '/conditionals',
-                partOfGrammarId: "sdlfkj23498s7f",
-                isOpen: true,
-                isStudied: false,
-                isOpenSubThemes: true,
-                subThemes: [
-                    {
-                        id: 'kjsdf2834792837',
-                        name: 'conditional 1',
-                        link: '/first-conditional',
-                        partOfGrammarId: "kjsdf2834792837",
-                        isOpen: true,
-                        isStudied: false,
-                    },
-                    {
-                        id: 'lsdjf298374',
-                        name: 'conditional 2',
-                        link: '/second-conditional',
-                        partOfGrammarId: "lsdjf298374",
-                        isOpen: true,
-                        isStudied: false,
-                    },
-                    {
-                        id: 'dfgj2340760235',
-                        name: 'conditional 3',
-                        link: '/third-conditional',
-                        partOfGrammarId: "023984lskdjf",
-                        isOpen: true,
-                        isStudied: false,
-                    },
-                ]
-            },
-        ],
-        userThemesRoute: [
             {
                 id: 'dfkjl23r7sdf823j',
-                name: 'For all occasions',
+                name: 'Phrases for all occasions',
                 link: '/for-all-occasions',
                 partOfGrammarId: "fkjrf80s9df83",
                 isOpen: true,
-                isStudied: false,
+                isStudied: true,
                 isOpenSubThemes: true,
+                isGrammar: false,
                 subThemes: [
                     {
                         id: 'sldkjf2398f0s9dfk',
@@ -176,6 +109,42 @@ export const initialTrainingRoute = [
                 ]
             },
             {
+                id: 'sdfj2l347sdf723j',
+                name: 'Present perfect',
+                link: '/present-perfect',
+                partOfGrammarId: "slkj234234",
+                isOpen: true,
+                isStudied: false,
+                isOpenSubThemes: true,
+                isGrammar: true,
+                subThemes: [
+                    {
+                        id: 'djfl2308fsdfj',
+                        name: 'Present perfect (positive statement)',
+                        link: '/positive-in-present-perfect',
+                        partOfGrammarId: "sldkfj3247987",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'fdslkj2l3987fsdj2',
+                        name: 'Present perfect (negative statement)',
+                        link: '/negative-in-present-perfect',
+                        partOfGrammarId: "dkfwher9237fsdf",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'sdfj2l3k4987sfj32',
+                        name: 'Present perfect (question)',
+                        link: '/question-in-present-perfect',
+                        partOfGrammarId: "djwlkej2387fsj3",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                ]
+            },
+            {
                 id: 'sdlkj23987sd',
                 name: 'Restaurants',
                 link: '/restaurants',
@@ -183,6 +152,7 @@ export const initialTrainingRoute = [
                 isOpen: true,
                 isStudied: false,
                 isOpenSubThemes: true,
+                isGrammar: false,
                 subThemes: [
                     {
                         id: 'sdlkfj2387sd',
@@ -211,6 +181,42 @@ export const initialTrainingRoute = [
                 ]
             },
             {
+                id: 'dlkfj348723984',
+                name: 'Conditionals',
+                link: '/conditionals',
+                partOfGrammarId: "sdlfkj23498s7f",
+                isOpen: true,
+                isStudied: false,
+                isOpenSubThemes: true,
+                isGrammar: true,
+                subThemes: [
+                    {
+                        id: 'kjsdf2834792837',
+                        name: 'conditional 1',
+                        link: '/first-conditional',
+                        partOfGrammarId: "kjsdf2834792837",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'lsdjf298374',
+                        name: 'conditional 2',
+                        link: '/second-conditional',
+                        partOfGrammarId: "lsdjf298374",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                    {
+                        id: 'dfgj2340760235',
+                        name: 'conditional 3',
+                        link: '/third-conditional',
+                        partOfGrammarId: "023984lskdjf",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                ]
+            },
+            {
                 id: 'sdlkj23098sd',
                 name: 'Renting a car',
                 link: '/renting-a-car',
@@ -218,6 +224,7 @@ export const initialTrainingRoute = [
                 isOpen: true,
                 isStudied: false,
                 isOpenSubThemes: true,
+                isGrammar: false,
                 subThemes: [
                     {
                         id: 'sdlkjf23921',
@@ -237,7 +244,7 @@ export const initialTrainingRoute = [
                     },
                 ]
             },
-        ]
+        ],
     },
     {
         id: 'sdlkj348203948667',

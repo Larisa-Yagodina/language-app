@@ -13,7 +13,7 @@ import TabPanel from "../../utils/TabPanel";
 import {initialGrammar} from "../../../serverData/InitialGrammar";
 import {initialThemes} from "../../../serverData/InitialThemes";
 import {useState} from "react";
-
+import Test from "../drill/Test";
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -32,17 +32,19 @@ export default function TheoryWrapper(props) {
 
     const userId = 'dlkfjl3487f9s';
 
-    const [value, setValue] = React.useState(props.option === 'lesson' ? 0 : 1);
+    const [value, setValue] = React.useState(props.option === 'lesson-grammar' || props.option === 'lesson-themes' ? 0 : 1);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
-    const [data, setData] = useState(props.option === 'grammar' ?
-        initialGrammar : props.option === 'themes' ?
-            initialThemes : initialGrammar)
+    const [data, setData] = useState(props.option === 'grammar' || props.option === 'lesson-grammar' ?
+        initialGrammar : initialThemes )
 
-    console.log(props.option)
+    const isLesson = props.option === 'lesson-grammar' || props.option === 'lesson-themes';
+    const isGrammar = props.option === 'lesson-grammar' || props.option === 'grammar';
+    const isDrill = data.find(el => el.id === props.partOfGrammarId).test.length === 0;
+    console.log(isDrill)
 
     return (
         <div>
@@ -52,7 +54,7 @@ export default function TheoryWrapper(props) {
 
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
 
-                            {props.option !== 'lesson' &&
+                            {(!isLesson) &&
                                 <MenuItem>
 
                                 <Link to={props.option === 'grammar' ? '/grammar_route' : '/themes_route'}>
@@ -63,17 +65,20 @@ export default function TheoryWrapper(props) {
                                 </MenuItem>
                             }
 
-                    <Tab label="Theory" {...a11yProps(props.option === 'lesson' ? 0 : 1)} />
-                    <Tab label="Drill" {...a11yProps(props.option === 'lesson' ? 1 : 2)} />
+                    <Tab label="Theory" {...a11yProps( isLesson ? 0 : 1)} />
+                    <Tab label={isDrill ? "Drill" : "Test"} {...a11yProps(isLesson ? 1 : 2)} />
                 </Tabs>
             </Box>
 
-            <TabPanel value={value} index={props.option === 'lesson' ? 0 : 1}>
-                <TheoryShowingMarkdown option={props.option === 'lesson' ? 'grammar' : props.option} theory={data.filter(el => el.id === props.partOfGrammarId)}/>
+            <TabPanel value={value} index={isLesson ? 0 : 1}>
+                <TheoryShowingMarkdown handleChange={handleChange} goNextTo={isLesson ? 1 : 2} option={isGrammar ? 'grammar' : 'themes'} theory={data.filter(el => el.id === props.partOfGrammarId)}/>
             </TabPanel>
-            <TabPanel value={value} index={props.option === 'lesson' ? 1 : 2}>
-                <DrillWrapper option={props.option === 'lesson' ? 'grammar' : props.option} partOfGrammarId={props.partOfGrammarId}/>
-            </TabPanel>
+            <TabPanel value={value} index={isLesson ? 1 : 2}>
+                { isDrill ?
+                    <DrillWrapper option={isGrammar ? 'grammar' : 'themes'} partOfGrammarId={props.partOfGrammarId}/> :
+                    <Test handleChange={handleChange} goBackTo={isLesson ? 0 : 1} theory={data.filter(el => el.id === props.partOfGrammarId)} />
+                }
+                </TabPanel>
         </Box>
         </div>
     );

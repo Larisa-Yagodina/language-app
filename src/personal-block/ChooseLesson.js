@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button} from "@mui/material";
 import {initialTrainingRoute} from "../serverData/InitialTrainingRoute";
 import ListItemText from "@mui/material/ListItemText";
@@ -36,7 +36,39 @@ const block = {
 function ChooseLesson() {
 
     const userId = 'dlkfjl3487f9s';
-    const [nextLesson, setNextLesson] = useState(initialTrainingRoute.find(el => el.userId === userId).userRoute.filter(el => el.isStudied === false)[0])
+
+    const getNextLesson = () => {
+        let lessons = initialTrainingRoute.find(el => el.userId === userId).userRoute;
+        for (let i = 0; i < lessons.length; i++) {
+            console.log('first FOR')
+            if (lessons[i].isStudied === false) {
+                setNextLesson(lessons[i]);
+                return 'Next';
+            } else if (lessons[i].subThemes.length > 0) {
+                let subThemes = lessons[i].subThemes;
+                for (let j = 0; j < subThemes.length; j++) {
+                    console.log('second FOR')
+                    if (subThemes[j].isStudied === false) {
+                        setNextLesson(subThemes[j]);
+                        return "Next";
+                    }
+                }
+            }
+        }
+    };
+
+
+    const getPreviousLessons = () => {
+
+    }
+
+    //const [nextLesson, setNextLesson] = useState(initialTrainingRoute.find(el => el.userId === userId).userRoute.filter(el => el.isStudied === false)[0])
+    const [nextLesson, setNextLesson] = useState(initialTrainingRoute.find(el => el.userId === userId).userRoute.find(el => el.isStudied === false))
+
+    useEffect(() => {
+        getNextLesson()
+    }, [])
+
     const previousLessonsLength = initialTrainingRoute.find(el => el.userId === userId)
         .userRoute.filter(el => el.isStudied === true).length;
     const [previousLesson, setPreviousLesson] = useState(initialTrainingRoute.find(el => el.userId === userId)

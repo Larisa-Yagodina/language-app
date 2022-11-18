@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
 import RouteList from "./RouteList";
 
-export default function GrammarRouteListWrapper() {
+export default function RouteListWrapper({mainUrl, title, isGrammar}) {
 
     const userId = 'dlkfjl3487f9s';
     const [userLearningRoute, setUserLearningRoute] = useState(initialTrainingRoute.filter(el => el.userId === userId));
@@ -22,7 +22,7 @@ export default function GrammarRouteListWrapper() {
         setUserLearningRoute(newRoute);
     };
 
-    const [openAll, setOpenAll] = React.useState(false);
+    const [openAll, setOpenAll] = React.useState(true);
     const [reFilter, setReFilter] = useState(1)
     const handleChange = (event) => {
         setOpenAll(event.target.checked);
@@ -30,7 +30,7 @@ export default function GrammarRouteListWrapper() {
     };
 
     const filterRoute = () => {
-        const newRoute = initialTrainingRoute.filter(el => el.userId === userId)[0].userRoute.filter(el => openAll ? true : el.isStudied === openAll);
+        const newRoute = initialTrainingRoute.filter(el => el.userId === userId)[0].userRoute.filter(el => el.isGrammar === isGrammar).filter(el => openAll ? true : el.isStudied === openAll);
         const newUserRoutes = initialTrainingRoute.map(el => el.userId === userId ? {...el, userRoute: newRoute} : el);
         setUserLearningRoute(newUserRoutes.filter(el => el.userId === userId))
     }
@@ -50,8 +50,8 @@ export default function GrammarRouteListWrapper() {
 
     return (
         <RouteList
-            mainUrl={'/grammar_route'}
-            title={"Grammar route"}
+            mainUrl={mainUrl}
+            title={title}
             openSubThemes={openSubThemes}
             openAll={openAll}
             handleChange={handleChange}
