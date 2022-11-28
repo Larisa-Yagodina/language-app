@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Route, Routes} from "react-router-dom";
-import WordsDrillWrapper from "../../no-theory-drills/words-drill/WordsDrillWrapper";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
 import TheoryWrapper from "../../study-routes/theory-and-drill-showing/theory/TheoryWrapper";
 import ChooseLesson from "../../personal-block/ChooseLesson";
@@ -10,6 +9,7 @@ import Help from "../../footer-menu-pages/Help";
 import Logout from "../../footer-menu-pages/Logout";
 import ThemesWrapper from "../../study-routes/routes/ThemesWrapper";
 import GrammarWrapper from "../../study-routes/routes/GrammarWrapper";
+import WordsTabs from "../../no-theory-drills/words-drill/WordsTabs";
 
 
 const AllRoutes = () => {
@@ -22,7 +22,7 @@ const AllRoutes = () => {
             <Route path="/my-lessons" element={<ChooseLesson />}/>
             <Route path="/phrases-to-remember" element={<AddNewPhraseToRemember />}/>
 
-            <Route path="/new_words_drill" element={<WordsDrillWrapper/>}/>
+            <Route path="/new_words_drill" element={<WordsTabs />}/>
             <Route path="/grammar_route" element={<GrammarWrapper />}/>
             <Route path="/themes_route" element={<ThemesWrapper />}/>
 

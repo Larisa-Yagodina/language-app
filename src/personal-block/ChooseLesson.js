@@ -40,14 +40,12 @@ function ChooseLesson() {
     const getNextLesson = () => {
         let lessons = initialTrainingRoute.find(el => el.userId === userId).userRoute;
         for (let i = 0; i < lessons.length; i++) {
-            console.log('first FOR')
             if (lessons[i].isStudied === false) {
                 setNextLesson(lessons[i]);
                 return 'Next';
             } else if (lessons[i].subThemes.length > 0) {
                 let subThemes = lessons[i].subThemes;
                 for (let j = 0; j < subThemes.length; j++) {
-                    console.log('second FOR')
                     if (subThemes[j].isStudied === false) {
                         setNextLesson(subThemes[j]);
                         return "Next";
@@ -57,23 +55,38 @@ function ChooseLesson() {
         }
     };
 
+    const [previousLessonsLength, setPreviousLessonsLength] = useState(0);
+    const [previousRandomLesson, setPreviousRandomLesson] = useState(initialTrainingRoute.find(el => el.userId === userId)
+        .userRoute.filter(el => el.isStudied === true)[Math.floor(Math.random() * previousLessonsLength)]
+    )
 
-    const getPreviousLessons = () => {
-
+    const getPreviousRandomLessons = () => {
+        let lessons = initialTrainingRoute.find(el => el.userId === userId).userRoute;
+        let previousLessons = [];
+        for (let i = 0; i < lessons.length; i++) {
+            if (lessons[i].isStudied === true) {
+                previousLessons.push(lessons[i])
+            }
+            if (lessons[i].subThemes.length > 0) {
+                let subThemes = lessons[i].subThemes;
+                for (let j = 0; j < subThemes.length; j++) {
+                    if (subThemes[j].isStudied === true) {
+                        previousLessons.push(subThemes[j])
+                    }
+                }
+            }
+        }
+        setPreviousLessonsLength(previousLessons.length)
+        setPreviousRandomLesson(previousLessons[Math.floor(Math.random() * previousLessons.length)]);
     }
 
-    //const [nextLesson, setNextLesson] = useState(initialTrainingRoute.find(el => el.userId === userId).userRoute.filter(el => el.isStudied === false)[0])
     const [nextLesson, setNextLesson] = useState(initialTrainingRoute.find(el => el.userId === userId).userRoute.find(el => el.isStudied === false))
 
     useEffect(() => {
-        getNextLesson()
+        getNextLesson();
+        getPreviousRandomLessons();
     }, [])
 
-    const previousLessonsLength = initialTrainingRoute.find(el => el.userId === userId)
-        .userRoute.filter(el => el.isStudied === true).length;
-    const [previousLesson, setPreviousLesson] = useState(initialTrainingRoute.find(el => el.userId === userId)
-        .userRoute.filter(el => el.isStudied === true)[Math.floor(Math.random() * previousLessonsLength)]
-    )
 
     return (
         <div style={parent}>
@@ -81,9 +94,9 @@ function ChooseLesson() {
                 {previousLessonsLength > 0 &&
                     <div style={block}>
                         <h3>Повторим пройденное?</h3>
-                        <h4>{previousLesson.name}</h4>
+                        <h4>{previousRandomLesson.name}</h4>
                         <Button variant="outlined" size="large">
-                            <Link to={`/my-lessons${previousLesson.link}`}
+                            <Link to={`/my-lessons${previousRandomLesson.link}`}
                                   style={{textDecoration: 'none', color: '#0062cc'}}>
                                 <ListItemText id={'lkjsd'} primary={'Repeat'}/>
                             </Link>

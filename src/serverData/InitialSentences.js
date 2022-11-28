@@ -179,7 +179,7 @@ export const initialSentences = [
         themes: ["lskdjlk2342kj"],
         partOfSpeech: [],
         words: ['sdlkjo2387skj3', ],
-        definition: ['elkrjelr89384eljeru', ],
+        definition: ['', ],
     },
     {
         id: uuidv4(),
@@ -319,7 +319,7 @@ export const initialSentences = [
         themes: ["lskdjlk2342kj"],
         partOfSpeech: [],
         words: ['sdlkjo2387skj3', ],
-        definition: ['elkrjelr89384eljeru'],
+        definition: [''],
     },
     {
         id: uuidv4(),
@@ -1321,7 +1321,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdfjk2398fsdjf37fajs', ],
-        definition: ['elkrjelr89384eljeru',],
+        definition: ['lskdjf30498sdkfj',],
         expressions: ['', ]
     },
     {
@@ -1332,7 +1332,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdflkj2398fsdkj23', ],
-        definition: ['elkrjelr89384eljeru',],
+        definition: ['',],
         expressions: ['', ]
     },
     {
@@ -1387,7 +1387,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h', ],
-        definition: ['elkrjelr89384eljeru', 'sdflkj398s0d98j3', ],
+        definition: ['', 'sdflkj398s0d98j3', ],
         expressions: ['', ]
     },
     {
@@ -1398,7 +1398,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h', ],
-        definition: ['elkrjelr89384eljeru', 'sdflkj398s0d98j3'],
+        definition: ['', 'sdflkj398s0d98j3'],
         expressions: ['', ]
     },
     {
@@ -1409,7 +1409,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h', ],
-        definition: ['elkrjelr89384eljeru', 'sdflkj398s0d98j3'],
+        definition: ['', 'sdflkj398s0d98j3'],
         expressions: ['', ]
     },
     {
@@ -1475,7 +1475,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdfjk2398fsdjf37fajs', ],
-        definition: ['elkrjelr89384eljeru',],
+        definition: ['lskdjf30498sdkfj',],
         expressions: ['', ]
     },
     {
@@ -1486,7 +1486,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', ],
-        definition: ['elkrjelr89384eljeru',],
+        definition: ['',],
         expressions: ['', ]
     },
     {
@@ -1497,7 +1497,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', ],
-        definition: ['elkrjelr89384eljeru',],
+        definition: ['',],
         expressions: ['', ]
     },
     {
@@ -1574,7 +1574,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h', ],
-        definition: ['elkrjelr89384eljeru', 'sdflkj398s0d98j3'],
+        definition: ['', 'sdflkj398s0d98j3'],
         expressions: ['', ]
     },
     {
@@ -1585,7 +1585,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', ],
-        definition: ['elkrjelr89384eljeru',],
+        definition: ['',],
         expressions: ['', ]
     },
     {
@@ -1642,7 +1642,7 @@ export const initialSentences = [
         themes: ['lkjf02398sdlkj2'],
         partOfSpeech: [''],
         words: ['', ],
-        definition: ['',],
+        definition: ['lskdjf30498sdkfj',],
         expressions: ['', ]
     },
     {

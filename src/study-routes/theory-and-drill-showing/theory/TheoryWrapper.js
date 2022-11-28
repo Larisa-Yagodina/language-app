@@ -9,7 +9,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import TheoryShowingMarkdown from "./TheoryShowingMarkdown";
 import DrillWrapper from "../drill/DrillWrapper";
-import TabPanel from "../../utils/TabPanel";
+import TabPanel from "../../../utils/TabPanel";
 import {initialGrammar} from "../../../serverData/InitialGrammar";
 import {initialThemes} from "../../../serverData/InitialThemes";
 import {useState} from "react";
