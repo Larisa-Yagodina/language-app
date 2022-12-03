@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import WordsDrillWrapper from "./WordsDrillWrapper";
-import TabPanel from "../../utils/TabPanel";
-import RandomWordDrillWrapper from "./RandomWordDrillWrapper";
+import TabPanel from "../utils/TabPanel";
+import AddNewPhraseToRemember from "./AddNewPhraseToRemember";
+import PhrasesWrapper from "./PhrasesWrapper";
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -20,7 +20,7 @@ function a11yProps(index) {
     };
 }
 
-export default function WordsTabs(props) {
+export default function PersonalPhrasesTabs(props) {
 
     const [value, setValue] = React.useState( 0);
 
@@ -36,16 +36,16 @@ export default function WordsTabs(props) {
 
                     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
 
-                        <Tab label="Random word" {...a11yProps(0)} />
-                        <Tab label="Chosen word"  {...a11yProps(1)} />
+                        <Tab label="Add new phrase" {...a11yProps(0)} />
+                        <Tab label="Drill"  {...a11yProps(1)} />
                     </Tabs>
                 </Box>
 
                 <TabPanel value={value} index={0}>
-                    <RandomWordDrillWrapper/>
+                    <PhrasesWrapper />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <WordsDrillWrapper/>
+
                 </TabPanel>
             </Box>
         </div>
