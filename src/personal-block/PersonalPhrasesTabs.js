@@ -4,8 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import TabPanel from "../utils/TabPanel";
-import AddNewPhraseToRemember from "./AddNewPhraseToRemember";
 import PhrasesWrapper from "./PhrasesWrapper";
+import PhasesDrillWrapper from "./PhrasesDrillWrapper";
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -45,7 +45,7 @@ export default function PersonalPhrasesTabs(props) {
                     <PhrasesWrapper />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-
+<PhasesDrillWrapper />
                 </TabPanel>
             </Box>
         </div>

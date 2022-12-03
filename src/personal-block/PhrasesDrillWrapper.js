@@ -1,11 +1,10 @@
-import '../../App.css';
 import React, {useEffect, useState} from "react";
-import ChoseSpeed from "../../searchAndFilter/ChoseSpeed";
-import {initialSentences} from "../../serverData/InitialSentences";
-import {initialDefinitions} from "../../serverData/Words/InitialDefinitions";
-import SentenceDrill from "../sentence-drill/SentenceDrill";
+import {initialSentences} from "../serverData/InitialSentences";
+import ChoseSpeed from "../searchAndFilter/ChoseSpeed";
+import SentenceDrill from "../no-theory-drills/sentence-drill/SentenceDrill";
 
-function WordsDrillWrapper() {
+
+function PhasesDrillWrapper() {
 
     const [chosenSpeed, setChosenSpeed] = useState(15000);
     const [speedRange, setSpeedRange] = useState([
@@ -32,8 +31,8 @@ function WordsDrillWrapper() {
         ]
     );
 
-    const [definition, setDefinition] = useState(initialDefinitions[Math.floor(Math.random() * initialDefinitions.length)]);
-    const [sentences, setSentences] = useState(initialSentences.filter(el => el.definition.includes(definition.id)));
+    const userId = 'dlkfjl3487f9s';
+    const [sentences, setSentences] = useState(initialSentences.filter(el => el.userId === userId).filter(el => !el.isStudied));
 
     const [randomIndex, setRandomIndex] = useState(null);
     const [openTranslation, setOpenTranslation] = useState(false);
@@ -98,9 +97,8 @@ function WordsDrillWrapper() {
     return (
         <div className="App">
 
-            <h3> Word of the day: {definition.english.toUpperCase()} </h3>
-            <p>Definition: {definition.definition}</p>
-            <p>Translation: {definition.russian.map((el, i) => i !== definition.russian.length - 1 ? el + ", " : el)}</p>
+            <h3> My phrases to learn </h3>
+
             <div style={{background: 'white', height: '90px'}}>
                 <ChoseSpeed speedRange={speedRange} setChosenSpeed={setChosenSpeed}/>
             </div>
@@ -117,7 +115,7 @@ function WordsDrillWrapper() {
     );
 }
 
-export default WordsDrillWrapper;
+export default PhasesDrillWrapper;
 
 
 // работа useEffect и setInterval

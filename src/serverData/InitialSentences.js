@@ -2064,7 +2064,7 @@ export const initialSentences = [
     {
         id: uuidv4(),
         english: 'I can`t get over this view.',
-        russian: 'Я так поражена этим видом (Не могу поверить).',
+        russian: 'Я так поражена этим видом. (Не погу поверить, что это вижу!)',
         note: '"(just) can`t get over (something)" — Не может или не хочет принять или поверить что-то. Часто используется гиперболически. Или: удивленный, позабавленный и т. д. чем-то.',
         isStudied: false,
         userId: 'dlkfjl3487f9s',
