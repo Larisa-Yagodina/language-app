@@ -115,6 +115,7 @@ export default function RouteList ({openSubThemes, openAll, handleChange, route,
                                                     <ListItemButton>
                                                         <Link to={mainUrl + subTheme.link}
                                                               style={{textDecoration: 'none', color: 'black'}}>
+
                                                             <ListItemText id={labelId} primary={subTheme.name}/>
                                                         </Link>
                                                     </ListItemButton>

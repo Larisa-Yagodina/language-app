@@ -92,7 +92,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'dflkj98fs098kjfd',
-                        name: 'How to be polite',
+                        name: 'How to be polite (greetings and requests)',
                         link: '/how-to-be-polite',
                         partOfGrammarId: "flkj2098srjsl9122",
                         isOpen: true,

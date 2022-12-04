@@ -25,8 +25,8 @@ export const initialThemes = [
     },
     {
         id: "flkj2098srjsl9122",
-        title: 'How to be polite',
-        russianTitle: 'Проявляем вежливость',
+        title: 'How to be polite (greetings and requests)',
+        russianTitle: 'Проявляем вежливость (приветствия и просьбы)',
         theory: 'how_to_be_polite.md',
         description: '',
         test: [],
