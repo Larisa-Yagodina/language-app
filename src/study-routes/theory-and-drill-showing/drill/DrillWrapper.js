@@ -5,7 +5,7 @@ import SentenceDrill from "../../../no-theory-drills/sentence-drill/SentenceDril
 
 function DrillWrapper({partOfGrammarId, option}) {
 
-    const [chosenSpeed, setChosenSpeed] = useState(5000);
+    const [chosenSpeed, setChosenSpeed] = useState(10000);
     const [speedRange, setSpeedRange] = useState([
             {value: 4000, name: "very high"},
             {value: 6000, name: "high"},

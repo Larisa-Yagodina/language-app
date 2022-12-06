@@ -33,9 +33,9 @@ export const initialThemes = [
     },
     {
         id: "lsd879823skjdhf",
-        title: 'Set expressions',
-        russianTitle: 'Устойчивые выражения',
-        theory: 'set_expressions.md',
+        title: 'Small talk',
+        russianTitle: 'Смол толк',
+        theory: 'small_talk.md',
         description: '',
         test: [],
     },

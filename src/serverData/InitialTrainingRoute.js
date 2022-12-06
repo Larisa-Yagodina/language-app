@@ -100,8 +100,8 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'kj38f0s98fj23f8dsdf',
-                        name: 'Set expressions',
-                        link: '/set-expressions',
+                        name: 'Small talk',
+                        link: '/small_talk',
                         partOfGrammarId: "lsd879823skjdhf",
                         isOpen: true,
                         isStudied: false,

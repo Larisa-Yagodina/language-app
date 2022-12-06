@@ -10,7 +10,7 @@ import ChooseNextOption from "../../searchAndFilter/ChooseNextOption";
 
 function GrammarThemesDrillWrapper() {
 
-    const [chosenSpeed, setChosenSpeed] = useState(5000);
+    const [chosenSpeed, setChosenSpeed] = useState(10000);
     const [speedRange, setSpeedRange] = useState([
             {value: 4000, name: "very high"},
             {value: 6000, name: "high"},
