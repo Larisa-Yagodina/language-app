@@ -47,14 +47,6 @@ export const initialTrainingRoute = [
                 isGrammar: true,
                 subThemes: [
                     {
-                        id: 'aslkj340sd9f8',
-                        name: 'Present simple (positive statement)',
-                        link: '/positive-in-present-simple',
-                        partOfGrammarId: "sdlkfjl3427fdjf",
-                        isOpen: true,
-                        isStudied: true,
-                    },
-                    {
                         id: 'sdfkjl3029384',
                         name: 'Present simple (negative statement)',
                         link: '/negative-in-present-simple',
@@ -67,6 +59,14 @@ export const initialTrainingRoute = [
                         name: 'Present simple (question)',
                         link: '/question-in-present-simple',
                         partOfGrammarId: "dlfkj234jlkj34",
+                        isOpen: true,
+                        isStudied: true,
+                    },
+                    {
+                        id: 'aslkj340sd9f8',
+                        name: 'present simple (how to use)',
+                        link: '/how-to-use-present-simple',
+                        partOfGrammarId: "sdlkfjl3427fdjf",
                         isOpen: true,
                         isStudied: true,
                     },
