@@ -47,9 +47,13 @@ export default function MainMenu() {
                             <ListIcon sx={{width: 32, height: 32}}>
                             </ListIcon>
                         </IconButton>
-                        {/*<Link to="/speak_fluent-sentence-drill" style={{ textDecoration: 'none', color: 'black'}}>*/}
-                        <Typography sx={{minWidth: 100}}> English UP </Typography>
-                        {/*</Link>*/}
+
+                        <Typography sx={{minWidth: 100}}>
+                            <Link to="/" style={{textDecoration: 'none', color: 'black'}}>
+                            English UP
+                            </Link>
+                        </Typography>
+
                     </>
                 </Box>
                 <Menu

@@ -1622,7 +1622,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['xlkjw098slakdgf',],
-        definition: ['sdflkj398s0d98j3',],
+        definition: ['sldkj093840293sd',],
         expressions: ['',]
     },
     {
@@ -1661,7 +1661,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h',],
-        definition: ['', 'sdflkj398s0d98j3',],
+        definition: ['', 'dlkfjlskdjflksdjf',],
         expressions: ['',]
     },
     {
@@ -1674,7 +1674,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h',],
-        definition: ['', 'sdflkj398s0d98j3'],
+        definition: ['', 'dlkfjlskdjflksdjf'],
         expressions: ['',]
     },
     {
@@ -1687,7 +1687,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h',],
-        definition: ['', 'sdflkj398s0d98j3'],
+        definition: ['', 'dlkfjlskdjflksdjf'],
         expressions: ['',]
     },
     {
@@ -1843,7 +1843,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['xlkjw098slakdgf',],
-        definition: ['sdflkj398s0d98j3',],
+        definition: ['sldkj093840293sd',],
         expressions: ['',]
     },
     {
@@ -1882,7 +1882,7 @@ export const initialSentences = [
         themes: ['dkfj3iusd9f3j'],
         partOfSpeech: [''],
         words: ['sdlkjo2387skj3', 'sdflkj2098sdkj2h',],
-        definition: ['', 'sdflkj398s0d98j3'],
+        definition: ['', 'dlkfjlskdjflksdjf'],
         expressions: ['',]
     },
     {
@@ -2144,7 +2144,7 @@ export const initialSentences = [
         themes: ['dkj2387slaflja'],
         partOfSpeech: [''],
         words: ['',],
-        definition: ['',],
+        definition: ['dlkfjlskdjflksdjf',],
         expressions: ['',]
     },
     {

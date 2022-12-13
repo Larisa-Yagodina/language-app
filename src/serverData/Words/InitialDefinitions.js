@@ -195,7 +195,7 @@ export const initialDefinitions = [
         status: 'todo'
     },
     {
-        id: 'sdflkj398s0d98j3',
+        id: 'dlkfjlskdjflksdjf',
         title: 'Одна вещь, которую можно выбрать из набора возможностей, или свобода выбора',
         english: 'option',
         wordId: "sdflkj2098sdkj2h",
@@ -207,7 +207,7 @@ export const initialDefinitions = [
         status: 'todo'
     },
     {
-        id: 'sdflkj398s0d98j3',
+        id: 'sldkj093840293sd',
         title: 'Качество легко подвергаться влиянию, изменению или повреждению, особенно физиологически',
         english: 'sensitivity',
         wordId: "xlkjw098slakdgf",
@@ -231,7 +231,7 @@ export const initialDefinitions = [
         status: 'todo'
     },
     {
-        id: 'sdflkj398s0d98j3',
+        id: 'sdlkfj20398rksdjf',
         title: '',
         english: '',
         wordId: "",
