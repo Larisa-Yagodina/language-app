@@ -11,6 +11,7 @@ import ThemesWrapper from "../../study-routes/routes/ThemesWrapper";
 import GrammarWrapper from "../../study-routes/routes/GrammarWrapper";
 import WordsTabs from "../../no-theory-drills/words-drill/WordsTabs";
 import PersonalPhrasesTabs from "../../personal-block/PersonalPhrasesTabs";
+import MainPage from "../../MainPage";
 
 
 const AllRoutes = () => {
@@ -105,8 +106,10 @@ const AllRoutes = () => {
                 </>
             )}
 
-            <Route path="/"/>
+            <Route path="/" element={<MainPage />}/>
+
             {/*<Route path="*" element={<App />} />*/}
+            <Route path="*" element={<ChooseLesson />}/>
 
         </Routes>
     );
