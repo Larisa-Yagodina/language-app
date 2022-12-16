@@ -153,9 +153,9 @@ export const initialGrammar = [
     },
     {
         id: "sdlkfjl3427fdjf",
-        title: 'present simple (how to use)',
-        russianTitle: 'Настоящее простое (как использовать)',
-        theory: 'present_simple_how_to_use.md',
+        title: 'present simple (when should we use)',
+        russianTitle: 'Настоящее простое (когда использовать)',
+        theory: 'present_simple_when_should_we_use.md',
         description: '',
         test: [],
     },

@@ -44,7 +44,7 @@ is.
 
 * **Tomorrow, I will call you from Los Angeles.** — Я тебе завтра позвоню из Лос Анжелеса;
 * **Yesterday, he met me at the airport.** — Он встретил меня вчера в аэропорту;
-* **Last night, I bought a Christmas cake at that bakery.** — Этим утром я в той кондитерской купила рождественский
+* **This morning, I bought a Christmas cake at that bakery.** — Этим утром я в той кондитерской купила рождественский
   пирог.
 
 Еще одно отличие русского и английского — в глаголе **to be**. Он используется для соединения одной вещи (или

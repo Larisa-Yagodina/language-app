@@ -72,8 +72,8 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'aslkj340sd9f8',
-                        name: 'present simple (how to use)',
-                        link: '/how-to-use-present-simple',
+                        name: 'present simple (when should we use)',
+                        link: '/when-should-we-use-present-simple',
                         partOfGrammarId: "sdlkfjl3427fdjf",
                         isOpen: true,
                         isStudied: false,
