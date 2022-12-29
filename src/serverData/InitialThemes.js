@@ -88,6 +88,14 @@ export const initialThemes = [
         test: [],
     },
     {
+        id: "jh387fsjh387fsjdhf",
+        title: 'Вводные фразы (часть 7)',
+        russianTitle: 'Вводные фразы (часть 7)',
+        theory: 'introductory_phrases_7.md',
+        description: '',
+        test: [],
+    },
+    {
         id: "lsd879dlkj823sk",
         title: 'Restaurants',
         russianTitle: 'В ресторане',

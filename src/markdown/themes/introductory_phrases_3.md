@@ -1,45 +1,52 @@
 ## Вводные слова (часть III)
 
 
-### Размышляем
+### Вносим больше ясности, поясняем с помощью примера
 
-On one hand	— С одной стороны
+For example / For instance — Например
 
-* **On one hand, there seems to be nothing wrong with that.** — С одной стороны, в этом нет ничего плохого.
+* **For example, in Denmark, people primarily value their employment.** — Например, в Дании люди в первую очередь ценят свою занятость.
+* **For instance, you never told me when you started dating Jessica.** Например то, что ты не сказал мне, когда начал встречаться с Джессикой.
 
-On the other hand — С другой стороны
+In other words — Другими словами
 
-* **On the other hand, each of them has not only advantages, but also disadvantages.** — С другой стороны, у каждого из них есть не только преимущества, но и недостатки.
+* **In other words it could happen sooner than we might think.** — Другими словами, это могло бы произойти раньше, чем можно было бы подумать.
+* **In other words, it must be financially justified.** — Другими словами, это должно быть оправдано с финансовой точки зрения.
 
-On the contrary	— Наоборот
+Which is to say — То есть, иначе говоря
 
-* **On the contrary, he seems quite cheerful and contented.** — Наоборот, он кажется вполне веселым и довольным.
+* **Data must be factual, which is to say, true and valid.** — Данные должны соответствовать фактам, то есть быть истинными и надёжными.
 
-### Говорим в завершение
+Such as	— Например / такой как
 
-Finally / After all / Eventually — В конце концов, в итоге, в конечном счете
+* **That money is to cover costs such as travel and accommodation.** — Эти деньги предназначены для покрытия расходов, таких как проезд и проживание.
 
-* **Finally, consider your financial capacity.** — В конце концов, учтите свои финансовые возможности.
-* **After all, some companies faced the same obstacles.** — В конечном счете, некоторые компании столкнулись с такими же препятствиями.
-* **Eventually this caused our friendship fall apart.** — В итоге это привело к тому, что дружба разрушилась.
+The thing is — Дело в том, что
 
-Either way	— Так или иначе, в любом случае
+* **The thing is, these bags are practical in terms of our lifestyles.** — Дело в том, что эти сумки практичны с точки зрения нашего образа жизни.
 
-* **Either way it's a win-win.** — В любом случае, это беспроигрышный вариант.
-* **Either way it will still impact your life.** — Но, так или иначе, это будет по-прежнему влиять на вашу жизнь.
+### Говорим о нюансах
 
-In conclusion — В заключении
+In spite of / Despite — Несмотря на (даже если происходит что-то неприятное или плохое). Единственная разница между In spite of и Despite — это 1 слово или 3 слова.
 
-* **In conclusion, we must stop looking backwards.** — В заключение хочу сказать, что надо перестать оглядываться назад.
+* **In spite of feeling tired, we decided to go out.** — Несмотря на усталость, мы решили выйти прогуляться.
+* **Despite her illness, she came to work.** — Несмотря на болезнь, она пришла на работу.
 
-Ultimately — В конечном счете, наконец
+However / Although — Однако (несмотря на это, тем не менее)
 
-* **Our thoughts ultimately determine our destiny.** — Наши идеи в конечном итоге определяют нашу судьбу.
+* **There may, however, be other reasons that we don’t know about.** — Однако могут быть и другие причины, о которых мы не знаем.
+* **She walked home by herself, although she knew that it was dangerous.** — Она шла домой одна, хотя знала, что это опасно.
 
-Overall / On the whole — В целом, в общем
+Nevertheless — Несмотря на
 
-* **Overall this strategy would be useful.** — В общем, такая структура была бы полезной.
-* **On the whole, I felt underwhelmed but optimistic.** — В целом, я был недоволен, но настроен оптимистично.
+* **I knew a lot about the subject already, but her talk was interesting nevertheless.** — Я уже много знал об этой теме, но ее выступление было интересным.
+
+Still / Yet — И всё же
+
+* **I’m a mother of two and I still hold down a job.** — Я мать двоих детей, и все же я работаю.
+* **This is so obvious and yet difficult to remember each moment.** — Это так очевидно, и все же так трудно помнить об этом каждый момент.
+
+
 
 
 

@@ -1,52 +1,42 @@
 ## Вводные слова (часть II)
 
 
-
 ### Когда есть сомнения
+
+Mistaken — ошибается в том, во что верит, или основанный на вере, которая неправильна (ошибочный, неправый).
 
 If I’m not mistaken	— если я не ошибаюсь
 
 * **If I'm not mistaken today is someone's birthday.** — Если я не ошибаюсь, у одного человека сегодня день рождения.
+* **If I'm not mistaken this is your third visit to Greece.** — Если не ошибаюсь, это Ваш третий приезд в Грецию.
 
 If I remember rightly / If I recall correctly — Если я правильно помню / Если мне не изменяет память
 
 * **You got a promotion, if I remember rightly.** — Ты получила повышение, если я правильно помню.
+* **If I remember rightly, the cafe will be located on the right hand side.** — Если я правильно помню, кафе будет справа.
 * **Hello, Miss Alice Smith, if I recall correctly.** — Здравствуйте, мисс Элис Смит, если я правильно помню.
+* **If I recall correctly, you're supposed to be running a marathon next month?** — Если я правильно помню, вы должны в следующем месяце бежать марафон?
 
-### Вносим больше ясности
+### Размышляем вслух
 
-In other words	— Другими словами
+On one hand	— С одной стороны
 
-* **In other words, it must be financially justified.** — Другими словами, это должно быть оправдано с финансовой точки зрения.
+* **On one hand, there seems to be nothing wrong with that.** — С одной стороны, в этом нет ничего плохого.
+* **On one hand I agree with you.** — С одной стороны, я с вами согласна.
 
-The thing is — Дело в том, что
+On the other hand — С другой стороны
 
-* **The thing is, these bags are practical in terms of our lifestyles.** — Дело в том, что эти сумки практичны с точки зрения нашего образа жизни.
+* **On the other hand, each of them has not only advantages, but also disadvantages.** — С другой стороны, у каждого из них есть не только преимущества, но и недостатки.
+* **On the other hand I often felt treated unfair.** — С другой стороны, мне часто кажется, что со мной обошлись несправедливо.
 
-### Указываем последовательность событий
+Alternatively — используется, чтобы предложить другую возможность (в противном случае / как вариант).
 
-First / Firstly — Во-первых
+* **We could go to the Indian restaurant, or alternatively, we could try that new Italian place.** — Мы могли бы пойти в индийский ресторан, или, как вариант, мы могли бы попробовать новое итальянское место.
+* **Alternatively, you can use your VISA card.** — Как вариант, вы можете воспользоваться своей картой Visa.
 
-* **Firstly, the decision was taken because it was necessary.** — Во-первых, это решение было принято потому, что оно оказалось необходимым.
+On the contrary / To the contrary — в противоположность / наоборот.
 
-Second / Secondly — Во-вторых
-
-* **Secondly, the price will surely bite.** — Во-вторых, цена, скорее всего, будет кусаться.
-
-Third / Thirdly — В-третьих
-
-* **Thirdly, they may lack the interest to study.** — В-третьих, им, возможно, не хватает заинтересованности в учебе.
-
-Then / Next — Затем, после
-
-* **Next, he sent me this kind email.** — После этого он прислал мне такое письмо по электронной почте.
-* **Then, they start talking behind your back.** — Затем они начнут говорить о вас за вашей спиной.
-
-Afterwards — Впоследствии
-
-* **Afterwards, we laughed over the incident.** — Впоследствии мы посмеялись над этим инцидентом.
-
-Previously / Before — До этого, раньше
-
-* **Previously, I often feel afraid about my money issues.** — До этого я очень часто беспокоилась по поводу проблем с деньгами.
-* **Before, I never thought I deserved it.** — Раньше я не думал, что заслуживал этого.
+* **On the contrary, he seems quite cheerful and contented.** — Наоборот, он кажется вполне веселым и довольным.
+* **— I thought you said the film was exciting? — On the contrary, I nearly fell asleep!** — Я думал, ты сказал, что фильм был захватывающим? — Наоборот, я чуть не заснул!
+* **To the contrary, economy continues to do extremely well.** — Наоборот, экономика продолжает работать очень хорошо.
+* **She works for me and not the other way round, despite appearances to the contrary.** — Она работает на меня, а не наоборот, несмотря на видимость обратного.

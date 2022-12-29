@@ -1,95 +1,55 @@
 ## Вводные слова (часть V)
 
-### Говорим о привычном
+### Дополняем свою речь подробностями
 
-As a rule — Обычно, как правило
+Also — Также, к тому же
 
-* **As a rule, we don’t allow dog in here.** — Как правило, мы не пускаем сюда собаку.
+* **Also, she attended dance classes in the past.** — Также она посещала танцевальные классы в прошлом.
 
-### Повторяем уже сказанное
+In addition / I’d like to add — В дополнение к этому, кроме того, я бы хотел добавить
 
-As I said before — Как я уже говорил
+* **In addition, they will guarantee their service.**  — Кроме того, они дают гарантию на свои услуги.
+* **I'd like to add a few more, based on my own experience.** — Я бы немного добавил исходя из собственного опыта.
 
-* **As I said before, my story isn't over.** — Как я уже говорил, моя история ещё не закончилась.
+Besides / Moreover / Furthermore — Кроме того, более того
 
-### Говорим о нюансах
+* **Besides, he often has fascinating adventures.** — Кроме того, он постоянно попадает в увлекательные приключения.
+* **Moreover, competition has never been so fierce.** — Более того, конкуренция еще никогда не была столь жесткой.
+* **Furthermore, I know I'm in good hands.** — Кроме того, я уверен, что нахожусь в хороших руках.
 
-In spite of / Despite — Несмотря на (даже если происходит что-то неприятное или плохое). Единственная разница между In spite of и Despite — это 1 слово или 3 слова.
+What’s more	— кроме того
 
-* **In spite of feeling tired, we decided to go out.** — Несмотря на усталость, мы решили выйти прогуляться.
-* **Despite her illness, she came to work.** — Несмотря на болезнь, она пришла на работу.
+* **What's more, both diets may result in weight loss.** — Более того, обе диеты могут привести к снижению массы тела.
 
-Alternatively — В противном случае / Как вариант (используется, чтобы предложить другую возможность)
+Just for the record	— для справки / чтобы вы знали
 
-* **We could go to the Indian restaurant, or alternatively, we could try that new Italian place.** — Мы могли бы пойти в индийский ресторан, или, как вариант, мы могли бы попробовать новое итальянское место.
+* **Just for the record, this is a terrific idea.** — Просто для записи, это отличная идея.
 
-However / Although — Однако (несмотря на это, тем не менее)
 
-* **There may, however, be other reasons that we don’t know about.** — Однако могут быть и другие причины, о которых мы не знаем.
-* **She walked home by herself, although she knew that it was dangerous.** — Она шла домой одна, хотя знала, что это опасно.
+### Сравнимаем с чем-то
 
-Nevertheless — Несмотря на 
+Like — Как, типа
 
-* **I knew a lot about the subject already, but her talk was interesting nevertheless.** — Я уже много знал об этой теме, но ее выступление было интересным.
+* **Like everyone, she has problems.** — И что у нее, как у всех, бывают проблемы.
 
-Still / Yet — И всё же
+Equally / Likewise / Similarly — Подобно, аналогично
 
-* **I’m a mother of two and I still hold down a job.** — Я мать двоих детей, и все же я работаю.
-* **This is so obvious and yet difficult to remember each moment.** — Это так очевидно, и все же так трудно помнить об этом каждый момент.
+* **Equally enchanting were the surrounding gardens.** — Такими же впечатлящими были сады, окружающие комплекс.
+* **We put up a fence, and other neighbors did likewise.** —  Мы поставили забор, и другие соседи сделали то же самое.
+* **But most people treat them similarly.** — Думаю, что и большинство людей точно так же к ним относятся.
 
-On the contrary / To the contrary — В противоположность этому / Наоборот 
+In the same way — Таким же образом
 
-* **— I thought you said the film was exciting? — On the contrary, I nearly fell asleep!** — Я думал, ты сказал, что фильм был захватывающим? — Наоборот, я чуть не заснул!
-* **To the contrary, economy continues to do extremely well.** — Наоборот, экономика продолжает работать очень хорошо.
+* **I am trying to raise my son in the same way.** — Я воспитываю своего сына таким же образом.
 
-### Подчеркиваем важное 
+It’s a similar situation with — Так же дело обстоит и с
 
-Especially — Особенно
+* **It's a similar situation with prices.** — Похожая ситуация складывается с ценами.
 
-* **Especially given our plans for business expansion.** — Особенно на фоне наших планов по расширению бизнеса.
+As well as — Тоже / Так же, как и
 
-Above all — прежде всего
+* **You will be given a rest, as well as time for photographing.** — Вам будет предоставлен отдых, а так же время для фотографирования.
 
-* **Above all children need to be given love.** — К детям, прежде всего, нужно относиться с любовью.
+All the same — Несмотря на это (на то, что было сказано)
 
-More importantly — Что еще более важно
-
-* **More importantly, pessimism is sometimes tied to health risks.** — Что еще более важно, пессимизм иногда связывают с рисками для здоровья.
-
-Undoubtedly — Несомненно, безусловно
-
-* **Undoubtedly both options have advantages and disadvantages.** — Несомненно, оба варианта имеют свои преимущества и недостатки.
-
-By all means — Всеми силами / В любом случае / Во что бы то ни стало
-
-* **By all means, travel while you can.** — Во что бы то ни стало, путешествуйте, пока можете.
-
-### Добавляем уверенности
-
-Of course / Surely / Certainly — Конечно, безусловно
-
-* **Of course he wasn't honest.** — Но, конечно, он не был искренен.
-* **The bank will surely face the problem.** — Банк наверняка будет иметь дело с проблемой.
-* **I determined that it certainly was possible.** — Я придерживаюсь той точки зрения, что это, безусловно, было возможно.
-
-Evidently — используется, чтобы показать, что что-то верно, например, потому что вы сами видели доказательства этого.
-
-* **Evidently somebody has made a mistake in figuring.** — Очевидно, кто-то ошибся при вычислении.
-
-Clearly — слово показывает, что то, о чем вы говорите очевидно или определенно.
-
-* **They clearly had feelings for each other.** — Конечно, у них были чувства друг к другу.
-
-Indeed — действительно, конечно. Слово используется, чтобы подчеркнуть мысль.
-
-* **Indeed, solitude or tranquillity is needed to reflect properly.** — Действительно, одиночество или спокойствие необходимы для того, чтобы размышлять должным образом.
-
-Obviously — так, что это легко понять или увидеть (очевидно)
-
-* **Obviously, the circumstances have changed.** — Очевидно, положение изменилось.
-
-<tr />
-
-*Reflect — тщательно подумать, особенно о возможностях и мнениях*
-*Circumstances — факт или событие, которое делает ситуацию такой, какой она есть.*
-*Figure — рассчитывать сумму.*
+* **It rained every day of our holiday, but we had a good time all the same.** — Каждый день нашего отпуска шел дождь, но мы все равно хорошо проводили время.

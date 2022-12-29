@@ -170,6 +170,14 @@ export const initialTrainingRoute = [
                         isOpen: true,
                         isStudied: false,
                     },
+                    {
+                        id: 'fkj387fsdjh2387fsd',
+                        name: 'Introductory phrases, part VII',
+                        link: '/introductory_phrases_VII',
+                        partOfGrammarId: "jh387fsjh387fsjdhf",
+                        isOpen: true,
+                        isStudied: false,
+                    },
                 ]
             },
             {

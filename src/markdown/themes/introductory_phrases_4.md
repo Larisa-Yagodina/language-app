@@ -1,93 +1,63 @@
 ## Вводные слова (часть IV)
 
 
+### Указываем последовательность событий
 
-### Поясняем с помощью примера
+First / Firstly — Во-первых
 
-For example / For instance — Например
+* **Firstly, the decision was taken because it was necessary.** — Во-первых, это решение было принято потому, что оно оказалось необходимым.
 
-* **For example, in Denmark, people primarily value their employment.** — Например, в Дании люди в первую очередь ценят свою занятость.
-* **For instance, you never told me when you started dating Jessica.** Например то, что ты не сказал мне, когда начал встречаться с Джессикой.
+Second / Secondly — Во-вторых
 
-In other words — Другими словами
+* **Secondly, the price will surely bite.** — Во-вторых, цена, скорее всего, будет кусаться.
 
-* **In other words it could happen sooner than we might think.** — Другими словами, это могло бы произойти раньше, чем можно было бы подумать.
+Third / Thirdly — В-третьих
 
-Which is to say — То есть, иначе говоря
+* **Thirdly, they may lack the interest to study.** — В-третьих, им, возможно, не хватает заинтересованности в учебе.
 
-* **Data must be factual, which is to say, true and valid.** — Данные должны соответствовать фактам, то есть быть истинными и надёжными.
+Then / Next — Затем, после
 
-Such as	— Например / такой как
+* **Next, he sent me this kind email.** — После этого он прислал мне такое письмо по электронной почте.
+* **Then, they start talking behind your back.** — Затем они начнут говорить о вас за вашей спиной.
 
-* **That money is to cover costs such as travel and accommodation.** — Эти деньги предназначены для покрытия расходов, таких как проезд и проживание.
+Afterwards — Впоследствии
 
-### Дополняем свою речь подробностями
+* **Afterwards, we laughed over the incident.** — Впоследствии мы посмеялись над этим инцидентом.
 
-Also — Также, к тому же
+Previously / Before — До этого, раньше
 
-* **Also, she attended dance classes in the past.** — Также она посещала танцевальные классы в прошлом.
+* **Previously, I often feel afraid about my money issues.** — До этого я очень часто беспокоилась по поводу проблем с деньгами.
+* **Before, I never thought I deserved it.** — Раньше я не думал, что заслуживал этого.
 
-In addition / I’d like to add — В дополнение к этому, кроме того, я бы хотел добавить
 
-* **In addition, they will guarantee their service.**  — Кроме того, они дают гарантию на свои услуги.
-* **I'd like to add a few more, based on my own experience.** — Я бы немного добавил исходя из собственного опыта.
+### Говорим в завершение, подводим итог
 
-Besides / Moreover / Furthermore — Кроме того, более того
+Finally / After all / Eventually — В конце концов, в итоге, в конечном счете
 
-* **Besides, he often has fascinating adventures.** — Кроме того, он постоянно попадает в увлекательные приключения.
-* **Moreover, competition has never been so fierce.** — Более того, конкуренция еще никогда не была столь жесткой.
-* **Furthermore, I know I'm in good hands.** — Кроме того, я уверен, что нахожусь в хороших руках.
+* **Finally, consider your financial capacity.** — В конце концов, учтите свои финансовые возможности.
+* **After all, some companies faced the same obstacles.** — В конечном счете, некоторые компании столкнулись с такими же препятствиями.
+* **Eventually this caused our friendship fall apart.** — В итоге это привело к тому, что дружба разрушилась.
 
-What’s more	— кроме того
+In conclusion — В заключении
 
-* **What's more, both diets may result in weight loss.** — Более того, обе диеты могут привести к снижению массы тела.
+* **In conclusion, we must stop looking backwards.** — Хочу сказать в заключение, что надо перестать оглядываться назад.
 
-Just for the record	— для справки / чтобы вы знали
+Ultimately — В конечном счете, наконец
 
-* **Just for the record, this is a terrific idea.** — Просто для записи, это отличная идея.
+* **Our thoughts ultimately determine our destiny.** — Наши идеи в конечном итоге определяют нашу судьбу.
 
-### Сравнимаем с чем-то
+Either way	— Так или иначе, в любом случае
 
-Like — Как, типа
+* **Either way it's a win-win.** — В любом случае, это беспроигрышный вариант.
+* **Either way it will still impact your life.** — Так или иначе, это будет по-прежнему влиять на вашу жизнь.
 
-* **Like everyone, she has problems.** — И что у нее, как у всех, бывают проблемы.
+Overall / On the whole — В целом, в общем
 
-Equally / Likewise / Similarly — Подобно, аналогично
+* **Overall this strategy would be useful.** — В общем, такая структура была бы полезной.
+* **On the whole, I felt underwhelmed but optimistic.** — В целом, я был недоволен, но настроен оптимистично.
 
-* **Equally enchanting were the surrounding gardens.** — Не менее впечатляют и сады, окружающие комплекс.
-* **We put up a fence, and other neighbors did likewise.** —  Мы поставили забор, и другие соседи сделали то же самое.
-* **But most people treat them similarly.** — Думаю, что и большинство людей точно так же к ним относятся.
 
-In the same way — Таким же образом
 
-* **I am trying to raise my son in the same way.** — Я воспитываю своего сына таким же образом.
-
-It’s a similar situation with — Так же дело обстоит и с
-
-* **It's a similar situation with prices.** — Похожая ситуация складывается с ценами.
-
-As well as — Тоже / Так же, как и
-
-* **You will be given a rest, as well as time for photographing.** — Вам будет предоставлен отдых, а так же время для фотографирования.
-
-All the same — Несмотря на то, что было сказано
-
-* **It rained every day of our holiday, but we had a good time all the same.** — Каждый день нашего отпуска шел дождь, но мы все равно хорошо проводили время.
-
-### Перевести тему
-
-By the way — Кстати
-
-* **By the way, Australian coffee is fantastic.** — Впрочем, знаменитый австралийский кофе прекрасен
-
-Before I forget — Пока я не забыл
-
-* **Before I forget, there’s a free concert on Monday night.** — Пока я не забыл, в понедельник вечером бесплатный концерт.
-
-Anyway — Кстати (используется для того, чтобы сменить тему, вернуться к более ранней теме или перейти к самому интересному пункту)
-
-* **Anyway, did you see Bob’s new flat?** — Кстати, вы видели новую квартиру Боба?
-* **So anyway, what are you going to do tonight?** — Так что ты собираешься делать сегодня вечером?
 
 
 
