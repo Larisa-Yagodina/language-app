@@ -2,11 +2,12 @@ import * as React from 'react';
 import { useState } from "react";
 import {initialSentences} from "../serverData/InitialSentences";
 import PhrasesList from "./PhrasesList";
+import initialUserPhrases from "../serverData/InitialUserPhrases";
 
 export default function PhrasesListWrapper({mainUrl, title}) {
 
     const userId = 'dlkfjl3487f9s';
-    const [initialPhrases, setInitialPhrases] = useState(initialSentences.filter(el => el.userId === userId).map(el => ({...el, isOpen: false})));
+    const [initialPhrases, setInitialPhrases] = useState(initialUserPhrases.filter(el => el.userId === userId).map(el => ({...el, isOpen: false})));
     const [phrases, setPhrases] = useState(initialPhrases);
 
 

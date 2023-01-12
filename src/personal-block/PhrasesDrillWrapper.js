@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import {initialSentences} from "../serverData/InitialSentences";
 import ChoseSpeed from "../searchAndFilter/ChoseSpeed";
 import SentenceDrill from "../no-theory-drills/sentence-drill/SentenceDrill";
+import initialUserPhrases from "../serverData/InitialUserPhrases";
 
 
 function PhasesDrillWrapper() {
@@ -32,7 +32,7 @@ function PhasesDrillWrapper() {
     );
 
     const userId = 'dlkfjl3487f9s';
-    const [sentences, setSentences] = useState(initialSentences.filter(el => el.userId === userId).filter(el => !el.isStudied));
+    const [sentences, setSentences] = useState(initialUserPhrases.filter(el => el.userId === userId).filter(el => !el.isStudied));
 
     const [randomIndex, setRandomIndex] = useState(null);
     const [openTranslation, setOpenTranslation] = useState(false);

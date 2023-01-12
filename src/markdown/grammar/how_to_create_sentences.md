@@ -21,6 +21,9 @@ call you».
 4) Место (где?);
 5) Время (когда?).
 
+<div class="rule"> Кто + что делает + с чем +  </div>
+
+
 Например:
 
 * **I will call you from Los Angeles tomorrow.** — Я тебе завтра позвоню из Лос Анжелеса;
