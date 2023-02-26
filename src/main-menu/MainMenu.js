@@ -56,7 +56,7 @@ export default function MainMenu() {
 
                         <Typography sx={{minWidth: 200}}>
                             <Link to="/add_new_phrase_or_word" style={{textDecoration: 'none', color: 'black'}}>
-                                Add WORD
+                                Add to remember
                             </Link>
                         </Typography>
 
