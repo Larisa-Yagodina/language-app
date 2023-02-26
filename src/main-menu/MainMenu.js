@@ -54,6 +54,12 @@ export default function MainMenu() {
                             </Link>
                         </Typography>
 
+                        <Typography sx={{minWidth: 200}}>
+                            <Link to="/add_new_phrase_or_word" style={{textDecoration: 'none', color: 'black'}}>
+                                Add WORD
+                            </Link>
+                        </Typography>
+
                     </>
                 </Box>
                 <Menu
@@ -118,15 +124,23 @@ export default function MainMenu() {
                             Phrases to remember
                         </MenuItem>
                     </Link>
+                    {/*<Link to="/words-to-remember" style={{textDecoration: 'none', color: 'black'}}>*/}
+                    {/*    <MenuItem>*/}
+                    {/*        <ListItemIcon>*/}
+                    {/*            <FaceRetouchingNaturalIcon fontSize="small"/>*/}
+                    {/*        </ListItemIcon>*/}
+                    {/*        Words to remember*/}
+                    {/*    </MenuItem>*/}
+                    {/*</Link>*/}
                     <Divider/>
-                    <Link to="/new_words_drill" style={{textDecoration: 'none', color: 'black'}}>
-                        <MenuItem>
-                            <ListItemIcon>
-                                <PlaylistAddCheckIcon fontSize="small"/>
-                            </ListItemIcon>
-                            Words
-                        </MenuItem>
-                    </Link>
+                    {/*<Link to="/new_words_drill" style={{textDecoration: 'none', color: 'black'}}>*/}
+                    {/*    <MenuItem>*/}
+                    {/*        <ListItemIcon>*/}
+                    {/*            <PlaylistAddCheckIcon fontSize="small"/>*/}
+                    {/*        </ListItemIcon>*/}
+                    {/*        Words*/}
+                    {/*    </MenuItem>*/}
+                    {/*</Link>*/}
                     <Link to="/grammar_route" style={{textDecoration: 'none', color: 'black'}}>
                         <MenuItem>
                             <ListItemIcon>

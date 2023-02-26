@@ -2,9 +2,10 @@ import React, {useEffect, useState} from "react";
 import ChoseSpeed from "../searchAndFilter/ChoseSpeed";
 import SentenceDrill from "../no-theory-drills/sentence-drill/SentenceDrill";
 import initialUserPhrases from "../serverData/InitialUserPhrases";
+import {connect} from "react-redux";
 
 
-function PhasesDrillWrapper() {
+function DrillWrapper(props) {
 
     const [chosenSpeed, setChosenSpeed] = useState(15000);
     const [speedRange, setSpeedRange] = useState([
@@ -31,8 +32,7 @@ function PhasesDrillWrapper() {
         ]
     );
 
-    const userId = 'dlkfjl3487f9s';
-    const [sentences, setSentences] = useState(initialUserPhrases.filter(el => el.userId === userId).filter(el => !el.isStudied));
+    const [sentences, setSentences] = useState(props.userSentences.filter(el => !el.isStudied));
 
     const [randomIndex, setRandomIndex] = useState(null);
     const [openTranslation, setOpenTranslation] = useState(false);
@@ -49,6 +49,7 @@ function PhasesDrillWrapper() {
     };
 
     let randomInd = 0;
+
     const getRandomIndex = () => {
         let random = Math.floor(Math.random() * sentences.length);
         while (randomInd === random) {
@@ -62,7 +63,7 @@ function PhasesDrillWrapper() {
     const [waitingTimer, setWaitingTimer] = useState(0)
     useEffect(() => {
         // пока ждем, пока сработает таймер
-        setRandomIndex(0);
+        setRandomIndex(getRandomIndex());
         setOpenTranslation(false)
         setTimeout(() => {
             setOpenTranslation(true)
@@ -97,7 +98,7 @@ function PhasesDrillWrapper() {
     return (
         <div className="App">
 
-            <h3> My phrases to learn </h3>
+            <h3> {props.title} </h3>
 
             <div style={{background: 'white', height: '90px'}}>
                 <ChoseSpeed speedRange={speedRange} setChosenSpeed={setChosenSpeed}/>
@@ -110,12 +111,16 @@ function PhasesDrillWrapper() {
                     sentences={sentences}
                 />
             </div>
-
         </div>
     );
 }
 
-export default PhasesDrillWrapper;
+const mapStateToProps = (state) => ({
+    userWords: state.userWords,
+    userSentences: state.userSentences
+})
+
+export default connect(mapStateToProps)(DrillWrapper);
 
 
 // работа useEffect и setInterval

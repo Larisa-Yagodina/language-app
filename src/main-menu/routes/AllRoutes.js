@@ -3,15 +3,15 @@ import {Route, Routes} from "react-router-dom";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
 import TheoryWrapper from "../../study-routes/theory-and-drill-showing/theory/TheoryWrapper";
 import ChooseLesson from "../../personal-block/ChooseLesson";
-import AddNewPhraseToRemember from "../../personal-block/AddNewPhraseToRemember";
 import DrillTips from "../../footer-menu-pages/DrillTips";
 import Help from "../../footer-menu-pages/Help";
 import Logout from "../../footer-menu-pages/Logout";
 import ThemesWrapper from "../../study-routes/routes/ThemesWrapper";
 import GrammarWrapper from "../../study-routes/routes/GrammarWrapper";
 import WordsTabs from "../../no-theory-drills/words-drill/WordsTabs";
-import PersonalPhrasesTabs from "../../personal-block/PersonalPhrasesTabs";
+import PersonalTabs from "../../personal-block/PersonalTabs";
 import MainPage from "../../MainPage";
+import AddNewWordOrPhrase from "../../personal-block/AddNewWordOrPhrase";
 
 
 const AllRoutes = () => {
@@ -22,7 +22,8 @@ const AllRoutes = () => {
     return (
         <Routes>
             <Route path="/my-lessons" element={<ChooseLesson />}/>
-            <Route path="/phrases-to-remember" element={<PersonalPhrasesTabs />}/>
+            <Route path="/phrases-to-remember" element={<PersonalTabs label={'Phrases'} />}/>
+            <Route path="/words-to-remember" element={<PersonalTabs label={'Words'} />}/>
 
             <Route path="/new_words_drill" element={<WordsTabs />}/>
             <Route path="/grammar_route" element={<GrammarWrapper />}/>
@@ -31,6 +32,7 @@ const AllRoutes = () => {
             <Route path="/drill-tips" element={<DrillTips />}/>
             <Route path="/help" element={<Help/>}/>
             <Route path="/logout" element={<Logout/>}/>
+            <Route path="/add_new_phrase_or_word" element={<AddNewWordOrPhrase/>}/>
             <Route path="*" element={<ChooseLesson />}/>
 
             {/* Грамматика */}

@@ -14,6 +14,7 @@ export const initialThemes = [
         theory: 'for_all_occasions.md',
         description: '',
         test: [],
+        userId: ['dlkfjl3487f9s', ]
     },
     {
         id: "kjdh087djh387s",

@@ -17,7 +17,7 @@ const styleRight = {
     marginRight: 0,
 }
 
-export default function PhrasesList({
+export default function ItemsList({
                                         openAll,
                                         handleChange,
                                         phrases,
@@ -66,18 +66,18 @@ export default function PhrasesList({
                     {/*    ТЕМЫ     */}
 
                     {phrases.map((value) => {
-                        const labelId = value.id;
+                        const labelId = value._id;
                         return (
-                            <div>
-                                <li>
+                            <div key={value._id}>
+
                                     <ListItem
-                                        key={value.id}
-                                        onClick={() => openNotes(value.id)}
+                                        key={value._id}
+                                        onClick={() => openNotes(value._id)}
                                         secondaryAction={
                                             <Checkbox
                                                 color="success"
                                                 edge="end"
-                                                onChange={handleToggle(value.id)}
+                                                onChange={handleToggle(value._id)}
                                                 checked={value.isStudied}
                                                 inputProps={{'aria-labelledby': labelId}}
                                             />
@@ -85,10 +85,10 @@ export default function PhrasesList({
                                         disablePadding
                                     >
                                         <ListItemButton>
-                                            <ListItemText id={labelId} primary={value.english}/>
+                                            <ListItemText id={labelId} primary={(title === "My phrases") ? value.english : value.word}/>
                                         </ListItemButton>
                                     </ListItem>
-                                </li>
+
 
                                 {/*    ВЛОЖЕННЫЕ ЗАМЕТКИ    */}
 
@@ -100,7 +100,7 @@ export default function PhrasesList({
                                                 disablePadding
                                             >
                                                 <ListItemButton>
-                                                    <ListItemText id={labelId + "russian"} primary={value.russian}/>
+                                                    <ListItemText id={labelId + "russian"} primary={ (title === "My phrases") ? value.russian : value.definition}/>
                                                 </ListItemButton>
                                             </ListItem>
                                             <ListItem
@@ -108,7 +108,7 @@ export default function PhrasesList({
                                                 disablePadding
                                             >
                                                 <ListItemButton>
-                                                    <ListItemText id={labelId + "note"} primary={value.note}/>
+                                                    <ListItemText id={labelId + "note"} primary={(title === "My phrases") ? value.note : "Equivalent: " + value.russianEquivalent}/>
                                                 </ListItemButton>
                                             </ListItem>
                                     </ul>

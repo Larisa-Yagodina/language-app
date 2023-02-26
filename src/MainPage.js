@@ -20,7 +20,7 @@ const MainPage = () => {
             <Markdown>
                 {text}
             </Markdown>
-            <ChooseLesson />
+            <ChooseLesson mainPage={true} />
         </div>
     );
 };

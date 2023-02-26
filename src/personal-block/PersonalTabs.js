@@ -4,8 +4,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import TabPanel from "../utils/TabPanel";
-import PhrasesWrapper from "./PhrasesWrapper";
-import PhasesDrillWrapper from "./PhrasesDrillWrapper";
+import DrillWrapper from "./DrillWrapper";
+import Phrases from "./Phrases";
+import Words from "./Words";
+import AddNewWordOrPhrase from "./AddNewWordOrPhrase";
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -20,9 +22,9 @@ function a11yProps(index) {
     };
 }
 
-export default function PersonalPhrasesTabs(props) {
+export default function PersonalTabs(props) {
 
-    const [value, setValue] = React.useState( 0);
+    const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -36,16 +38,22 @@ export default function PersonalPhrasesTabs(props) {
 
                     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
 
-                        <Tab label="Add new phrase" {...a11yProps(0)} />
-                        <Tab label="Drill"  {...a11yProps(1)} />
+                        <Tab label={props.label} {...a11yProps(0)} />
+                        <Tab label='Drill' {...a11yProps(1)} />
                     </Tabs>
                 </Box>
 
                 <TabPanel value={value} index={0}>
-                    <PhrasesWrapper />
+                    { props.label === 'Phrases' ?
+                        <Phrases />
+                        :
+                        <Words />}
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-<PhasesDrillWrapper />
+                    { props.label === 'Phrases' ?
+                        <DrillWrapper title={"My phrases to learn"} option={"Phrases"}/>
+                        :
+                        <DrillWrapper title={"My words to learn"} option={"Words"} />}
                 </TabPanel>
             </Box>
         </div>

@@ -1543,7 +1543,7 @@ export const initialSentences = [
         isStudied: false,
         userId: '',
         grammar: [''],
-        themes: ['dkfj3iusd9f3j',],
+        themes: ['dkfj3iusd9f3j', ],
         partOfSpeech: [''],
         words: ['',],
         definition: ['',],

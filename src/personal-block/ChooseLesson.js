@@ -33,7 +33,7 @@ const block = {
     textAlign: 'center',
 }
 
-function ChooseLesson() {
+function ChooseLesson(props) {
 
     const userId = 'dlkfjl3487f9s';
 
@@ -91,7 +91,7 @@ function ChooseLesson() {
     return (
         <div style={parent}>
             <div style={blockWrapper}>
-                {previousLessonsLength > 0 &&
+                {(previousLessonsLength > 0 && !props.mainPage) &&
                     <div style={block}>
                         <h3>Повторим пройденное?</h3>
                         <h4>{previousRandomLesson.name}</h4>
