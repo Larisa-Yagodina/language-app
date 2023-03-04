@@ -39,7 +39,7 @@ function ListWrapper({mainUrl, title, userSentences, changeUserSentence, getAllU
             title={title}
             openAll={openAll}
             handleChange={handleChange}
-            phrases={!phrases.length ? userSentences.reverse() : phrases.reverse()}
+            phrases={!phrases.length ? userSentences : phrases}
             handleToggle={handleToggle}
             openNotes={openNotes}
         />
