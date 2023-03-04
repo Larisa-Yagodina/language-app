@@ -1,12 +1,12 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const URI = 'https://english-app-server.vercel.app';
 
-export function getUserWords () {
+export function getUserWords() {
     return (dispatch) => {
         axios.get(`${URI}/userWords`)
             .then(res => {
-                dispatch ({
+                dispatch({
                     type: 'GET_USER_WORDS',
                     payload: res.data,
                 })
@@ -15,11 +15,11 @@ export function getUserWords () {
     }
 }
 
-export function getUserSentences () {
+export function getUserSentences() {
     return (dispatch) => {
         axios.get(`${URI}/userPhrases`)
             .then(res => {
-                dispatch ({
+                dispatch({
                     type: 'GET_USER_SENTENCES',
                     payload: res.data,
                 })
@@ -28,23 +28,45 @@ export function getUserSentences () {
     }
 }
 
-export function addUserPhrase (word) {
+export function addUserPhrase(word) {
     return (dispatch) => {
         axios.post(`${URI}/userPhrases`, word)
             .then(res => {
-                dispatch(getUserSentences());
-                alert("Phrase has been added successfully")
+                dispatch(
+                    getUserSentences()
+                );
+                dispatch({
+                    type: 'OPEN_ALERT',
+                    payload: {message: "Phrase has been added successfully", alertColour: "success"},
+                })
+                console.log("OK")
             })
-            .catch(err => err)
+            .catch(err => {
+                    console.log("ERROR")
+                    dispatch({
+                        type: 'OPEN_ALERT',
+                        payload: {message: "Phrase hasn't been changed - server problems", alertColour: "error"},
+                    })
+                }
+            )
     }
 }
 
-export function changeUserPhrase (id, changes) {
+export function changeUserPhrase(id, changes) {
     return (dispatch) => {
         axios.patch(`${URI}/userPhrases/${id}`, changes)
             .then(res => {
                 dispatch(getUserSentences());
+                dispatch({
+                    type: 'OPEN_ALERT',
+                    payload: {message: "Phrase has been changed successfully", alertColour: 'success'},
+                })
             })
-            .catch(err => alert("Phrase hasn't been changed - server problems"))
+            .catch(err =>
+                dispatch({
+                    type: 'OPEN_ALERT',
+                    payload: {message: "Phrase hasn't been changed - server problems", alertColour: 'error'},
+                })
+            )
     }
 }

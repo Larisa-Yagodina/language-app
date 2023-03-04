@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import MainMenu from "./main-menu/MainMenu";
 import axios from 'axios';
-import logout from "./footer-menu-pages/Logout";
+import Alerts from "./redux/Alerts";
 
 const App = () => {
 
@@ -24,6 +24,7 @@ const App = () => {
     return (
         <div style={{ margin: 12 }}>
             <MainMenu />
+            <Alerts />
         </div>
     );
 };

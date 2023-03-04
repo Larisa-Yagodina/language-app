@@ -1,6 +1,13 @@
 const initialState = {
     userWords: [],
     userSentences: [],
+    isOpenAlert: {
+        open: false,
+        vertical: 'top',
+        horizontal: 'center',
+        message: '',
+        alertColour: 'info'
+    }
 };
 
 const reducer = (state = initialState, action) => {
@@ -18,6 +25,19 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 userSentences: action.payload.reverse(),
             };
+
+        case 'OPEN_ALERT':
+            return {
+                ...state,
+                isOpenAlert: {...state.isOpenAlert, open: true, message: action.payload.message, alertColour: action.payload.alertColour},
+            }
+
+        case 'CLOSE_ALERT':
+            return {
+                ...state,
+                isOpenAlert: {...state.isOpenAlert, open: false, message: '', alertColour: 'info'},
+            }
+
 
         default:
             return state;

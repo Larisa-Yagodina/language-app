@@ -47,7 +47,6 @@ function ListWrapper({mainUrl, title, userSentences, changeUserSentence, getAllU
 }
 
 const mapStateToProps = (state) => ({
-    userWords: state.userWords,
     userSentences: state.userSentences
 })
 
