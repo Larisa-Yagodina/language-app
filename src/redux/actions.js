@@ -38,3 +38,13 @@ export function addUserPhrase (word) {
             .catch(err => err)
     }
 }
+
+export function changeUserPhrase (id, changes) {
+    return (dispatch) => {
+        axios.patch(`${URI}/userPhrases/${id}`, changes)
+            .then(res => {
+                dispatch(getUserSentences());
+            })
+            .catch(err => alert("Phrase hasn't been changed - server problems"))
+    }
+}

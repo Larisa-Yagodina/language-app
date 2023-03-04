@@ -2,21 +2,18 @@ import * as React from 'react';
 import {useEffect, useState} from "react";
 import ItemsList from "./ItemsList";
 import {connect} from "react-redux";
-import {getUserSentences, getUserWords} from "../redux/actions";
+import {changeUserPhrase, getUserSentences} from "../redux/actions";
 
-function ListWrapper({mainUrl, title, label, userWords, userSentences, getAllUserWords, getAllUserSentences}) {
+function ListWrapper({mainUrl, title, userSentences, changeUserSentence, getAllUserSentences}) {
 
     useEffect(() => {
         getAllUserSentences();
     }, []);
 
-    const [initData, setInitData] = useState(userSentences.map(el => ({...el, isOpen: false})).reverse());
-    const [phrases, setPhrases] = useState(initData);
+    const [phrases, setPhrases] = useState([]);
 
-    const handleToggle = (id) => () => {
-        const newPhrases = phrases.map(el => el._id === id ? {...el, isStudied: !el.isStudied} : el);
-        setPhrases(newPhrases);
-        setInitData(newPhrases)
+    const handleToggle = (id, isStudied) => () => {
+        changeUserSentence(id, {isStudied})
     };
 
     const openNotes = (id) => {
@@ -26,9 +23,13 @@ function ListWrapper({mainUrl, title, label, userWords, userSentences, getAllUse
 
     const [openAll, setOpenAll] = React.useState(true);
 
+    useEffect(() => {
+        setPhrases(openAll ? userSentences : userSentences.filter(el => el.isStudied === false))
+    }, [userSentences])
+
     const handleChange = (event) => {
         setOpenAll(event.target.checked);
-        const newPhrases = event.target.checked ? initData : initData.filter(el => el.isStudied === false);
+        const newPhrases = event.target.checked ? userSentences : userSentences.filter(el => el.isStudied === false);
         setPhrases(newPhrases);
     };
 
@@ -38,7 +39,7 @@ function ListWrapper({mainUrl, title, label, userWords, userSentences, getAllUse
             title={title}
             openAll={openAll}
             handleChange={handleChange}
-            phrases={phrases.length ? phrases : userSentences}
+            phrases={!phrases.length ? userSentences.reverse() : phrases.reverse()}
             handleToggle={handleToggle}
             openNotes={openNotes}
         />
@@ -51,7 +52,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    getAllUserSentences: () => dispatch(getUserSentences())
+    getAllUserSentences: () => dispatch(getUserSentences()),
+    changeUserSentence: (id, changes) => dispatch(changeUserPhrase(id, changes))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListWrapper);

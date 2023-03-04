@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
-import {FormControlLabel, FormGroup, Stack, Switch} from "@mui/material";
+import {Stack, Switch} from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Checkbox from "@mui/material/Checkbox";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import ListItemButton from "@mui/material/ListItemButton";
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 
 const wrapperStyle = {
     display: 'grid',
@@ -18,13 +20,13 @@ const styleRight = {
 }
 
 export default function ItemsList({
-                                        openAll,
-                                        handleChange,
-                                        phrases,
-                                        handleToggle,
-                                        title,
-                                        openNotes
-                                    }) {
+                                      openAll,
+                                      handleChange,
+                                      phrases,
+                                      handleToggle,
+                                      title,
+                                      openNotes
+                                  }) {
 
     return (
         <div>
@@ -44,7 +46,7 @@ export default function ItemsList({
                         />
                         <Typography>All</Typography>
                     </Stack>
-                    <div style={{textAlign: 'right'}}>
+                    <div style={{textAlign: 'center'}}>
                         Already knew :
                     </div>
                 </div>
@@ -70,24 +72,38 @@ export default function ItemsList({
                         return (
                             <div key={value._id}>
 
-                                    <ListItem
-                                        key={value._id}
-                                        onClick={() => openNotes(value._id)}
-                                        secondaryAction={
+
+                                <Box sx={{flexGrow: 1}}>
+                                    <Grid container spacing={0}>
+                                        <Grid item xs={11}>
+
+
+                                            <ListItem
+                                                key={value._id}
+                                                onClick={() => openNotes(value._id)}
+                                                disablePadding
+                                            >
+                                                <ListItemButton>
+                                                    <ListItemText id={labelId}
+                                                                  primary={(title === "My phrases") ? value.english : value.word}/>
+                                                </ListItemButton>
+                                            </ListItem>
+
+
+                                        </Grid>
+                                        <Grid item xs={1}>
+
                                             <Checkbox
                                                 color="success"
                                                 edge="end"
-                                                onChange={handleToggle(value._id)}
+                                                onChange={handleToggle(value._id, !value.isStudied)}
                                                 checked={value.isStudied}
                                                 inputProps={{'aria-labelledby': labelId}}
                                             />
-                                        }
-                                        disablePadding
-                                    >
-                                        <ListItemButton>
-                                            <ListItemText id={labelId} primary={(title === "My phrases") ? value.english : value.word}/>
-                                        </ListItemButton>
-                                    </ListItem>
+
+                                        </Grid>
+                                    </Grid>
+                                </Box>
 
 
                                 {/*    ВЛОЖЕННЫЕ ЗАМЕТКИ    */}
@@ -95,22 +111,24 @@ export default function ItemsList({
                                 {value.isOpen &&
                                     <ul>
 
-                                            <ListItem
-                                                key={value.id}
-                                                disablePadding
-                                            >
-                                                <ListItemButton>
-                                                    <ListItemText id={labelId + "russian"} primary={ (title === "My phrases") ? value.russian : value.definition}/>
-                                                </ListItemButton>
-                                            </ListItem>
-                                            <ListItem
-                                                key={value.id}
-                                                disablePadding
-                                            >
-                                                <ListItemButton>
-                                                    <ListItemText id={labelId + "note"} primary={(title === "My phrases") ? value.note : "Equivalent: " + value.russianEquivalent}/>
-                                                </ListItemButton>
-                                            </ListItem>
+                                        <ListItem
+                                            key={value.id}
+                                            disablePadding
+                                        >
+                                            {/*<ListItemButton>*/}
+                                              <ListItemText id={labelId + "russian"}
+                                                          primary={(title === "My phrases") ? value.russian : value.definition}/>
+                                            {/*</ListItemButton>*/}
+                                        </ListItem>
+                                        <ListItem
+                                            key={value.id}
+                                            disablePadding
+                                        >
+                                            {/*<ListItemButton>*/}
+                                            <ListItemText id={labelId + "note"} style={{fontStyle: 'italic'}}
+                                                          primary={(title === "My phrases") ? value.note : "Equivalent: " + value.russianEquivalent}/>
+                                            {/*</ListItemButton>*/}
+                                        </ListItem>
                                     </ul>
                                 }
                             </div>

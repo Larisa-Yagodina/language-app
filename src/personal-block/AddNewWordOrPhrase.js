@@ -1,10 +1,11 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useForm} from "react-hook-form";
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import {addUserPhrase} from "../redux/actions";
 import {connect} from "react-redux";
+import {Link} from "react-router-dom";
 
 const AddNewWordOrPhrase = (props) => {
 
@@ -24,6 +25,7 @@ const AddNewWordOrPhrase = (props) => {
             "isStudied": false,
             "userId": "dlkfjl3487f9s",
         }
+        console.log('SUBMIT')
         props.addUserPhrase(userSentence)
         reset({ ...inputData })
     }
@@ -53,7 +55,7 @@ const AddNewWordOrPhrase = (props) => {
                         <TextField
                             id="standard-multiline-static"
                             multiline
-                            rows={2}
+                            rows={3}
                             variant="standard"
                             label="Sentence in English"
                             type="text"
@@ -62,9 +64,9 @@ const AddNewWordOrPhrase = (props) => {
                         <TextField
                             id="standard-multiline-static"
                             multiline
-                            rows={2}
+                            rows={3}
                             variant="standard"
-                            label="Russian translation"
+                            label="Russian equivalent"
                             type="text"
                             {...register("russian",)}
                         />
@@ -79,7 +81,7 @@ const AddNewWordOrPhrase = (props) => {
                             label="English word or phrase"
                             type="text"
                             multiline
-                            rows={2}
+                            rows={3}
                             {...register("word", {required: 'Word or phrase is required.'})}
                             helperText="Добавьте слово или устойчивое выражение, которое использовано в предложении (по английски)."
                         />
@@ -90,7 +92,7 @@ const AddNewWordOrPhrase = (props) => {
                             label="Description"
                             type="text"
                             multiline
-                            rows={2}
+                            rows={3}
                             {...register("description", {required: 'Description is required.'})}
                             helperText="Добавьте пояснения — определение слова или выражения, его эквивалент в русском (как бы вы это сказали по-русски)."
                         />
@@ -114,6 +116,14 @@ const AddNewWordOrPhrase = (props) => {
 
                     <div style={{margin: "30px 8px"}}>
                         <Button type='submit' variant="outlined">Submit</Button>
+                    </div>
+
+                    <div style={{margin: "30px 8px"}}>
+
+                        <Link type='button' to="/phrases-to-remember" style={{textDecoration: 'none', color: 'black'}}>
+                            <Button  variant="outlined"> Go to drill</Button>
+                        </Link>
+
                     </div>
                 </Box>
 

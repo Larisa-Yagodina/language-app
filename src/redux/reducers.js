@@ -16,7 +16,7 @@ const reducer = (state = initialState, action) => {
         case 'GET_USER_SENTENCES':
             return {
                 ...state,
-                userSentences: action.payload,
+                userSentences: action.payload.reverse(),
             };
 
         default:
