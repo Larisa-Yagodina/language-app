@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import ListItemButton from "@mui/material/ListItemButton";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import ItemMenuDeleteUpdate from "./ItemMenuDeleteUpdate";
 
 const wrapperStyle = {
     display: 'grid',
@@ -28,8 +29,11 @@ export default function ItemsList({
                                       openNotes
                                   }) {
 
+
+
     return (
         <div>
+
             <div style={wrapperStyle}>
                 <div>
                     <h2>{title}</h2>
@@ -75,7 +79,7 @@ export default function ItemsList({
 
                                 <Box sx={{flexGrow: 1}}>
                                     <Grid container spacing={0}>
-                                        <Grid item xs={11}>
+                                        <Grid item xs={10.7}>
 
 
                                             <ListItem
@@ -91,7 +95,7 @@ export default function ItemsList({
 
 
                                         </Grid>
-                                        <Grid item xs={1}>
+                                        <Grid item xs={1.3}>
 
                                             <Checkbox
                                                 color="success"
@@ -100,6 +104,9 @@ export default function ItemsList({
                                                 checked={value.isStudied}
                                                 inputProps={{'aria-labelledby': labelId}}
                                             />
+                                            {' '}
+
+                                            <ItemMenuDeleteUpdate phrase={value}/>
 
                                         </Grid>
                                     </Grid>
@@ -107,6 +114,7 @@ export default function ItemsList({
 
 
                                 {/*    ВЛОЖЕННЫЕ ЗАМЕТКИ    */}
+
 
                                 {value.isOpen &&
                                     <ul>

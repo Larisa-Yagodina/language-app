@@ -6,8 +6,6 @@ function PositionedSnackbar(props) {
 
     const { vertical, horizontal, open, message, alertColour } = props.isOpenAlert;
 
-    console.log(alertColour)
-
     const handleClose = () => {
         props.closeAlert(false)
     };

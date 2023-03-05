@@ -45,7 +45,7 @@ export function addUserPhrase(word) {
                     console.log("ERROR")
                     dispatch({
                         type: 'OPEN_ALERT',
-                        payload: {message: "Phrase hasn't been changed - server problems", alertColour: "error"},
+                        payload: {message: "Phrase hasn't been changed", alertColour: "error"},
                     })
                 }
             )
@@ -65,8 +65,29 @@ export function changeUserPhrase(id, changes) {
             .catch(err =>
                 dispatch({
                     type: 'OPEN_ALERT',
-                    payload: {message: "Phrase hasn't been changed - server problems", alertColour: 'error'},
+                    payload: {message: "Phrase hasn't been changed", alertColour: 'error'},
                 })
             )
     }
 }
+
+
+export function deleteUserPhrase(id) {
+    return (dispatch) => {
+        axios.delete(`${URI}/userPhrases/${id}`)
+            .then(res => {
+                dispatch(getUserSentences());
+                dispatch({
+                    type: 'OPEN_ALERT',
+                    payload: {message: "Phrase has been deleted successfully", alertColour: 'success'},
+                })
+            })
+            .catch(err =>
+                dispatch({
+                    type: 'OPEN_ALERT',
+                    payload: {message: "Phrase hasn't been delete", alertColour: 'error'},
+                })
+            )
+    }
+}
+
