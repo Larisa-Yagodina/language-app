@@ -11,9 +11,9 @@ const Phrases = (props) => {
     }, []);
 
     return (
-        <div>
+        <>
             <ListWrapper title={'My phrases'} label={"Phrases"} />
-        </div>
+        </>
     );
 };
 

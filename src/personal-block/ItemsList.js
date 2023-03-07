@@ -17,7 +17,7 @@ const wrapperStyle = {
 
 const styleRight = {
     marginLeft: 'auto',
-    marginRight: 0,
+    marginRight: '22%',
 }
 
 export default function ItemsList({
@@ -30,7 +30,6 @@ export default function ItemsList({
                                   }) {
 
 
-
     return (
         <div>
 
@@ -40,8 +39,8 @@ export default function ItemsList({
                 </div>
                 <div style={styleRight}>
                     <br/>
-                    <Stack direction="row" spacing={-0.5} alignItems="center">
-                        <Typography>To learn</Typography>
+                    <Stack direction="row" spacing={-0.6} alignItems="center">
+                        <Typography>New</Typography>
                         <Switch
                             color="success"
                             checked={openAll}
@@ -50,15 +49,15 @@ export default function ItemsList({
                         />
                         <Typography>All</Typography>
                     </Stack>
-                    <div style={{textAlign: 'center'}}>
-                        Already knew :
+                    <div style={{textAlign: 'center', fontSize: "80%"}}>
+                        Already knew:
                     </div>
                 </div>
             </div>
 
             <List
                 sx={{
-                    width: 'auto',
+                    width: '100%',
                     // height: 230,
                     bgcolor: 'background.paper',
                     overflow: 'auto',
@@ -67,7 +66,7 @@ export default function ItemsList({
                 component="div"
                 role="list"
             >
-                <ul>
+                <ul style={{margin: '0.01%', padding: '0.01%'}}>
 
                     {/*    ТЕМЫ     */}
 
@@ -79,7 +78,7 @@ export default function ItemsList({
 
                                 <Box sx={{flexGrow: 1}}>
                                     <Grid container spacing={0}>
-                                        <Grid item xs={10.7}>
+                                        <Grid item xs={10.5}>
 
 
                                             <ListItem
@@ -95,8 +94,10 @@ export default function ItemsList({
 
 
                                         </Grid>
-                                        <Grid item xs={1.3}>
+                                        <Grid item xs={1.5}>
 
+                                            <Grid container spacing={2}>
+                                                <Grid item xs={4}>
                                             <Checkbox
                                                 color="success"
                                                 edge="end"
@@ -105,9 +106,11 @@ export default function ItemsList({
                                                 inputProps={{'aria-labelledby': labelId}}
                                             />
                                             {' '}
-
+                                                </Grid>
+                                                <Grid item xs={8}>
                                             <ItemMenuDeleteUpdate phrase={value}/>
-
+                                                </Grid>
+                                            </Grid>
                                         </Grid>
                                     </Grid>
                                 </Box>
@@ -124,7 +127,7 @@ export default function ItemsList({
                                             disablePadding
                                         >
                                             {/*<ListItemButton>*/}
-                                              <ListItemText id={labelId + "russian"}
+                                            <ListItemText id={labelId + "russian"}
                                                           primary={(title === "My phrases") ? value.russian : value.definition}/>
                                             {/*</ListItemButton>*/}
                                         </ListItem>

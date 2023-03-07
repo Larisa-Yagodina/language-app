@@ -1,10 +1,9 @@
 import React from 'react';
 import MainMenu from "./main-menu/MainMenu";
-import axios from 'axios';
 import Alerts from "./redux/Alerts";
 
-const App = () => {
 
+const App = () => {
 
 
     return (
