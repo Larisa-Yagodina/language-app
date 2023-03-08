@@ -96,7 +96,7 @@ export default function ItemsList({
                                         </Grid>
                                         <Grid item xs={1.5}>
 
-                                            <Grid container spacing={2}>
+                                            <Grid container spacing={2.5}>
                                                 <Grid item xs={4}>
                                             <Checkbox
                                                 color="success"
