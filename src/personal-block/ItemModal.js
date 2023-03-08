@@ -34,7 +34,7 @@ function ItemModal(props) {
                     <Box
                         component="form"
                         sx={{
-                            '& .MuiTextField-root': {m: 2, width: '45ch'},
+                            '& .MuiTextField-root': {m: 2, width: '33ch'},
                         }}
                         noValidate
                         autoComplete="off"
