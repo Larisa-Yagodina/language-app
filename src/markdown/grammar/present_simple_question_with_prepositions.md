@@ -23,6 +23,10 @@
 * **When he is silent, who does she listen to?** — Когда он молчит, кого она слушает?
 * **What favorite countries do you travel to?** — В какие любимые страны ты путешествуешь?
 * **When you’re in Madrid, what hotel do you stay in?** — Когда ты в Мадриде, в каком отеле ты останавливаешься?
-* **Ask Tom about it. Only he knows which home does Alice live in?** — Спроси об этом Тома. Только он знает, в каком доме живет Алиса.
 * **Who do you spend the weekends with?** — С кем ты проводишь выходные?
+
+Вопросы - не единственные конструкции, где можно встретить предлоги в конце.
+
+* **Ask Tom about it. Only he knows which home does Alice live in.** — Спроси об этом Тома. Только он знает, в каком доме живет Алиса.
+
 

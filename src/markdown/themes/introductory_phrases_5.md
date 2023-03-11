@@ -9,7 +9,7 @@ Also — Также, к тому же
 In addition / I’d like to add — В дополнение к этому, кроме того, я бы хотел добавить
 
 * **In addition, they will guarantee their service.**  — Кроме того, они дают гарантию на свои услуги.
-* **I'd like to add a few more, based on my own experience.** — Я бы немного добавил исходя из собственного опыта.
+* **I'd like to add a few more, based on my own experience.** — Я бы немного добавил, исходя из собственного опыта.
 
 Besides / Moreover / Furthermore — Кроме того, более того
 
@@ -23,14 +23,14 @@ What’s more	— кроме того
 
 Just for the record	— для справки / чтобы вы знали
 
-* **Just for the record, this is a terrific idea.** — Просто для записи, это отличная идея.
+* **Just for the record, this is a terrific idea.** — Чтобы вы знали, это отличная идея.
 
 
 ### Сравнимаем с чем-то
 
 Like — Как, типа
 
-* **Like everyone, she has problems.** — И что у нее, как у всех, бывают проблемы.
+* **Like everyone, she has problems.** — У нее, как у всех, бывают проблемы.
 
 Equally / Likewise / Similarly — Подобно, аналогично
 

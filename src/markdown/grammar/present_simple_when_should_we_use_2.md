@@ -18,7 +18,7 @@
 ### Для описания прошедших событий в заголовках газет
 
 * **The bus with fourteen tourists crashes in Pakistan** — В Пакистане разбился автобус с 14-ю туристами.
-* **Queen Elizabeth meets Harry and his spouse Meghan** — Королева Елизавета встречает Гарри и его супругу Меган.
+* **Queen Elizabeth meets Harry and his spouse Meghan** — Королева Елизавета встретилась с Гарри и его супругой Меган.
 
 ### Чтобы рассказать о прошедшем событии (рассказывая о ком-то и его действиях)
 

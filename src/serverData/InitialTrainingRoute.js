@@ -101,7 +101,7 @@ export const initialTrainingRoute = [
                     {
                         id: 'lfj387fsjh38f7s',
                         name: 'Phrases for all occasions, part II',
-                        link: '/for-all-occasions',
+                        link: '/for-all-occasions-part-2',
                         partOfGrammarId: "kjdh087djh387s",
                         isOpen: true,
                         isStudied: false,
@@ -149,7 +149,16 @@ export const initialTrainingRoute = [
                 isStudied: false,
                 isOpenSubThemes: true,
                 isGrammar: false,
-                subThemes: [],
+                subThemes: [
+                    {
+                        id: 'sdlkfj309fs8dfj',
+                        name: 'Small talk (Part II)',
+                        link: '/small_talk_part_2',
+                        partOfGrammarId: "lsd8798sldkjfvxucy",
+                        isOpen: true,
+                        isStudied: false,
+                    },
+                ]
             },
             {
                 id: 'lkdjw48esdkfjwekr2',

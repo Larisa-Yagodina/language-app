@@ -73,9 +73,11 @@ export default function TheoryWrapper(props) {
             <TabPanel value={value} index={isLesson ? 0 : 1}>
                 <TheoryShowingMarkdown handleChange={handleChange} goNextTo={isLesson ? 1 : 2} option={isGrammar ? 'grammar' : 'themes'} theory={data.filter(el => el.id === props.partOfGrammarId)}/>
             </TabPanel>
+
             <TabPanel value={value} index={isLesson ? 1 : 2}>
                 { isDrill ?
-                    <DrillWrapper option={isGrammar ? 'grammar' : 'themes'} partOfGrammarId={props.partOfGrammarId}/> :
+                    <DrillWrapper option={isGrammar ? 'grammar' : 'themes'} partOfGrammarId={props.partOfGrammarId} theory={data.find(el => el.id === props.partOfGrammarId)}/> :
+
                     <Test handleChange={handleChange} goBackTo={isLesson ? 0 : 1} theory={data.filter(el => el.id === props.partOfGrammarId)} />
                 }
                 </TabPanel>

@@ -29,7 +29,7 @@
 * **They don`t provide a guarantee** — Они не дают (предоставляют) гарантию.
 * **People around the world celebrate the New Year** — Люди по всему миру празднуют Новый год.
 * **The major airlines all have loyalty programs** — У всех крупных авиакомпаний есть программы лояльности.
-* **A pocket diary fit man, who is often on the road and at meetings** — Карманный ежедневник подойдет человеку, который
+* **A pocket diary fits man, who is often on the road and at meetings** — Карманный ежедневник подойдет человеку, который
   часто бывает в командировках и на встречах.
 
 ### Общеизвестные факты

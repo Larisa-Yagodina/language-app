@@ -6,6 +6,7 @@ import RouteList from "./RouteList";
 export default function RouteListWrapper({mainUrl, title, isGrammar}) {
 
     const userId = 'dlkfjl3487f9s';
+
     const [userLearningRoute, setUserLearningRoute] = useState(initialTrainingRoute.filter(el => el.userId === userId));
 
     const handleToggle = (id) => () => {

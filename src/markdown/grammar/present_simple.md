@@ -23,8 +23,8 @@
 
 <div class="rule"> She / He / It + Verb + s (es)</div>
 
-* **She works for a large company — Она работает в большой компании**;
-* **He takes a cab to work — Он ездит на работу на такси**;
+* **She works for a large company** — Она работает в большой компании;
+* **He takes a cab to work** — Он ездит на работу на такси;
 * **She does exercises in the morning and goes to the gym sometimes** — Она делает зарядку утром и иногда ходит в
   спортзал;
 * **He prefers coffee** — Он предпочитает кофе.
@@ -44,11 +44,11 @@
 Примеры:
 
 * **I am good at tennis** — Я отлично играю в теннис;
-* **She is in a hurry** — Она спешит;
-* **We are so excited** — Мы так рады;
+* **The table is near the window** — Стол стоит рядом с окном;
+* **My parents are in Paris** — Мои родители (находятся) в Париже;
 * **It is warm and sunny today** — Сегодня тепло и солнечно;
 * **Tonny is a smart guy** — Тони — умный парень.
 * **My family is large** — У меня большая семья (по-русски мы чаще говорим так, но дословно это будет звучать “Моя семья
   большая”);
-* **They are interested in our services** — Они интересуются нашими услугами. 
+* **Our office is not far from here** — Наш офис (расположен) недалеко отсюда. 
 
