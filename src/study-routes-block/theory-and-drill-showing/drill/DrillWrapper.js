@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import ChoseSpeed from "../../../searchAndFilter/ChoseSpeed";
-import SentenceDrill from "../../../no-theory-drills/sentence-drill/SentenceDrill";
+import ChoseSpeed from "../../../drills/ChoseSpeed";
+import SentenceDrill from "../../../drills/SentenceDrill";
 
 function DrillWrapper({theory}) {
 

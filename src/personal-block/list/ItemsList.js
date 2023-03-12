@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import ListItemButton from "@mui/material/ListItemButton";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import MenuForDeleteUpdateItem from "../menu-list-item/MenuForDeleteUpdateItem";
+import MenuForDeleteUpdateItem from "../controller-list-item/MenuForDeleteUpdateItem";
 
 const wrapperStyle = {
     display: 'grid',
