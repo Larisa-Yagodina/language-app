@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
-import ChoseSpeed from "../searchAndFilter/ChoseSpeed";
-import SentenceDrill from "../no-theory-drills/sentence-drill/SentenceDrill";
-import initialUserPhrases from "../serverData/InitialUserPhrases";
+import ChoseSpeed from "../../searchAndFilter/ChoseSpeed";
+import SentenceDrill from "../../no-theory-drills/sentence-drill/SentenceDrill";
 import {connect} from "react-redux";
 
 
@@ -116,7 +115,6 @@ function DrillWrapper(props) {
 }
 
 const mapStateToProps = (state) => ({
-    userWords: state.userWords,
     userSentences: state.userSentences
 })
 

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Stack, Switch} from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import ListItemButton from "@mui/material/ListItemButton";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import ItemMenuDeleteUpdate from "./ItemMenuDeleteUpdate";
+import MenuForDeleteUpdateItem from "../menu-list-item/MenuForDeleteUpdateItem";
 
 const wrapperStyle = {
     display: 'grid',
@@ -108,7 +108,7 @@ export default function ItemsList({
                                             {' '}
                                                 </Grid>
                                                 <Grid item xs={8}>
-                                            <ItemMenuDeleteUpdate phrase={value}/>
+                                            <MenuForDeleteUpdateItem phrase={value}/>
                                                 </Grid>
                                             </Grid>
                                         </Grid>

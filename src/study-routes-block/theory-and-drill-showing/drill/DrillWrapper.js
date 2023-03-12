@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from "react";
 import ChoseSpeed from "../../../searchAndFilter/ChoseSpeed";
-import {initialSentences} from "../../../serverData/InitialSentences";
 import SentenceDrill from "../../../no-theory-drills/sentence-drill/SentenceDrill";
 
-function DrillWrapper({partOfGrammarId, option, theory}) {
+function DrillWrapper({theory}) {
 
     console.log(theory.sentences)
 

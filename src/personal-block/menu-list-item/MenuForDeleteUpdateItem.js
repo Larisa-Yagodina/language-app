@@ -7,9 +7,10 @@ import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutl
 import IconButton from "@mui/material/IconButton";
 import {useState} from "react";
 import * as React from "react";
-import ItemModal from "./ItemModal";
+import ItemModal from "./ModalForDeleteUpdateItem";
 
-export default function ItemMenuDeleteUpdate(props) {
+export default function MenuForDeleteUpdateItem(props) {
+
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -64,8 +65,12 @@ export default function ItemMenuDeleteUpdate(props) {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
-                <MenuItem onClick={onEdit}> <ModeEditOutlineOutlinedIcon color={'action'} /> </MenuItem>
-                <MenuItem onClick={onDelete}> <DeleteOutlineIcon color={'action'} /></MenuItem>
+                <MenuItem onClick={onEdit}>
+                    <ModeEditOutlineOutlinedIcon color={'action'} />
+                </MenuItem>
+                <MenuItem onClick={onDelete}>
+                    <DeleteOutlineIcon color={'action'} />
+                </MenuItem>
             </Menu>
         </>
     );

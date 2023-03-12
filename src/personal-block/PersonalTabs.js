@@ -4,10 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import TabPanel from "../utils/TabPanel";
-import DrillWrapper from "./DrillWrapper";
-import Phrases from "./Phrases";
-import Words from "./Words";
-import AddNewWordOrPhrase from "./AddNewWordOrPhrase";
+import DrillWrapper from "./drill/DrillWrapper";
+import Phrases from "./list/PhrasesGetToListWrapper";
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -32,7 +30,6 @@ export default function PersonalTabs(props) {
 
     return (
         <div>
-
             <Box sx={{width: '100%'}}>
                 <Box sx={{borderBottom: 1, borderColor: 'divider'}}>
 
@@ -44,16 +41,10 @@ export default function PersonalTabs(props) {
                 </Box>
 
                 <TabPanel value={value} index={0}>
-                    { props.label === 'Phrases' ?
                         <Phrases />
-                        :
-                        <Words />}
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    { props.label === 'Phrases' ?
                         <DrillWrapper title={"My phrases to learn"} option={"Phrases"}/>
-                        :
-                        <DrillWrapper title={"My words to learn"} option={"Words"} />}
                 </TabPanel>
             </Box>
         </div>

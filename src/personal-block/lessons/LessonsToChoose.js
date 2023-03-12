@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Button} from "@mui/material";
-import {initialTrainingRoute} from "../serverData/InitialTrainingRoute";
+import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
 import ListItemText from "@mui/material/ListItemText";
 import {Link} from "react-router-dom";
 
@@ -33,7 +33,7 @@ const block = {
     textAlign: 'center',
 }
 
-function ChooseLesson(props) {
+function LessonsToChoose(props) {
 
     const userId = 'dlkfjl3487f9s';
 
@@ -118,4 +118,4 @@ function ChooseLesson(props) {
     );
 }
 
-export default ChooseLesson;
+export default LessonsToChoose;

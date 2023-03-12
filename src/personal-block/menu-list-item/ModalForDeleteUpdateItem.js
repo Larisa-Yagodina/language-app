@@ -5,9 +5,9 @@ import {Box} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import {useState} from "react";
 import {connect} from "react-redux";
-import {changeUserPhrase, deleteUserPhrase} from "../redux/actions";
+import {changeUserPhrase, deleteUserPhrase} from "../../redux/actions";
 
-function ItemModal(props) {
+function ModalForDeleteUpdateItem(props) {
 
     const [english, setEnglish] = useState(props.phrase.english)
     const [russian, setRussian] = useState(props.phrase.russian)
@@ -101,4 +101,4 @@ const mapDispatchToProps = (dispatch) => ({
     deleteUserPhrase: (id) => dispatch(deleteUserPhrase(id))
 })
 
-export default connect(null, mapDispatchToProps)(ItemModal);
+export default connect(null, mapDispatchToProps)(ModalForDeleteUpdateItem);

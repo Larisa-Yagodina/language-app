@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import ChooseLesson from "./personal-block/ChooseLesson";
+import LessonsToChoose from "./personal-block/lessons/LessonsToChoose";
 import Markdown from "markdown-to-jsx";
 
 const MainPage = () => {
@@ -20,7 +20,7 @@ const MainPage = () => {
             <Markdown>
                 {text}
             </Markdown>
-            <ChooseLesson mainPage={true} />
+            <LessonsToChoose mainPage={true} />
         </div>
     );
 };

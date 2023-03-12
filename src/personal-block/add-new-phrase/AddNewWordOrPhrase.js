@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {addUserPhrase} from "../redux/actions";
+import {addUserPhrase} from "../../redux/actions";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 

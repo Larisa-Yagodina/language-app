@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import Markdown from "markdown-to-jsx";
 import {Button} from "@mui/material";
-import '../../../markdown/grammar/Styles.css'
+import '../../markdown/grammar/Styles.css'
 
-function TheoryShowingMarkdown (props) {
+function ShowMarkdown (props) {
 
     let fileName = props.theory[0].theory;
 
@@ -33,4 +33,4 @@ function TheoryShowingMarkdown (props) {
     );
 }
 
-export default TheoryShowingMarkdown;
+export default ShowMarkdown;

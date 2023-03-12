@@ -7,13 +7,13 @@ import MenuItem from "@mui/material/MenuItem";
 import {Link} from "react-router-dom";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import TheoryShowingMarkdown from "./TheoryShowingMarkdown";
-import DrillWrapper from "../drill/DrillWrapper";
-import TabPanel from "../../../utils/TabPanel";
-import {initialGrammar} from "../../../serverData/InitialGrammar";
-import {initialThemes} from "../../../serverData/InitialThemes";
+import ShowMarkdown from "./ShowMarkdown";
+import DrillWrapper from "./drill/DrillWrapper";
+import TabPanel from "../../utils/TabPanel";
+import {initialGrammar} from "../../serverData/InitialGrammar";
+import {initialThemes} from "../../serverData/InitialThemes";
 import {useState} from "react";
-import Test from "../drill/Test";
+import Test from "./drill/Test";
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -28,7 +28,7 @@ function a11yProps(index) {
     };
 }
 
-export default function TheoryWrapper(props) {
+export default function LessonWrapper(props) {
 
     const userId = 'dlkfjl3487f9s';
 
@@ -71,12 +71,12 @@ export default function TheoryWrapper(props) {
             </Box>
 
             <TabPanel value={value} index={isLesson ? 0 : 1}>
-                <TheoryShowingMarkdown handleChange={handleChange} goNextTo={isLesson ? 1 : 2} option={isGrammar ? 'grammar' : 'themes'} theory={data.filter(el => el.id === props.partOfGrammarId)}/>
+                <ShowMarkdown handleChange={handleChange} goNextTo={isLesson ? 1 : 2} option={isGrammar ? 'grammar' : 'themes'} theory={data.filter(el => el.id === props.partOfGrammarId)}/>
             </TabPanel>
 
             <TabPanel value={value} index={isLesson ? 1 : 2}>
                 { isDrill ?
-                    <DrillWrapper option={isGrammar ? 'grammar' : 'themes'} partOfGrammarId={props.partOfGrammarId} theory={data.find(el => el.id === props.partOfGrammarId)}/> :
+                    <DrillWrapper theory={data.find(el => el.id === props.partOfGrammarId)}/> :
 
                     <Test handleChange={handleChange} goBackTo={isLesson ? 0 : 1} theory={data.filter(el => el.id === props.partOfGrammarId)} />
                 }
