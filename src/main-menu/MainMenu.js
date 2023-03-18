@@ -59,6 +59,23 @@ export default function MainMenu() {
                             </Link>
                         </Typography>
 
+                        <Typography sx={{minWidth: 100}}>
+                            <Link to="/registration" style={{textDecoration: 'none', color: 'black'}}>
+                                Authorisation
+                            </Link>
+                        </Typography>
+
+                        <Typography sx={{minWidth: 100}}>
+                            <Link to="/login" style={{textDecoration: 'none', color: 'black'}}>
+                                Login
+                            </Link>
+                        </Typography>
+
+                        <Typography sx={{minWidth: 100}}>
+                            <Link to="/logout" style={{textDecoration: 'none', color: 'black'}}>
+                                Logout
+                            </Link>
+                        </Typography>
                     </>
                 </Box>
                 <Menu

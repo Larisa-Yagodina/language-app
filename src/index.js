@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -6,15 +6,23 @@ import App from "./App";
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./redux/store";
+import StoreUser from "./auth-login-logout/store/storeUser";
 
+const storeUser = new StoreUser();
+
+export const Context = createContext({
+    storeUser,
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-        <BrowserRouter>
-            <App/>
-        </BrowserRouter>
+            <Context.Provider value={{storeUser}}>
+                <BrowserRouter>
+                    <App/>
+                </BrowserRouter>
+            </Context.Provider>
         </Provider>
     </React.StrictMode>
 );

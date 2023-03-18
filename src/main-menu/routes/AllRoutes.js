@@ -5,12 +5,14 @@ import LessonWrapper from "../../study-routes-block/theory-and-drill-showing/Les
 import LessonsToChoose from "../../personal-block/lessons/LessonsToChoose";
 import DrillTips from "../../footer-menu-pages/DrillTips";
 import Help from "../../footer-menu-pages/Help";
-import Logout from "../../footer-menu-pages/Logout";
+import Logout from "../../auth-login-logout/Logout";
 import ThemesWrapper from "../../study-routes-block/routes/ThemesWrapper";
 import GrammarWrapper from "../../study-routes-block/routes/GrammarWrapper";
 import PersonalTabs from "../../personal-block/PersonalTabs";
 import MainPage from "../../MainPage";
 import AddNewWordOrPhrase from "../../personal-block/add-new-phrase/AddNewWordOrPhrase";
+import LoginForm from "../../auth-login-logout/LoginForm";
+import RegistrationForm from "../../auth-login-logout/RegistrationForm";
 
 
 const AllRoutes = () => {
@@ -23,6 +25,10 @@ const AllRoutes = () => {
 
             <Route path="/my-account" element={<LessonsToChoose />}/>
             <Route path="/settings" element={<LessonsToChoose />}/>
+            <Route path="/login" element={<LoginForm/>}/>
+            <Route path="/logout" element={<Logout/>}/>
+            <Route path="/registration" element={<RegistrationForm />}/>
+
 
             <Route path="/my-lessons" element={<LessonsToChoose />}/>
             <Route path="/add_new_phrase_or_word" element={<AddNewWordOrPhrase/>}/>
