@@ -26,9 +26,7 @@ const AllRoutes = () => {
             <Route path="/my-account" element={<LessonsToChoose />}/>
             <Route path="/settings" element={<LessonsToChoose />}/>
             <Route path="/login" element={<LoginForm/>}/>
-            <Route path="/logout" element={<Logout/>}/>
-            <Route path="/registration" element={<RegistrationForm />}/>
-
+            {/*<Route path="/registration" element={<RegistrationForm />}/>*/}
 
             <Route path="/my-lessons" element={<LessonsToChoose />}/>
             <Route path="/add_new_phrase_or_word" element={<AddNewWordOrPhrase/>}/>
@@ -113,7 +111,6 @@ const AllRoutes = () => {
                     }
                 </>
             )}
-
 
             <Route path="/" element={<MainPage />}/>
             <Route path="*" element={<LessonsToChoose />}/>

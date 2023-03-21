@@ -2,6 +2,7 @@ import {makeAutoObservable} from "mobx";
 import AuthService from "../services/AuthService";
 import axios from "axios";
 import {API_URL} from "../IndexLogin";
+// import {connect} from "react-redux";
 
 
 export default class StoreUser {
@@ -33,10 +34,11 @@ export default class StoreUser {
             this.setAuth(true)
             this.setUser(response.data.user)
         } catch (e) {
+            const message = e.response.data.split(': ')[1].split('<br>')[0];
+            alert(message)
             console.log(e)
         }
     }
-
     async registration(email, password) {
         try {
             const response = await AuthService.registration(email, password)
@@ -44,11 +46,16 @@ export default class StoreUser {
             //     console.log(res);
             // })
             // .catch(err => console.log(err));
-            console.log(response)
             localStorage.setItem('token', response.data.accessToken);
             this.setAuth(true)
             this.setUser(response?.data?.user)
+            //redirect("/my-lessons");
+            // const history = useHistory();
+            // history.push('/my-lessons')
+            alert('Для активации аккаунта вам на почту было отправлено письмо')
         } catch (e) {
+            const message = e.response.data.split(': ')[1].split('<br>')[0];
+            alert(message === 'Message failed' ? 'Этот адрес не существует' : message)
             console.log(e.response?.data?.message)
         }
     }
@@ -79,3 +86,11 @@ export default class StoreUser {
     }
 
 }
+
+// const mapDispatchToProps = (dispatch) => ({
+//     openAlert: (message, alertColour) => dispatch({
+//                  type: 'OPEN_ALERT',
+//                  payload: {message, alertColour},
+//              })
+// })
+//export default connect(null, mapDispatchToProps)(StoreUser);

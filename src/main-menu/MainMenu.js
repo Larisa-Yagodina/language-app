@@ -18,8 +18,9 @@ import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact
 import FaceRetouchingNaturalIcon from '@mui/icons-material/FaceRetouchingNatural';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
+import AuthMenu from "../auth-login-logout/AuthMenu";
 
-export default function MainMenu() {
+export default function MainMenu(props) {
 
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -34,7 +35,7 @@ export default function MainMenu() {
         <div>
             <nav>
                 <Box sx={{display: 'flex', alignItems: 'center', textAlign: 'center'}}>
-                    <>
+
                         <IconButton
                             onClick={handleClick}
                             size="small"
@@ -49,7 +50,7 @@ export default function MainMenu() {
 
                         <Typography sx={{minWidth: 100}}>
                             <Link to="/" style={{textDecoration: 'none', color: 'black'}}>
-                            English UP
+                                {props.appName}
                             </Link>
                         </Typography>
 
@@ -59,24 +60,9 @@ export default function MainMenu() {
                             </Link>
                         </Typography>
 
-                        <Typography sx={{minWidth: 100}}>
-                            <Link to="/registration" style={{textDecoration: 'none', color: 'black'}}>
-                                Authorisation
-                            </Link>
-                        </Typography>
-
-                        <Typography sx={{minWidth: 100}}>
-                            <Link to="/login" style={{textDecoration: 'none', color: 'black'}}>
-                                Login
-                            </Link>
-                        </Typography>
-
-                        <Typography sx={{minWidth: 100}}>
-                            <Link to="/logout" style={{textDecoration: 'none', color: 'black'}}>
-                                Logout
-                            </Link>
-                        </Typography>
-                    </>
+                    <Typography sx={{minWidth: 400}}>
+                            <AuthMenu/>
+                    </Typography>
                 </Box>
                 <Menu
                     anchorEl={anchorEl}
@@ -176,30 +162,30 @@ export default function MainMenu() {
                     <Divider/>
 
                     <Link to="/drill-tips" style={{textDecoration: 'none', color: 'black'}}>
-                    <MenuItem>
-                        <ListItemIcon>
-                            <InfoOutlinedIcon fontSize="small"/>
-                        </ListItemIcon>
-                        Drill tips
-                    </MenuItem>
+                        <MenuItem>
+                            <ListItemIcon>
+                                <InfoOutlinedIcon fontSize="small"/>
+                            </ListItemIcon>
+                            Drill tips
+                        </MenuItem>
                     </Link>
 
                     <Link to="/help" style={{textDecoration: 'none', color: 'black'}}>
-                    <MenuItem>
-                        <ListItemIcon>
-                            <ContactSupportOutlinedIcon fontSize="small"/>
-                        </ListItemIcon>
-                        Help
-                    </MenuItem>
+                        <MenuItem>
+                            <ListItemIcon>
+                                <ContactSupportOutlinedIcon fontSize="small"/>
+                            </ListItemIcon>
+                            Help
+                        </MenuItem>
                     </Link>
 
                     <Link to="/logout" style={{textDecoration: 'none', color: 'black'}}>
-                    <MenuItem>
-                        <ListItemIcon>
-                            <Logout fontSize="small"/>
-                        </ListItemIcon>
-                        Logout
-                    </MenuItem>
+                        <MenuItem>
+                            <ListItemIcon>
+                                <Logout fontSize="small"/>
+                            </ListItemIcon>
+                            Logout
+                        </MenuItem>
                     </Link>
                 </Menu>
             </nav>

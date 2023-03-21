@@ -5,12 +5,14 @@ import Button from "@mui/material/Button";
 import {Context} from "../index";
 import {observer} from "mobx-react-lite";
 import {Link} from "react-router-dom";
+import LogoHeader from "./LogoHeader";
 
-const LoginForm = () => {
+const LoginForm = (props) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const {storeUser} = useContext(Context);
+    const [openRegistrationForm, setOpenRegistrationForm] = useState(false)
 
     return (
 
@@ -24,7 +26,8 @@ const LoginForm = () => {
                 flexWrap: 'wrap',
             }}
         >
-
+            <LogoHeader appName={props.appName}/>
+            <h2>{!openRegistrationForm ? 'Вход' : 'Регистрация'}</h2>
             <Input
                 value={email}
                 onChange={e => setEmail(e.target.value)}
@@ -39,26 +42,52 @@ const LoginForm = () => {
                 type="password"
             />
 
-            <Button
-                onClick={() => storeUser.login(email, password)}
-                variant="outlined"
-            > Login </Button>
+            {!openRegistrationForm ?
 
-                <div style={{textAlign: 'center', margin: '20%'}}>
+                <Button
+                    onClick={() => storeUser.login(email, password)}
+                    variant="outlined"
+                > Login </Button>
+                :
+                <Button
+                    onClick={() => storeUser.registration(email, password)}
+                    variant="outlined"
+                > Register</Button>
+
+            }
+
+
+            {!openRegistrationForm ?
+                < >
+                <div onClick={() => setOpenRegistrationForm(true)} style={{textAlign: 'center', margin: '20% 0 2% 0'}}>
                     Нет аккаунта?
                     {' '}
                     <Link type='button' to="/registration">
-                         Зарегистрироваться
+                        Зарегистрироваться
                     </Link>
-
                 </div>
-
+                <div  style={{textAlign: 'center'}}>
+                    Забыли пароль?
+                    {' '}
+                    <Link type='button' to="/refresh-password">
+                        Создать новый пароль
+                    </Link>
+                </div>
+                </ >
+                :
+                <div style={{textAlign: 'center', margin: '20%'}}>
+                    <Link onClick={() => setOpenRegistrationForm(false)} type='button' to="/login">
+                        Зайти в аккаунт
+                    </Link>
+                </div>
+            }
 
 
         </Box>
 
 
-    );
+    )
+        ;
 };
 
 export default observer(LoginForm);

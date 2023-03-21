@@ -5,12 +5,13 @@ import {Context} from "./index";
 import {observer} from "mobx-react-lite";
 import LoginForm from "./auth-login-logout/LoginForm";
 import UserService from "./auth-login-logout/services/UserService";
+import RegistrationForm from "./auth-login-logout/RegistrationForm";
 
 
 const App = () => {
 
     const {storeUser} = useContext(Context)
-    const [users, setUsers] = useState([])
+    const appName = 'English UP';
 
     useEffect(() => {
         if (localStorage.getItem('token')) {
@@ -18,14 +19,15 @@ const App = () => {
         }
     }, [])
 
-    async function getUsers() {
-        try {
-            const response = await UserService.fetchUsers();
-            setUsers(response.data);
-        } catch (e) {
-            console.log(e)
-        }
-    }
+    // const [users, setUsers] = useState([])
+    // async function getUsers() {
+    //     try {
+    //         const response = await UserService.fetchUsers();
+    //         setUsers(response.data);
+    //     } catch (e) {
+    //         console.log(e)
+    //     }
+    // }
 
     if (storeUser.isLoading) {
         return (
@@ -36,28 +38,15 @@ const App = () => {
     if (!storeUser.isAuth) {
         return (
             <div>
-                <LoginForm/>
+                <LoginForm appName={appName}/>
             </div>
-
         )
     }
 
-    console.log(storeUser)
-
     return (
         <div style={{margin: 12}}>
-            <h3>{storeUser.isAuth
-                ? <div>
-                    Пользователь {storeUser.user.email} авторизован
-                    <button onClick={() => storeUser.logout()}>Logout</button>
-                </div>
-                : `Необходима авторизация`}</h3>
-            <h3>{storeUser.user.isActivated === 'true' ? 'Пользователь активирован' : 'Подтвердите аккаунт'}</h3>
-            <button onClick={getUsers}>Получить пользователей</button>
-            {users.map(el =>
-                <li key={el.email}>{el.email}</li>
-            )}
-            <MainMenu/>
+
+            <MainMenu appName={appName}/>
             <Alerts/>
         </div>
     );
