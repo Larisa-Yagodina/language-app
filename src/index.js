@@ -16,7 +16,7 @@ export const Context = createContext({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
+    // <React.StrictMode>
         <Provider store={store}>
             <Context.Provider value={{storeUser}}>
                 <BrowserRouter>
@@ -24,7 +24,7 @@ root.render(
                 </BrowserRouter>
             </Context.Provider>
         </Provider>
-    </React.StrictMode>
+    // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

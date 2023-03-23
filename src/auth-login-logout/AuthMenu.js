@@ -1,23 +1,26 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
-import {Context} from "../index";
 import Button from "@mui/material/Button";
+import {logout} from "../redux/actions";
+import {connect} from "react-redux";
 
-const AuthMenu = () => {
+const AuthMenu = (props) => {
 
-    const {storeUser} = useContext(Context)
+    // const {storeUser} = useContext(Context)
 
     return (
         <div>
-            <p>{storeUser.isAuth
+            <p>{props.user.isAuth
                 ?
                 <>
-                    {storeUser.user.email}{' '}
+                    {props.user.data.email}{' '}
+                    <Link to="/" style={{textDecoration: 'none', color: 'black'}}>
                     <Button
-                        onClick={() => storeUser.logout()}
+                        onClick={() => props.logout()}
                         variant="outlined"
                     > Logout</Button>
+                    </Link>
                 </>
                 :
                 <Typography sx={{minWidth: 100}}>
@@ -27,9 +30,17 @@ const AuthMenu = () => {
                 </Typography>
             }
             </p>
-            <p style={{color: 'palevioletred'}}>{storeUser.user.isActivated === 'true' ? null : 'Подтвердите аккаунт'}</p>
+            <p style={{color: 'palevioletred'}}>{props.user.data.isActivated === 'true' ? null : 'Подтвердите аккаунт'}</p>
         </div>
     );
 };
 
-export default AuthMenu;
+const mapStateToProps = (state) => ({
+    user: state.currentUser
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    logout: () => dispatch(logout())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(AuthMenu);

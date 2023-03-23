@@ -12,7 +12,6 @@ import PersonalTabs from "../../personal-block/PersonalTabs";
 import MainPage from "../../MainPage";
 import AddNewWordOrPhrase from "../../personal-block/add-new-phrase/AddNewWordOrPhrase";
 import LoginForm from "../../auth-login-logout/LoginForm";
-import RegistrationForm from "../../auth-login-logout/RegistrationForm";
 
 
 const AllRoutes = () => {
@@ -26,7 +25,6 @@ const AllRoutes = () => {
             <Route path="/my-account" element={<LessonsToChoose />}/>
             <Route path="/settings" element={<LessonsToChoose />}/>
             <Route path="/login" element={<LoginForm/>}/>
-            {/*<Route path="/registration" element={<RegistrationForm />}/>*/}
 
             <Route path="/my-lessons" element={<LessonsToChoose />}/>
             <Route path="/add_new_phrase_or_word" element={<AddNewWordOrPhrase/>}/>

@@ -104,7 +104,7 @@ function LessonsToChoose(props) {
                     </div>
                 }
                 <div style={block}>
-                    <h2>Урок на сегодня: </h2>
+                    <h2>{ !props.title ? "Урок на сегодня:" : props.title }</h2>
                     <h3> {nextLesson.name} </h3>
                     <Button variant="outlined" size="large">
                         <Link to={`/my-lessons${nextLesson.link}`}

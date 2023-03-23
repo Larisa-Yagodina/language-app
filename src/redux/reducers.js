@@ -1,12 +1,17 @@
 const initialState = {
-    userWords: [],
     userSentences: [],
     isOpenAlert: {
         open: false,
         vertical: 'top',
-        horizontal: 'center',
+        horizontal: 'right',
         message: '',
         alertColour: 'info'
+    },
+    currentUser: {
+        data: {},
+        isAuth: false,
+        isLoading: false,
+        isLoggedIn: false
     }
 };
 
@@ -38,6 +43,17 @@ const reducer = (state = initialState, action) => {
                 isOpenAlert: {...state.isOpenAlert, open: false, message: '', alertColour: 'info'},
             }
 
+        case 'SET_USER':
+            return {
+                ...state,
+                currentUser: {...state.currentUser, data: action.payload.user, isAuth: action.payload.isAuth, isLoggedIn: action.payload.isLoggedIn}
+            }
+
+        case 'SET_LOADING':
+            return {
+                ...state,
+                currentUser: {...state.currentUser, isLoading: action.payload}
+            }
 
         default:
             return state;
