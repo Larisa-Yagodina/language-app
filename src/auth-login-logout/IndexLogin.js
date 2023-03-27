@@ -5,7 +5,7 @@ export const API_URL = 'https://english-app-server.vercel.app';
 
 const $api = axios.create({
     withCredentials: true,
-    baseURL: 'http://localhost:5000/user',
+    baseURL: API_URL,
 })
 
 $api.interceptors.request.use((config) => {
