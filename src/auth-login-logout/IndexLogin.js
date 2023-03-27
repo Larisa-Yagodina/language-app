@@ -1,7 +1,7 @@
 import axios from "axios";
 import storeUser from './store/storeUser'
 
-export const API_URL = 'http://localhost:5000/user';
+export const API_URL = 'https://english-app-server.vercel.app';
 
 const $api = axios.create({
     withCredentials: true,
