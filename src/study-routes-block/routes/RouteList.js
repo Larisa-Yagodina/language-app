@@ -10,7 +10,6 @@ import IconButton from "@mui/material/IconButton";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-
 const wrapperStyle = {
     display: 'grid',
     gridTemplateColumns: '2fr 1fr',
@@ -20,6 +19,7 @@ const styleRight = {
     marginLeft: 'auto',
     marginRight: 0,
 }
+
 
 export default function RouteList ({openSubThemes, openAll, handleChange, route, handleToggle, title, mainUrl}) {
 
@@ -36,7 +36,7 @@ export default function RouteList ({openSubThemes, openAll, handleChange, route,
                             value="start"
                             control={
                                 <Switch
-                                    color="success"
+                                    color="info"
                                     checked={openAll}
                                     onChange={handleChange}
                                     aria-label="route switch"
@@ -62,7 +62,7 @@ export default function RouteList ({openSubThemes, openAll, handleChange, route,
                                         key={value.id}
                                         secondaryAction={
                                             <Checkbox
-                                                color="success"
+                                                color='info'
                                                 edge="end"
                                                 onChange={handleToggle(value.id)}
                                                 checked={value.isStudied}
@@ -103,7 +103,7 @@ export default function RouteList ({openSubThemes, openAll, handleChange, route,
                                                         key={value.id}
                                                         secondaryAction={
                                                             <Checkbox
-                                                                color="success"
+                                                                color="info"
                                                                 edge="end"
                                                                 onChange={handleToggle(subTheme.id)}
                                                                 checked={subTheme.isStudied}

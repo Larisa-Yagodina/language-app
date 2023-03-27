@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Markdown from "markdown-to-jsx";
 import {Button} from "@mui/material";
 import '../../markdown/grammar/Styles.css'
+import {colour} from "../../StylesConstatns";
 
 function ShowMarkdown (props) {
 
@@ -25,7 +26,7 @@ function ShowMarkdown (props) {
                 {theory}
             </Markdown>
             <div style={{textAlign: 'right'}}>
-            <Button variant="outlined" size="large" onClick={() => props.handleChange(null, props.goNextTo)}>
+            <Button variant="outlined" color="info" size="large" onClick={() => props.handleChange(null, props.goNextTo)}>
                 Go next
             </Button>
             </div>

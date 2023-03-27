@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {Button} from "@mui/material";
+import {Button, createTheme} from "@mui/material";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
 import ListItemText from "@mui/material/ListItemText";
 import {Link} from "react-router-dom";
+import {colour, muiDefaultColour} from '../../StylesConstatns';
 
 const parent = {
     width: '100%',
@@ -87,17 +88,17 @@ function LessonsToChoose(props) {
         getPreviousRandomLessons();
     }, [])
 
-
     return (
         <div style={parent}>
+
             <div style={blockWrapper}>
                 {(previousLessonsLength > 0 && !props.mainPage) &&
                     <div style={block}>
                         <h3>Повторим пройденное?</h3>
                         <h4>{previousRandomLesson.name}</h4>
-                        <Button variant="outlined" size="large">
+                        <Button variant="outlined" color={muiDefaultColour} size="large">
                             <Link to={`/my-lessons${previousRandomLesson.link}`}
-                                  style={{textDecoration: 'none', color: '#0062cc'}}>
+                                  style={{textDecoration: 'none', color: colour}}>
                                 <ListItemText id={'lkjsd'} primary={'Repeat'}/>
                             </Link>
                         </Button>
@@ -106,9 +107,9 @@ function LessonsToChoose(props) {
                 <div style={block}>
                     <h2>{ !props.title ? "Урок на сегодня:" : props.title }</h2>
                     <h3> {nextLesson.name} </h3>
-                    <Button variant="outlined" size="large">
+                    <Button variant="outlined" color={muiDefaultColour} size="large">
                         <Link to={`/my-lessons${nextLesson.link}`}
-                              style={{textDecoration: 'none', color: '#0062cc'}}>
+                              style={{textDecoration: 'none', color: colour}}>
                             <ListItemText id={'lkjsd'} primary={'Start new lesson'}/>
                         </Link>
                     </Button>

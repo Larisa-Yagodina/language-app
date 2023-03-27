@@ -14,6 +14,7 @@ import {initialGrammar} from "../../serverData/InitialGrammar";
 import {initialThemes} from "../../serverData/InitialThemes";
 import {useState} from "react";
 import Test from "./drill/Test";
+import {colour, muiDefaultColour} from "../../StylesConstatns";
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -44,13 +45,13 @@ export default function LessonWrapper(props) {
     const isLesson = props.option === 'lesson-grammar' || props.option === 'lesson-themes';
     const isGrammar = props.option === 'lesson-grammar' || props.option === 'grammar';
     const isDrill = data.find(el => el.id === props.partOfGrammarId).test.length === 0;
-    console.log(isDrill)
+
 
     return (
         <div>
 
-        <Box sx={{ width: '100%' }}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Box sx={{ width: '100%', margin: '10px 2px' }}>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
 
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
 

@@ -42,7 +42,7 @@ export default function ItemsList({
                     <Stack direction="row" spacing={-0.6} alignItems="center">
                         <Typography>New</Typography>
                         <Switch
-                            color="success"
+                            color="primary"
                             checked={openAll}
                             onChange={handleChange}
                             aria-label="route switch"
@@ -99,7 +99,7 @@ export default function ItemsList({
                                             <Grid container spacing={2.5}>
                                                 <Grid item xs={4}>
                                             <Checkbox
-                                                color="success"
+                                                color="primary"
                                                 edge="end"
                                                 onChange={handleToggle(value._id, !value.isStudied)}
                                                 checked={value.isStudied}

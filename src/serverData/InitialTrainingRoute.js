@@ -115,7 +115,7 @@ export const initialTrainingRoute = [
                         isStudied: false,
                     },
                     {
-                        id: 'dflkj98fs098kjfd',
+                        id: 'dflkj98flkjf98kljvsiu',
                         name: 'How to be polite (advices)',
                         link: '/how-to-be-polite-advices',
                         partOfGrammarId: "flkj2098srdj3ufsdf",

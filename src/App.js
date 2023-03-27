@@ -6,6 +6,7 @@ import {connect} from "react-redux";
 import ConfirmationEmailWaiting from "./auth-login-logout/ConfirmationEmailWaiting";
 import {checkAuth} from "./redux/actions";
 import UserService from "./auth-login-logout/services/UserService";
+import MainMenu2 from "./main-menu/MainMenu2";
 
 
 const App = (props) => {
@@ -61,8 +62,10 @@ const App = (props) => {
 
     return (
         <div style={{margin: 12}}>
-            <MainMenu appName={appName}/>
-            <button onClick={getUsers}>fetch users</button>
+            <MainMenu2 appName={appName}/>
+            {/*<MainMenu appName={appName}/>*/}
+            {/*<button onClick={getUsers}>fetch users</button>*/}
+
             <Alerts/>
         </div>
     );

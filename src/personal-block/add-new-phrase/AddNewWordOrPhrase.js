@@ -115,13 +115,13 @@ const AddNewWordOrPhrase = (props) => {
 
 
                     <div style={{margin: "30px 8px"}}>
-                        <Button type='submit' variant="outlined">Submit</Button>
+                        <Button type='submit' variant="outlined" color='info'>Submit</Button>
                     </div>
 
                     <div style={{margin: "30px 8px"}}>
 
                         <Link type='button' to="/phrases-to-remember" style={{textDecoration: 'none', color: 'black'}}>
-                            <Button  variant="outlined"> Go to phrases</Button>
+                            <Button  variant="outlined" color='info'> Go to phrases</Button>
                         </Link>
 
                     </div>
