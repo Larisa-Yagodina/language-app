@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {addUserPhrase} from "../../redux/actions";
+import {addUserPhrase, addUserPhraseWithCheckAuth} from "../../redux/actions";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 
@@ -113,17 +113,14 @@ const AddNewWordOrPhrase = (props) => {
 
                     </div>
 
-
                     <div style={{margin: "30px 8px"}}>
                         <Button type='submit' variant="outlined" color='info'>Submit</Button>
                     </div>
 
                     <div style={{margin: "30px 8px"}}>
-
                         <Link type='button' to="/phrases-to-remember" style={{textDecoration: 'none', color: 'black'}}>
                             <Button  variant="outlined" color='info'> Go to phrases</Button>
                         </Link>
-
                     </div>
                 </Box>
 
@@ -135,6 +132,6 @@ const AddNewWordOrPhrase = (props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    addUserPhrase: (newPhrase) => dispatch(addUserPhrase(newPhrase))
+    addUserPhrase: (newPhrase) => dispatch(addUserPhraseWithCheckAuth(newPhrase))
 })
 export default connect(null, mapDispatchToProps)(AddNewWordOrPhrase);

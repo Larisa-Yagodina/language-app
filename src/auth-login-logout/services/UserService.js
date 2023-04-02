@@ -1,8 +1,11 @@
 import $api from "../IndexLogin";
 
 
-export default class UserService {
-     static fetchUsers(){
-         return $api.get('/users')
-     }
+export async function fetchUserPhrases(){
+         return $api.get('/userPhrases')
+}
+
+export async function addUserPhrase(phrase){
+    return $api.post('/userPhrases', phrase)
+
 }

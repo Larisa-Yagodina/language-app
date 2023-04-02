@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import ListWrapper from "./ListWrapper";
-import {getUserSentences, getUserWords} from "../../redux/actions";
+import {getUserPhrases} from "../../redux/actions";
 import {connect} from "react-redux";
 
 const PhrasesGetToListWrapper = (props) => {
@@ -17,7 +17,7 @@ const PhrasesGetToListWrapper = (props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    getUserSentences: () => dispatch(getUserSentences())
+    getUserSentences: () => dispatch(getUserPhrases())
 
 })
 

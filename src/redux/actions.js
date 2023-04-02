@@ -2,58 +2,90 @@ import axios from 'axios';
 import AuthService from "../auth-login-logout/services/AuthService";
 import {registration} from '../auth-login-logout/services/AuthServiceFunction'
 import $api, {API_URL} from "../auth-login-logout/IndexLogin";
+import {addUserPhrase, fetchUserPhrases} from "../auth-login-logout/services/UserService";
 
-const URI = 'https://english-app-server.vercel.app';
+//const URI = 'https://english-app-server.vercel.app';
+// const URI = 'http://localhost:5000'
+export const URI = 'https://english-app-server.up.railway.app'
 
-export function getUserWords() {
-    return (dispatch) => {
-        axios.get(`${URI}/userWords`)
-            .then(res => {
-                dispatch({
-                    type: 'GET_USER_WORDS',
-                    payload: res.data,
-                })
-            })
-            .catch(err => err)
-    }
-}
 
 export function getUserSentences() {
     return (dispatch) => {
         axios.get(`${URI}/userPhrases`)
             .then(res => {
+                console.log('phrases ok')
                 dispatch({
                     type: 'GET_USER_SENTENCES',
                     payload: res.data,
                 })
             })
-            .catch(err => err)
-    }
-}
-
-export function addUserPhrase(word) {
-    return (dispatch) => {
-        axios.post(`${URI}/userPhrases`, word)
-            .then(res => {
-                dispatch(
-                    getUserSentences()
-                );
-                dispatch({
-                    type: 'OPEN_ALERT',
-                    payload: {message: "Phrase has been added successfully", alertColour: "success"},
-                })
-                console.log("OK")
-            })
-            .catch(err => {
-                    console.log("ERROR")
-                    dispatch({
-                        type: 'OPEN_ALERT',
-                        payload: {message: "Phrase hasn't been changed", alertColour: "error"},
-                    })
-                }
+            .catch(err =>
+                console.log(err)
             )
     }
 }
+
+export function getUserPhrases() {
+    return async (dispatch) => {
+        try {
+            const response = await fetchUserPhrases();
+            //const response = await props.fetchUsers();
+            dispatch({
+                type: 'GET_USER_SENTENCES',
+                payload: response.data,
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    }
+}
+
+export function addUserPhraseWithCheckAuth(word) {
+    return async (dispatch) => {
+        try {
+            const response = await addUserPhrase(word)
+            console.log(response)
+            dispatch(
+                getUserPhrases()
+            );
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {message: "Phrase has been added successfully", alertColour: "success"},
+            })
+            console.log("OK")
+        }
+        catch (err) {
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {message: "Phrase hasn't been changed", alertColour: "error"},
+            })
+        }
+    }
+}
+
+// export function addUserPhrase(word) {
+//     return (dispatch) => {
+//         axios.post(`${URI}/userPhrases`, word)
+//             .then(res => {
+//                 dispatch(
+//                     getUserSentences()
+//                 );
+//                 dispatch({
+//                     type: 'OPEN_ALERT',
+//                     payload: {message: "Phrase has been added successfully", alertColour: "success"},
+//                 })
+//                 console.log("OK")
+//             })
+//             .catch(err => {
+//                     console.log("ERROR")
+//                     dispatch({
+//                         type: 'OPEN_ALERT',
+//                         payload: {message: "Phrase hasn't been changed", alertColour: "error"},
+//                     })
+//                 }
+//             )
+//     }
+// }
 
 export function changeUserPhrase(id, changes) {
     return (dispatch) => {
@@ -137,6 +169,7 @@ export function login(email, password) {
         try {
             const response = await AuthService.login(email, password);
             localStorage.setItem('token', response.data.accessToken);
+            console.log(response)
             dispatch({
                 type: 'SET_USER',
                 payload: {
@@ -192,7 +225,7 @@ export function checkAuth() {
         //this.setLoading(true);
         try {
             // const response = await AuthService.login(email, password);
-            const response = await axios.get(`${API_URL}/refresh`, {withCredentials: true});
+            const response = await axios.get(`${API_URL}/user/refresh`, {withCredentials: true});
             localStorage.setItem('token', response.data.accessToken);
             dispatch({
                 type: 'SET_USER',
