@@ -149,7 +149,7 @@ function MainMenu2(props) {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {mainMenu2.map((page, ind) => (
-                            <Link to={page.link} style={{textDecoration: 'none', color: 'black'}}>
+                            <Link key={ind} to={page.link} style={{textDecoration: 'none', color: 'black'}}>
                             <Button
                                 key={ind}
                                 onClick={handleCloseNavMenu}

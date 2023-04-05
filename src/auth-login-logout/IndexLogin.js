@@ -1,13 +1,13 @@
 import axios from "axios";
 import storeUser from './store/storeUser'
-import {URI} from '../redux/actions'
 
-
-export const API_URL = URI;
+export const API_URL = 'https://english-app-server.up.railway.app';
+//export const API_URL = 'http://localhost:5000';
 
 const $api = axios.create({
     withCredentials: true,
-    baseURL: API_URL,
+    baseURL: 'https://english-app-server.up.railway.app',
+    //baseURL: 'http://localhost:5000',
 })
 
 $api.interceptors.request.use((config) => {
@@ -19,6 +19,7 @@ $api.interceptors.response.use((config) => {
     return config;
 }, async (error) => {
     const originalRequest = error.config;
+
     if (error.response.status == 401 && error.config && !error.config._isRetry) {
         originalRequest._isRetry = true;
         try{
@@ -26,8 +27,8 @@ $api.interceptors.response.use((config) => {
             localStorage.setItem('token', response.data.accessToken)
             return $api.request(originalRequest)
         } catch (e) {
-            storeUser.setAuth(false)
             console.log('НЕ АВТОРИЗОВАН')
+            storeUser.setAuth(false)
         }
     }
     throw error;

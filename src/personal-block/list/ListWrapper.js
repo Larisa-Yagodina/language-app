@@ -2,13 +2,14 @@ import * as React from 'react';
 import {useEffect, useState} from "react";
 import ItemsList from "./ItemsList";
 import {connect} from "react-redux";
-import {changeUserPhrase, getUserSentences} from "../../redux/actions";
+import {changeUserPhrase, } from "../../redux/actions";
 
 function ListWrapper({mainUrl, title, userSentences, changeUserSentence, getAllUserSentences}) {
 
-    useEffect(() => {
-        getAllUserSentences();
-    }, []);
+    // useEffect(() => {
+    //     console.log(' --- ListWrapper --- ')
+    //
+    // }, []);
 
     const [phrases, setPhrases] = useState([]);
 
@@ -51,7 +52,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    getAllUserSentences: () => dispatch(getUserSentences()),
+    //getAllUserSentences: () => dispatch(getUserSentences()),
     changeUserSentence: (id, changes) => dispatch(changeUserPhrase(id, changes))
 })
 
