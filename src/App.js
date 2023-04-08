@@ -3,7 +3,7 @@ import Alerts from "./redux/Alerts";
 import LoginForm from "./auth-login-logout/LoginForm";
 import {connect} from "react-redux";
 import ConfirmationEmailWaiting from "./auth-login-logout/ConfirmationEmailWaiting";
-import {checkAuth} from "./redux/actions";
+import {checkAuth} from "./redux/actionsAuthorisation";
 import MainMenu2 from "./main-menu/MainMenu2";
 
 

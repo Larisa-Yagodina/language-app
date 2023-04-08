@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import logo from "../images/logo192.png";
 import {AccountCircle} from "@mui/icons-material";
 import {Link} from "react-router-dom";
-import {logout} from "../redux/actions";
+import {logout} from "../redux/actionsAuthorisation";
 import {connect} from "react-redux";
 import AddIcon from '@mui/icons-material/Add';
 

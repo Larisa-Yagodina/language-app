@@ -44,9 +44,15 @@ function ModalForDeleteUpdateItem(props) {
                         { props.mode === 'delete' ?
                             <div>
                             <h3 style={{margin: '20px 17px'}}>Delete phrase</h3>
-                                <div style={{margin: '50px 35px'}}>
-                                <p>Delete this?</p>
-                                    <p><b>{props.phrase.english}</b></p>
+                                <div style={{margin: '30px 20px'}}>
+                                <p>Please confirm you want to delete this:</p>
+                                    <p><b>
+                                        {
+                                            props.phrase.english.length > 40 ?
+                                            props.phrase.english.slice(0, 40) + '...' :
+                                            props.phrase.english
+                                        }
+                                    </b></p>
                                 </div>
                             </div>
                             :
@@ -84,7 +90,7 @@ function ModalForDeleteUpdateItem(props) {
                             </div>
                             </>
                         }
-                        <div style={{margin: '10px 17px'}}>
+                        <div style={{margin: '17px 20px'}}>
                             <Button variant="outlined" onClick={onConfirmButton}>{props.mode === 'edit' ? 'Save' : 'Delete' }</Button> {' '}
                             <Button variant="outlined" onClick={props.toggleDrawer}>Cancel</Button>
                         </div>

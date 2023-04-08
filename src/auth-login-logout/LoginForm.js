@@ -6,7 +6,7 @@ import {Context} from "../index";
 import {Link} from "react-router-dom";
 import LogoHeader from "./LogoHeader";
 import {connect} from "react-redux";
-import {registrationAction, login} from '../redux/actions'
+import {registrationAction, login} from '../redux/actionsAuthorisation'
 
 
 const LoginForm = (props) => {
@@ -51,14 +51,14 @@ const LoginForm = (props) => {
                     {!openRegistrationForm ?
                         <Link to="/" style={{textDecoration: 'none', color: 'black'}}>
                         <Button
-                            onClick={() => props.login(email, password)}
+                            onClick={() => props.login(email.toLowerCase(), password)}
                             variant="outlined"
                         > Login </Button>
                         </Link>
                         :
                         <Button
                             //onClick={() => storeUser.registration(email, password)}
-                            onClick={() => props.registrateUser(email, password)}
+                            onClick={() => props.registrateUser(email.toLowerCase(), password)}
                             variant="outlined"
                         > Register</Button>
                     }
