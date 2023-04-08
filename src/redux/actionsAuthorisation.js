@@ -8,7 +8,7 @@ export function registrationAction(email, password) {
         try {
             const response = await registration(email, password)
             localStorage.setItem('token', response.data.accessToken);
-            console.log(response?.data?.user)
+            //console.log(response?.data?.user)
             dispatch({
                 type: 'SET_USER',
                 payload: {
@@ -28,7 +28,7 @@ export function registrationAction(email, password) {
             })
             //alert('Для активации аккаунта вам на почту было отправлено письмо')
         } catch (e) {
-            const message = e.response.data.split(': ')[1].split('<br>')[0];
+            const message = e.response.data;
             //alert(message === 'Message failed' ? 'Этот адрес не существует' : message)
             dispatch({
                 type: 'OPEN_ALERT',
@@ -45,7 +45,7 @@ export function login(email, password) {
         try {
             const response = await AuthService.login(email, password);
             localStorage.setItem('token', response.data.accessToken);
-            console.log(response)
+            //console.log(response)
             dispatch({
                 type: 'SET_USER',
                 payload: {
@@ -57,8 +57,8 @@ export function login(email, password) {
             // this.setAuth(true)
             // this.setUser(response.data.user)
         } catch (e) {
-            console.log(e)
-            const message = e.response.data.split(': ')[1].split('<br>')[0];
+            //console.log(e)
+            const message = e.response.data;
             //alert(message)
             dispatch({
                 type: 'OPEN_ALERT',
