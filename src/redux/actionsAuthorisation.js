@@ -57,7 +57,7 @@ export function login(email, password) {
             // this.setAuth(true)
             // this.setUser(response.data.user)
         } catch (e) {
-            console.log(e.response.data)
+            console.log(e)
             const message = e.response.data.split(': ')[1].split('<br>')[0];
             //alert(message)
             console.log(e)
