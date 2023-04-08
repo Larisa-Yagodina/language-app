@@ -1,13 +1,13 @@
 import axios from "axios";
 import storeUser from './store/storeUser'
 
-//export const API_URL = 'https://english-app-server.up.railway.app';
-export const API_URL = 'http://localhost:5000';
+export const API_URL = 'https://english-app-server.up.railway.app';
+//export const API_URL = 'http://localhost:5000';
 
 const $api = axios.create({
     withCredentials: true,
-    //baseURL: 'https://english-app-server.up.railway.app',
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://english-app-server.up.railway.app',
+    //baseURL: 'http://localhost:5000',
 })
 
 $api.interceptors.request.use((config) => {
