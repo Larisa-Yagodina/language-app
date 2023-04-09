@@ -90,7 +90,7 @@ export const initialTrainingRoute = [
             },
             {
                 id: 'dfkjl23r7sdf823j',
-                name: 'Phrases for all occasions',
+                name: 'Фразы на все случаи жизни (спасибо, пожалуйста и многое другое)',
                 link: '/for-all-occasions',
                 partOfGrammarId: "fkjrf80s9df83",
                 isOpen: true,
@@ -100,7 +100,7 @@ export const initialTrainingRoute = [
                 subThemes: [
                     {
                         id: 'lfj387fsjh38f7s',
-                        name: 'Phrases for all occasions, part II',
+                        name: 'Согласие, неуверенность и несогласие, «я не знаю»',
                         link: '/for-all-occasions-part-2',
                         partOfGrammarId: "kjdh087djh387s",
                         isOpen: true,
@@ -108,7 +108,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'dflkj98fs098kjfd',
-                        name: 'How to be polite (greetings and requests)',
+                        name: 'Как проявлять вежливость (приветствие, просьбы, вопросы)',
                         link: '/how-to-be-polite',
                         partOfGrammarId: "flkj2098srjsl9122",
                         isOpen: true,
@@ -116,7 +116,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'dflkj98flkjf98kljvsiu',
-                        name: 'How to be polite (advices)',
+                        name: 'Как дать совет вежливо',
                         link: '/how-to-be-polite-advices',
                         partOfGrammarId: "flkj2098srdj3ufsdf",
                         isOpen: true,
@@ -124,7 +124,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'sldkjf2398f0s9dfk',
-                        name: 'Clarify possible misunderstandings, part I',
+                        name: 'Как попросить повторить или перефразировать',
                         link: '/clarify-possible-misunderstandings-1',
                         partOfGrammarId: "dkj2387slaflja",
                         isOpen: true,
@@ -132,7 +132,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'dlkj98sdkj498s09d',
-                        name: 'Clarify possible misunderstandings part II',
+                        name: 'Как переспросить, уточнить или спросить, как что-то называется',
                         link: '/clarify-possible-misunderstandings-2',
                         partOfGrammarId: "glkjsd93809s8d",
                         isOpen: true,
@@ -142,7 +142,7 @@ export const initialTrainingRoute = [
             },
             {
                 id: 'kj38f0s98fj23f8dsdf',
-                name: 'Small talk',
+                name: 'Смол толк: о чем говорить и как начать',
                 link: '/small_talk',
                 partOfGrammarId: "lsd879823skjdhf",
                 isOpen: true,
@@ -152,7 +152,7 @@ export const initialTrainingRoute = [
                 subThemes: [
                     {
                         id: 'sdlkfj309fs8dfj',
-                        name: 'Small talk (Part II)',
+                        name: 'Фразы, чтобы вежливо закончить смол толк',
                         link: '/small_talk_part_2',
                         partOfGrammarId: "lsd8798sldkjfvxucy",
                         isOpen: true,
@@ -162,7 +162,7 @@ export const initialTrainingRoute = [
             },
             {
                 id: 'lkdjw48esdkfjwekr2',
-                name: 'Introductory phrases, part I',
+                name: 'Вводные фразы (как выразить свою точку зрения и т. д.)',
                 link: '/introductory_phrases_I',
                 partOfGrammarId: "fl3ef7j3rfsj3f7s",
                 isOpen: true,
@@ -171,7 +171,7 @@ export const initialTrainingRoute = [
                 isGrammar: false,
                 subThemes: [{
                     id: 'lkdjw48esdkfjwe2jd3hjf',
-                    name: 'Introductory phrases, part II',
+                    name: 'Выражаем сомнения и размышляем вслух',
                     link: '/introductory_phrases_II',
                     partOfGrammarId: "fl3ef7j3rfsj3f7sdj2",
                     isOpen: true,
@@ -179,7 +179,7 @@ export const initialTrainingRoute = [
                 },
                     {
                         id: 'sldkjf20398sdkj38d',
-                        name: 'Introductory phrases, part III',
+                        name: 'Поясняем и уточняем нюансы',
                         link: '/introductory_phrases_III',
                         partOfGrammarId: "dkj2398sdkj498sdgf",
                         isOpen: true,
@@ -187,7 +187,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'sldkjf20398sdkj38dsdj2',
-                        name: 'Introductory phrases, part IV',
+                        name: 'Говорим о последовательности событий и подводим итоги',
                         link: '/introductory_phrases_IV',
                         partOfGrammarId: "dkj2398sdkj498sdgfajsh",
                         isOpen: true,
@@ -195,7 +195,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'sdlkj298sdk2jh39s8f',
-                        name: 'Introductory phrases, part V',
+                        name: 'Дополняем речь подробностями и сравнением',
                         link: '/introductory_phrases_V',
                         partOfGrammarId: "lskj98s0dj3ks0d98f",
                         isOpen: true,
@@ -203,7 +203,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'sdlkj298sdk2jh39s8fdfse',
-                        name: 'Introductory phrases, part VI',
+                        name: 'Говорим о важном и подчеркиваем уверенность',
                         link: '/introductory_phrases_VI',
                         partOfGrammarId: "lskj98s0dj3ks0d98laksj2",
                         isOpen: true,
@@ -211,7 +211,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'fkj387fsdjh2387fsd',
-                        name: 'Introductory phrases, part VII',
+                        name: 'Переводим тему, говорим о причинах, конкретике, невероятном и т. д.',
                         link: '/introductory_phrases_VII',
                         partOfGrammarId: "jh387fsjh387fsjdhf",
                         isOpen: true,
@@ -256,7 +256,7 @@ export const initialTrainingRoute = [
             },
             {
                 id: 'sdlkj23987sd',
-                name: 'Restaurants',
+                name: 'В ресторане',
                 link: '/restaurants',
                 partOfGrammarId: "lsd879dlkj823sk",
                 isOpen: true,
@@ -266,7 +266,7 @@ export const initialTrainingRoute = [
                 subThemes: [
                     {
                         id: 'sdlkfj2387sd',
-                        name: 'Making the order',
+                        name: 'Делаем заказ',
                         link: '/making-the-order',
                         partOfGrammarId: "dkfj3iusd9f3j",
                         isOpen: true,
@@ -274,7 +274,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'sdlfkj23987sd',
-                        name: 'Allergies',
+                        name: 'Как уточнить детали, если у вас аллергия',
                         link: '/allergies',
                         partOfGrammarId: "lkjf02398sdlkj2",
                         isOpen: true,
@@ -282,7 +282,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'sdlfkjl23kj',
-                        name: 'Paying bills',
+                        name: 'Как попросить счет и заплатить самому или разделить',
                         link: '/paying-bills',
                         partOfGrammarId: "jsdj2987sdhfsjd",
                         isOpen: true,
@@ -328,7 +328,7 @@ export const initialTrainingRoute = [
             },
             {
                 id: 'sdlkj23098sd',
-                name: 'Renting a car',
+                name: 'Как взять машину напрокат',
                 link: '/renting-a-car',
                 partOfGrammarId: "dsflkj939898sds",
                 isOpen: true,
@@ -338,7 +338,7 @@ export const initialTrainingRoute = [
                 subThemes: [
                     {
                         id: 'sdlkjf23921',
-                        name: 'Insurance',
+                        name: 'Уточняем детали страховки',
                         link: '/insurance',
                         partOfGrammarId: "alkj2387fs98d7f",
                         isOpen: true,
@@ -346,7 +346,7 @@ export const initialTrainingRoute = [
                     },
                     {
                         id: 'dslkfj02938',
-                        name: 'Options',
+                        name: 'Выбираем варианты',
                         link: '/options',
                         partOfGrammarId: "fksj379s8d7j2h",
                         isOpen: true,
