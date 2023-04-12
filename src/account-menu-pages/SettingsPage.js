@@ -1,11 +1,15 @@
 import React from 'react';
 
-const Help = () => {
+const SettingsPage = () => {
+
     return (
         <div style={{margin: '35px 20px'}}>
-            Help
+            <h2>Настройки</h2>
+
         </div>
     );
 };
 
-export default Help;
+
+
+export default SettingsPage;

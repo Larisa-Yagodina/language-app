@@ -38,7 +38,7 @@ const AddNewWordOrPhrase = (props) => {
 
     return (
         <div>
-            <h2>Add new phrase you want get used to</h2>
+            <h2>Add new phrase you want to learn</h2>
 
             <form
                 onSubmit={handleSubmit(onSubmit)}

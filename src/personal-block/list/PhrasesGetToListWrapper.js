@@ -6,7 +6,9 @@ import {connect} from "react-redux";
 const PhrasesGetToListWrapper = (props) => {
 
     useEffect(() => {
-        props.getUserSentences();
+        if (!props.phrasesLength){
+            props.getUserSentences();
+        }
     }, []);
 
     return (
@@ -16,9 +18,13 @@ const PhrasesGetToListWrapper = (props) => {
     );
 };
 
+const mapStateToProps = (state) => ({
+  phrasesLength: state.userSentences.length
+})
+
 const mapDispatchToProps = (dispatch) => ({
     getUserSentences: () => dispatch(getUserPhrases())
 
 })
 
-export default connect(null, mapDispatchToProps)(PhrasesGetToListWrapper);
+export default connect(mapStateToProps, mapDispatchToProps)(PhrasesGetToListWrapper);

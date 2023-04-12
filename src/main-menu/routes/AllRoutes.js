@@ -3,8 +3,8 @@ import {Route, Routes} from "react-router-dom";
 import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
 import LessonWrapper from "../../study-routes-block/theory-and-drill-showing/LessonWrapper";
 import LessonsToChoose from "../../personal-block/lessons/LessonsToChoose";
-import DrillTips from "../../footer-menu-pages/DrillTips";
-import Help from "../../footer-menu-pages/Help";
+import DrillTips from "../../account-menu-pages/DrillTips";
+import Help from "../../account-menu-pages/Help";
 import Logout from "../../auth-login-logout/Logout";
 import ThemesWrapper from "../../study-routes-block/routes/ThemesWrapper";
 import GrammarWrapper from "../../study-routes-block/routes/GrammarWrapper";
@@ -12,6 +12,8 @@ import PersonalTabs from "../../personal-block/PersonalTabs";
 import MainPage from "../../MainPage";
 import AddNewWordOrPhrase from "../../personal-block/add-new-phrase/AddNewWordOrPhrase";
 import LoginForm from "../../auth-login-logout/LoginForm";
+import MyAccount from "../../account-menu-pages/MyAccount";
+import SettingsPage from "../../account-menu-pages/SettingsPage";
 
 
 const AllRoutes = () => {
@@ -22,8 +24,8 @@ const AllRoutes = () => {
     return (
         <Routes>
 
-            <Route path="/my-account" element={<LessonsToChoose />}/>
-            <Route path="/settings" element={<LessonsToChoose />}/>
+            <Route path="/my-account" element={<MyAccount />}/>
+            <Route path="/settings" element={<SettingsPage />}/>
             <Route path="/login" element={<LoginForm/>}/>
 
             <Route path="/my-lessons" element={<LessonsToChoose />}/>
