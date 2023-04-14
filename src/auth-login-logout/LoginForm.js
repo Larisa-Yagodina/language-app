@@ -1,107 +1,126 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import Box from '@mui/joy/Box';
-import Input from '@mui/joy/Input';
 import Button from "@mui/material/Button";
-import {Context} from "../index";
 import {Link} from "react-router-dom";
 import LogoHeader from "./LogoHeader";
 import {connect} from "react-redux";
 import {registrationAction, login} from '../redux/actionsAuthorisation'
+import {useForm} from "react-hook-form";
+import {yupResolver} from "@hookform/resolvers/yup";
+import {loginSchema} from "../utils/Validation";
+import TextField from "@mui/material/TextField";
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { Divider, IconButton, InputAdornment } from '@mui/material';
 
 
 const LoginForm = (props) => {
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const {storeUser} = useContext(Context);
-    const [openRegistrationForm, setOpenRegistrationForm] = useState(false)
+    const [showPassword, setShowPassword] = useState(false);
+    const handleClickShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({
+        resolver: yupResolver(loginSchema),
+        mode: 'onBlur',
+    });
+
+    const onSubmit = (formValues) => {
+        props.login(formValues.email.toLowerCase(), formValues.password);
+    };
 
 
     return (
 
         <Box
             sx={{
-                margin: '0 25% 5% 25%',
+                margin: '0 25% 0% 25%',
                 py: 10,
                 display: 'grid',
                 gap: 2,
                 alignItems: 'center',
                 flexWrap: 'wrap',
             }}
+            component="form"
+            onSubmit={handleSubmit(onSubmit)}
         >
             <LogoHeader appName={props.appName}/>
 
-            {!props.user?.data?.isActivated &&
-                <>
-                    <h2>{!openRegistrationForm ? 'Вход' : 'Регистрация'}</h2>
-                    <Input
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                        placeholder="Email"
+
+                    <h2>Welcome back!</h2>
+
+                    <TextField
+
+                        margin="normal"
+                        id="email"
+                        helperText={errors.email?.message}
+                        error={!!errors.email}
+                        label="Email"
                         variant="outlined"
+                        // fullWidth
+                        // autoFocus
+                        {...register('email')}
                     />
-                    <Input
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        placeholder="Password"
+
+                    <TextField
+                        margin="normal"
+                        id="password"
+                        helperText={errors.password?.message}
+                        error={!!errors.password}
+                        label="Password"
                         variant="outlined"
-                        type="password"
+                        fullWidth
+                        type={showPassword ? 'text' : 'password'}
+                        {...register('password')}
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        aria-label="toggle password visibility"
+                                        onClick={handleClickShowPassword}
+                                        edge="end"
+                                        aria-describedby="component-error-text"
+                                    >
+                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                    </IconButton>
+                                </InputAdornment>
+                            ),
+                        }}
                     />
 
-                    {!openRegistrationForm ?
-                        <Link to="/" style={{textDecoration: 'none', color: 'black'}}>
-                        <Button
-                            onClick={() => props.login(email.toLowerCase(), password)}
-                            variant="outlined"
-                        > Login </Button>
-                        </Link>
-                        :
-                        <Button
-                            //onClick={() => storeUser.registration(email, password)}
-                            onClick={() => props.registrateUser(email.toLowerCase(), password)}
-                            variant="outlined"
-                        > Register</Button>
-                    }
 
+            <Button type="submit" fullWidth variant="outlined" sx={{ mt: 3, mb: 2 }}>
+                        Log in
+            </Button>
 
-                    {!openRegistrationForm ?
-                        < >
-                            <div onClick={() => setOpenRegistrationForm(true)}
-                                 style={{textAlign: 'center', margin: '20% 0 2% 0'}}>
-                                Нет аккаунта?
-                                {' '}
-                                <Link type='button' to="/registration">
-                                    Зарегистрироваться
-                                </Link>
-                            </div>
-                            <div style={{textAlign: 'center'}}>
-                                Забыли пароль?
-                                {' '}
-                                <Link type='button' to="/refresh-password">
-                                    Создать новый пароль
-                                </Link>
-                            </div>
-                        </ >
-                        :
-                        <div style={{textAlign: 'center', margin: '20%'}}>
-                            <Link onClick={() => setOpenRegistrationForm(false)} type='button' to="/login">
-                                Зайти в аккаунт
-                            </Link>
-                        </div>
-                    }
-                </>
-            }
-            {
-                (!props.user?.data?.isActivated && props.user?.data?.email) &&
-                <h3>Ваш емэйл ожидает подтверждения, чтобы можно было приступить к занятиям.</h3>
+            <br/>
+            <Divider className="mt-4 mb-4">OR</Divider>
 
-            }
+            <div
+                onClick={() => props.setOpenRegistrationForm(true)}
+                 style={{textAlign: 'center'}}>
+                Нет аккаунта?
+                {' '}
+                <Link type='button' to="/registration" style={{textDecoration: 'none', color: '#0277bd'}}>
+                    Зарегистрироваться
+                </Link>
+            </div>
 
+            <div style={{textAlign: 'center'}}>
+                Забыли пароль?
+                {' '}
+                <Link type='button' to="/refresh-password" style={{textDecoration: 'none', color: '#0277bd'}}>
+                    Создать новый пароль
+                </Link>
+            </div>
         </Box>
 
-
-    )
-        ;
+    );
 };
 
 const mapStateToProps = (state) => ({

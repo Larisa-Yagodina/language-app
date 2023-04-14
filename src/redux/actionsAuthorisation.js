@@ -3,6 +3,7 @@ import AuthService from "../auth-login-logout/services/AuthService";
 import axios from "axios";
 import {API_URL} from "../auth-login-logout/IndexLogin";
 
+
 export function registrationAction(email, password) {
     return async (dispatch) => {
         try {

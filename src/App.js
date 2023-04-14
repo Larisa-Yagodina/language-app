@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import Alerts from "./redux/Alerts";
-import LoginForm from "./auth-login-logout/LoginForm";
 import {connect} from "react-redux";
 import ConfirmationEmailWaiting from "./auth-login-logout/ConfirmationEmailWaiting";
 import {checkAuth} from "./redux/actionsAuthorisation";
 import MainMenu2 from "./main-menu/MainMenu2";
+import AuthWrapper from "./auth-login-logout/AuthWrapper";
 
 
 const App = (props) => {
@@ -43,7 +43,7 @@ const App = (props) => {
         return (
             <div>
                 {/*<MainMenu appName={appName}/>*/}
-                <LoginForm appName={appName}/>
+                <AuthWrapper appName={appName}/>
                 <Alerts/>
             </div>
         )
