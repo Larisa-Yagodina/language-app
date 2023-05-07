@@ -1,10 +1,9 @@
 import {registration} from "../auth-login-logout/services/AuthServiceFunction";
 import AuthService from "../auth-login-logout/services/AuthService";
-import axios from "axios";
-import {API_URL} from "../auth-login-logout/IndexLogin";
 
 
 export function registrationAction(email, password) {
+
     return async (dispatch) => {
         try {
             const response = await registration(email, password)
@@ -15,7 +14,6 @@ export function registrationAction(email, password) {
                 payload: {
                     isAuth: true,
                     user: response?.data?.user
-
                 },
             })
             // this.setAuth(true)
@@ -103,9 +101,8 @@ export function checkAuth() {
         //this.setLoading(true);
         try {
             // const response = await AuthService.login(email, password);
-            const response = await axios.get(`${API_URL}/user/refresh`, {withCredentials: true});
-            console.log(' --- await axios.get  --- ')
-            console.log(response.data)
+            //const response = await axios.get(`https://localhost:5000/user/refresh`, {withCredentials: true});
+            const response = await AuthService.refresh();
             localStorage.setItem('token', response.data.accessToken);
             dispatch({
                 type: 'SET_USER',
@@ -118,7 +115,6 @@ export function checkAuth() {
             // this.setAuth(true)
             // this.setUser(response?.data?.user)
         } catch (e) {
-            console.log(e.response?.data?.message)
             dispatch({
                 type: 'OPEN_ALERT',
                 payload: {message: "Необходимо авторизоваться", alertColour: 'error'},

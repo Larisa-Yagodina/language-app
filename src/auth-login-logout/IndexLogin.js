@@ -6,7 +6,7 @@ export const API_URL = 'https://english-app-server.up.railway.app';
 
 const $api = axios.create({
     withCredentials: true,
-    baseURL: 'https://english-app-server.up.railway.app',
+    baseURL: API_URL,
     //baseURL: 'http://localhost:5000',
 })
 

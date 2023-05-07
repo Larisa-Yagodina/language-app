@@ -5,10 +5,6 @@ import {
     fetchUserPhrases
 } from "../auth-login-logout/services/UserService";
 
-//const URI = 'https://english-app-server.vercel.app';
-//const URI = 'http://localhost:5000'
-export const URI = 'https://english-app-server.up.railway.app'
-
 
 export function getUserPhrases() {
     return async (dispatch) => {
