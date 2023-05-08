@@ -28,6 +28,7 @@ const AuthWrapper = (props) => {
 
 const mapStateToProps = (state) => ({
     user: state.currentUser,
+    appName: state.appName
 })
 
 export default connect(mapStateToProps)(AuthWrapper);

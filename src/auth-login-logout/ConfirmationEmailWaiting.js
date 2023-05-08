@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/joy/Box';
 
 import LogoHeader from "./LogoHeader";
+import {connect} from "react-redux";
 
 
 const ConfirmationEmailWaiting = (props) => {
@@ -31,6 +32,8 @@ const ConfirmationEmailWaiting = (props) => {
         ;
 };
 
+const mapStateToProps = (state) => ({
+    appName: state.appName
+})
 
-
-export default ConfirmationEmailWaiting;
+export default connect(mapStateToProps)(ConfirmationEmailWaiting);

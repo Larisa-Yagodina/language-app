@@ -32,10 +32,6 @@ function MainMenu2(props) {
         {name: 'Drill tips', link: '/drill-tips'},
         {name: 'Help', link: '/help'},
     ];
-    const mainMenu = ['Lessons', 'Phrases', 'Grammar', 'Themes'];
-    const accountMenu = ['My account', 'Settings', 'Drill tips', 'Help', 'Logout'];
-
-
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -222,11 +218,15 @@ function MainMenu2(props) {
     );
 }
 
+const mapStateToProps = (state) => ({
+    appName: state.appName
+})
+
 const mapDispatchToProps = (dispatch) => ({
     logout: () => dispatch(logout())
 })
 
-export default connect(null, mapDispatchToProps)(MainMenu2)
+export default connect(mapStateToProps, mapDispatchToProps)(MainMenu2)
 
 
 

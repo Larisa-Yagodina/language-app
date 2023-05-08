@@ -9,10 +9,6 @@ import AuthWrapper from "./auth-login-logout/AuthWrapper";
 
 const App = (props) => {
 
-    //const {storeUser} = useContext(Context)
-
-    const appName = 'English UP';
-
     useEffect(() => {
         if (localStorage.getItem('token')) {
             props.checkAuth()
@@ -31,9 +27,10 @@ const App = (props) => {
 
 
     if (props.user?.isAuth && props.user?.data?.isActivated === 'false') {
+
         return (
             <div>
-                <ConfirmationEmailWaiting appName={appName}/>
+                <ConfirmationEmailWaiting />
                 <Alerts/>
             </div>
         )
@@ -43,7 +40,7 @@ const App = (props) => {
         return (
             <div>
                 {/*<MainMenu appName={appName}/>*/}
-                <AuthWrapper appName={appName}/>
+                <AuthWrapper/>
                 <Alerts/>
             </div>
         )
@@ -51,7 +48,7 @@ const App = (props) => {
 
     return (
         <div style={{margin: 12}}>
-            <MainMenu2 appName={appName}/>
+            <MainMenu2 />
             {/*<MainMenu appName={appName}/>*/}
             {/*<button onClick={getUsers}>fetch users</button>*/}
 

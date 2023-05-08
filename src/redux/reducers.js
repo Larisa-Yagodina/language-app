@@ -1,4 +1,5 @@
 const initialState = {
+    appName: "English UP",
     userSentences: [],
     isOpenAlert: {
         open: false,
