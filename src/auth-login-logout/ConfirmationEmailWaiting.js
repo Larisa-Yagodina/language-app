@@ -21,7 +21,6 @@ const ConfirmationEmailWaiting = (props) => {
                 flexWrap: 'wrap',
             }}
         >
-            <LogoHeader appName={props.appName}/>
 
                 <h3>Ваш емэйл ожидает подтверждения, чтобы можно было приступить к занятиям.</h3>
 

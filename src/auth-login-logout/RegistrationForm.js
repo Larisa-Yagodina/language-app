@@ -51,12 +51,11 @@ const LoginForm = (props) => {
                 gap: 2,
                 alignItems: 'center',
                 flexWrap: 'wrap',
+                paddingTop: '0px'
             }}
             component="form"
             onSubmit={handleSubmit(onSubmit)}
         >
-            <LogoHeader appName={props.appName}/>
-
             <h2>Start your adventure!</h2>
 
             <TextField
@@ -126,8 +125,6 @@ const LoginForm = (props) => {
             <Button type="submit" fullWidth variant="outlined" sx={{ mt: 3, mb: 2 }}>
                 Create your account
             </Button>
-
-            <br/>
 
             <Divider className="mt-4 mb-4">OR</Divider>
 

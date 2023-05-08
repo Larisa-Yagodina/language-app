@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import AllRoutes from "./routes/AllRoutes";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -21,16 +20,16 @@ import AddIcon from '@mui/icons-material/Add';
 function MainMenu2(props) {
 
     const mainMenu2 = [
-        {name: 'Lessons', link: "/my-lessons"},
-        {name: 'Phrases', link: '/phrases-to-remember'},
-        {name: 'Grammar', link: '/grammar_route'},
-        {name: 'Themes', link: '/themes_route'}
+        {name: 'Lessons', link: "/private/my-lessons"},
+        {name: 'Phrases', link: '/private/phrases-to-remember'},
+        {name: 'Grammar', link: '/private/grammar_route'},
+        {name: 'Themes', link: '/private/themes_route'}
     ];
     const accountMenu2 = [
-        {name: 'My account', link: '/my-account'},
-        {name: 'Settings', link: '/settings'},
-        {name: 'Drill tips', link: '/drill-tips'},
-        {name: 'Help', link: '/help'},
+        {name: 'My account', link: '/private/my-account'},
+        {name: 'Settings', link: '/private/settings'},
+        {name: 'Drill tips', link: '/private/drill-tips'},
+        {name: 'Help', link: '/private/help'},
     ];
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -158,7 +157,7 @@ function MainMenu2(props) {
                     </Box>
 
 
-                        <Link to="/add_new_phrase_or_word" style={{textDecoration: 'none', color: 'black'}}>
+                        <Link to="/private/add_new_phrase_or_word" style={{textDecoration: 'none', color: 'black'}}>
                             <Button sx={{ color: '#fff' }}>
                                 <AddIcon />
                             </Button>
@@ -213,7 +212,7 @@ function MainMenu2(props) {
                 </Toolbar>
             </Container>
         </AppBar>
-            <AllRoutes/>
+
         </>
     );
 }

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import Box from '@mui/joy/Box';
 import Button from "@mui/material/Button";
 import {Link} from "react-router-dom";
-import LogoHeader from "./LogoHeader";
 import {connect} from "react-redux";
 import {registrationAction, login} from '../redux/actionsAuthorisation'
 import {useForm} from "react-hook-form";
@@ -12,9 +11,14 @@ import TextField from "@mui/material/TextField";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Divider, IconButton, InputAdornment } from '@mui/material';
+import {useLocation, useNavigate} from "react-router-dom";
 
 
 const LoginForm = (props) => {
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const fromPage = location.state?.from?.pathname || '/';
 
     const [showPassword, setShowPassword] = useState(false);
     const handleClickShowPassword = () => {
@@ -31,7 +35,7 @@ const LoginForm = (props) => {
     });
 
     const onSubmit = (formValues) => {
-        props.login(formValues.email.toLowerCase(), formValues.password);
+        props.login(formValues.email.toLowerCase(), formValues.password, () => navigate(fromPage, {replace: true}));
     };
 
 
@@ -45,12 +49,11 @@ const LoginForm = (props) => {
                 gap: 2,
                 alignItems: 'center',
                 flexWrap: 'wrap',
+                paddingTop: '0px'
             }}
             component="form"
             onSubmit={handleSubmit(onSubmit)}
         >
-            <LogoHeader appName={props.appName}/>
-
 
                     <h2>Welcome back!</h2>
 
@@ -98,7 +101,11 @@ const LoginForm = (props) => {
                         Log in
             </Button>
 
-            <br/>
+            <div style={{textAlign: 'right'}}>
+                <Link type='button' to="/refresh-password" style={{textDecoration: 'none', color: '#0277bd'}}>
+                    Забыл пароль
+                </Link>
+            </div>
             <Divider className="mt-4 mb-4">OR</Divider>
 
             <div
@@ -111,13 +118,7 @@ const LoginForm = (props) => {
                 </Link>
             </div>
 
-            <div style={{textAlign: 'center'}}>
-                Забыли пароль?
-                {' '}
-                <Link type='button' to="/refresh-password" style={{textDecoration: 'none', color: '#0277bd'}}>
-                    Создать новый пароль
-                </Link>
-            </div>
+
         </Box>
 
     );
@@ -129,7 +130,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     registrateUser: (email, password) => dispatch(registrationAction(email, password)),
-    login: (email, password) => dispatch(login(email, password))
+    login: (email, password, callback) => dispatch(login(email, password, callback))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

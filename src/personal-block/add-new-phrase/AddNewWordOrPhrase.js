@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import {addUserPhrase, addUserPhraseWithCheckAuth} from "../../redux/actions";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import {appLinks} from "../../routes/appLinks";
 
 const AddNewWordOrPhrase = (props) => {
 
@@ -116,12 +117,15 @@ const AddNewWordOrPhrase = (props) => {
                     <div style={{margin: "30px 8px"}}>
                         <Button type='submit' variant="outlined" color='info'>Submit</Button>
                     </div>
-
-                    <div style={{margin: "30px 8px"}}>
-                        <Link type='button' to="/phrases-to-remember" style={{textDecoration: 'none', color: 'black'}}>
-                            <Button  variant="outlined" color='info'> Go to phrases</Button>
-                        </Link>
-                    </div>
+                    {
+                        !props.hideButton &&
+                        <div style={{margin: "30px 8px"}}>
+                            <Link type='button' to={appLinks.phrasesToRemember}
+                                  style={{textDecoration: 'none', color: 'black'}}>
+                                <Button variant="outlined" color='info'> Go to phrases</Button>
+                            </Link>
+                        </div>
+                    }
                 </Box>
 
             </form>

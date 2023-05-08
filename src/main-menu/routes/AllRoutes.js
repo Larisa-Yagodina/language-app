@@ -14,7 +14,7 @@ import AddNewWordOrPhrase from "../../personal-block/add-new-phrase/AddNewWordOr
 import LoginForm from "../../auth-login-logout/LoginForm";
 import MyAccount from "../../account-menu-pages/MyAccount";
 import SettingsPage from "../../account-menu-pages/SettingsPage";
-import ChangePassword from "../../account-menu-pages/ChangePassword";
+import ChangePasswordForm from "../../account-menu-pages/ChangePasswordForm";
 import AuthWrapper from "../../auth-login-logout/AuthWrapper";
 import RegistrationForm from "../../auth-login-logout/RegistrationForm";
 
@@ -31,7 +31,7 @@ const AllRoutes = () => {
             <Route path="/settings" element={<SettingsPage />}/>
             <Route path="/login" element={<AuthWrapper />}/>
             <Route path="/registration" element={<RegistrationForm />}/>
-            <Route path="/change-password" element={<ChangePassword/>}/>
+            <Route path="/change-password" element={<ChangePasswordForm/>}/>
 
 
             <Route path="/my-lessons" element={<LessonsToChoose />}/>

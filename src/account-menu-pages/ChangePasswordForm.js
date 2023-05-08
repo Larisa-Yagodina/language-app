@@ -12,7 +12,7 @@ import Input from "@mui/joy/Input";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 
-const ChangePassword = () => {
+const ChangePasswordForm = () => {
 
     const {
         register,
@@ -92,4 +92,4 @@ const ChangePassword = () => {
     );
 };
 
-export default ChangePassword;
+export default ChangePasswordForm;

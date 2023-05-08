@@ -51,7 +51,7 @@ export default function RouteListWrapper({mainUrl, title, isGrammar}) {
 
     return (
         <RouteList
-            mainUrl={mainUrl}
+            mainUrl={ '/private' + mainUrl}
             title={title}
             openSubThemes={openSubThemes}
             openAll={openAll}

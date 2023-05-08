@@ -13,7 +13,6 @@ import {Link} from "react-router-dom";
 import KeyIcon from '@mui/icons-material/Key';
 import ListIcon from '@mui/icons-material/List';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
-import AllRoutes from "./routes/AllRoutes";
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import FaceRetouchingNaturalIcon from '@mui/icons-material/FaceRetouchingNatural';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';

@@ -29,6 +29,7 @@ export default function PersonalTabs(props) {
         setValue(newValue);
     };
 
+
     return (
         <div>
             <Box sx={{width: '100%', margin: '10px 2px'}}>
@@ -50,7 +51,7 @@ export default function PersonalTabs(props) {
                 </TabPanel>
 
                 <TabPanel value={value} index={2}>
-                    <AddNewWordOrPhrase />
+                    <AddNewWordOrPhrase hideButton={true}/>
                 </TabPanel>
             </Box>
         </div>

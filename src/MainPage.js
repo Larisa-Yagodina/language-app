@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import LessonsToChoose from "./personal-block/lessons/LessonsToChoose";
 import Markdown from "markdown-to-jsx";
-import {checkAuth} from "./redux/actions";
 import {connect} from "react-redux";
 
 const MainPage = (props) => {

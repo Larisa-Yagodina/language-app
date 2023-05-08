@@ -6,11 +6,6 @@ import {changeUserPhrase, } from "../../redux/actions";
 
 function ListWrapper({mainUrl, title, userSentences, changeUserSentence, getAllUserSentences}) {
 
-    // useEffect(() => {
-    //     console.log(' --- ListWrapper --- ')
-    //
-    // }, []);
-
     const [phrases, setPhrases] = useState([]);
 
     const handleToggle = (id, isStudied) => () => {

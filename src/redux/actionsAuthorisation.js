@@ -1,5 +1,7 @@
 import {registration} from "../auth-login-logout/services/AuthServiceFunction";
 import AuthService from "../auth-login-logout/services/AuthService";
+import { Navigate } from "react-router-dom";
+import React from "react";
 
 
 export function registrationAction(email, password) {
@@ -39,12 +41,11 @@ export function registrationAction(email, password) {
 
 }
 
-export function login(email, password) {
+export function login(email, password, callback) {
     return async (dispatch) => {
         try {
             const response = await AuthService.login(email, password);
             localStorage.setItem('token', response.data.accessToken);
-            //console.log(response)
             dispatch({
                 type: 'SET_USER',
                 payload: {
@@ -52,13 +53,10 @@ export function login(email, password) {
                     user: response?.data?.user,
                     isLoggedIn: true,
                 },
-            })
-            // this.setAuth(true)
-            // this.setUser(response.data.user)
+            });
+            callback();
         } catch (e) {
-            //console.log(e)
             const message = e.response.data;
-            //alert(message)
             dispatch({
                 type: 'OPEN_ALERT',
                 payload: {message, alertColour: 'error'},
@@ -79,6 +77,7 @@ export function logout() {
                     data: {},
                 },
             })
+            return <Navigate to='/login' />
             // this.setAuth(false)
             // this.setUser({})
         } catch (e) {
