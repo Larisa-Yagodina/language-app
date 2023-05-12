@@ -16,4 +16,16 @@ export default class AuthService {
     static async refresh(){
         return $api.get('/user/refresh', {withCredentials: true})
     }
+
+    static async setNewPassword(email, password, oldPassword){
+        return $api.post('/user/reset_password', {email, password, oldPassword}, {withCredentials: true})
+    }
+
+    static async sendEmailToSetNewPassword(email){
+        return $api.post('/user/forgot_password', {email}, {withCredentials: true})
+    }
+
+    static async resetPasswordThroughEmail(id, password){
+        return $api.post(`/user/reset-password/${id}`, {id, password}, {withCredentials: true})
+    }
 }

@@ -50,6 +50,18 @@ const reducer = (state = initialState, action) => {
                 currentUser: {...state.currentUser, data: action.payload.user, isAuth: action.payload.isAuth, isLoggedIn: action.payload.isLoggedIn}
             }
 
+        case 'DELETE_USER':
+            return {
+                ...state,
+                currentUser: {
+                    ...state.currentUser,
+                    data: {},
+                    isAuth: false,
+                    isLoading: false,
+                    isLoggedIn: false
+                }
+            }
+
         case 'SET_LOADING':
             return {
                 ...state,

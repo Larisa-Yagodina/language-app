@@ -1,7 +1,7 @@
 import React from 'react';
 import {Outlet} from "react-router-dom";
-import MainMenu2 from "./main-menu/MainMenu2";
-import Alerts from "./redux/Alerts";
+import MainMenu2 from "../main-menu/MainMenu2";
+import Alerts from "../redux/Alerts";
 
 const Layout = () => {
 

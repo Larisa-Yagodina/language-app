@@ -1,16 +1,14 @@
 import {registration} from "../auth-login-logout/services/AuthServiceFunction";
 import AuthService from "../auth-login-logout/services/AuthService";
-import { Navigate } from "react-router-dom";
 import React from "react";
 
 
-export function registrationAction(email, password) {
+export function registrationAction(email, password, callback) {
 
     return async (dispatch) => {
         try {
             const response = await registration(email, password)
             localStorage.setItem('token', response.data.accessToken);
-            //console.log(response?.data?.user)
             dispatch({
                 type: 'SET_USER',
                 payload: {
@@ -18,8 +16,6 @@ export function registrationAction(email, password) {
                     user: response?.data?.user
                 },
             })
-            // this.setAuth(true)
-            // this.setUser(response?.data?.user)
             dispatch({
                 type: 'OPEN_ALERT',
                 payload: {
@@ -27,15 +23,14 @@ export function registrationAction(email, password) {
                     alertColour: 'success'
                 },
             })
-            //alert('Для активации аккаунта вам на почту было отправлено письмо')
+            callback()
         } catch (e) {
-            const message = e.response.data;
-            //alert(message === 'Message failed' ? 'Этот адрес не существует' : message)
+            const message = e.response.data.includes('local recipient verification failed')
+                ? "Email doesn't exist"  : 'Something went wrong';
             dispatch({
                 type: 'OPEN_ALERT',
                 payload: {message, alertColour: 'error'},
             })
-            //console.log(e.response?.data?.message)
         }
     }
 
@@ -77,9 +72,6 @@ export function logout() {
                     data: {},
                 },
             })
-            return <Navigate to='/login' />
-            // this.setAuth(false)
-            // this.setUser({})
         } catch (e) {
             console.log(e.response?.data?.message)
             dispatch({
@@ -97,10 +89,7 @@ export function checkAuth() {
             type: 'SET_LOADING',
             payload: true,
         })
-        //this.setLoading(true);
         try {
-            // const response = await AuthService.login(email, password);
-            //const response = await axios.get(`https://localhost:5000/user/refresh`, {withCredentials: true});
             const response = await AuthService.refresh();
             localStorage.setItem('token', response.data.accessToken);
             dispatch({
@@ -111,21 +100,83 @@ export function checkAuth() {
 
                 },
             })
-            // this.setAuth(true)
-            // this.setUser(response?.data?.user)
+
         } catch (e) {
             dispatch({
                 type: 'OPEN_ALERT',
                 payload: {message: "Необходимо авторизоваться", alertColour: 'error'},
-                // payload: {message: e.response?.data?.message, alertColour: 'error'},
-
             })
         } finally {
             dispatch({
                 type: 'SET_LOADING',
                 payload: false,
             })
-            //this.setLoading(false)
+        }
+    }
+}
+
+export function resetPassword(email, password, oldPassword) {
+    return async (dispatch) => {
+        try {
+            const response = await AuthService.setNewPassword(email, password, oldPassword);
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {
+                    message: response.data,
+                    alertColour: 'success'
+                },
+            })
+        } catch (e) {
+            const message = e.response.data;
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {message, alertColour: 'error'},
+            })
+        }
+    }
+}
+
+export function forgotPasswordSendEmail(email) {
+    return async (dispatch) => {
+        try {
+            const response = await AuthService.sendEmailToSetNewPassword(email);
+            localStorage.setItem('token', response.data.token);
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {
+                    // message: response.data,
+                    message: "На ваш емэйл отправлено письмо со ссылкой",
+                    alertColour: 'success'
+                },
+            })
+        } catch (e) {
+            const message = e.response.data;
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {message, alertColour: 'error'},
+            })
+        }
+    }
+}
+
+export function forgotPasswordReset(id, password) {
+    return async (dispatch) => {
+        try {
+            const response = await AuthService.resetPasswordThroughEmail(id, password);
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {
+                    message: response.data,
+                    //message: 'password was changed successfully',
+                    alertColour: 'success'
+                },
+            })
+        } catch (e) {
+            const message = e.response.data;
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {message, alertColour: 'error'},
+            })
         }
     }
 }

@@ -6,13 +6,12 @@ import {
     createBrowserRouter,
     createRoutesFromElements
 } from "react-router-dom";
-import Layout from "../Layout";
+import Layout from "../layout/Layout";
 import AuthWrapper from "../auth-login-logout/AuthWrapper";
 import RegistrationForm from "../auth-login-logout/RegistrationForm";
 import ChangePasswordForm from "../account-menu-pages/ChangePasswordForm";
 import ConfirmationEmailWaiting from "../auth-login-logout/ConfirmationEmailWaiting";
 import ChangePasswordRequest from "../account-menu-pages/ChangePasswordRequest";
-import Logout from "../auth-login-logout/Logout";
 import DrillTips from "../account-menu-pages/DrillTips";
 import Help from "../account-menu-pages/Help";
 import MyAccount from "../account-menu-pages/MyAccount";
@@ -24,10 +23,12 @@ import GrammarWrapper from "../study-routes-block/routes/GrammarWrapper";
 import ThemesWrapper from "../study-routes-block/routes/ThemesWrapper";
 import HomePage from "../intro-page/HomePage";
 import RequireAuth from "../auth-login-logout/RequireAuth";
-import PersonalWrapper from "../PersonalWrapper";
-import NotFoundPage from "../NotFoundPage";
-import ErrorPage from "../ErrorPage";
-import {connect} from "react-redux";
+import PersonalWrapper from "../personal-block/PersonalWrapper";
+import NotFoundPage from "../error-handling/NotFoundPage";
+import ErrorPage from "../error-handling/ErrorPage";
+import LessonWrapper from "../study-routes-block/theory-and-drill-showing/LessonWrapper";
+import EmailActivationAcknowledgePage from "../auth-login-logout/EmailActivationAcknowledgePage";
+import ChangePasswordByLinkForm from "../account-menu-pages/ChangePasswordByLinkForm";
 
 
 const appRoutes = createBrowserRouter(createRoutesFromElements(
@@ -37,15 +38,13 @@ const appRoutes = createBrowserRouter(createRoutesFromElements(
         <Route index element={<HomePage/>}/>
 
         <Route path="login" element={<AuthWrapper/>}/>
-        <Route path="logout" element={<Logout/>}/>
 
         <Route path="registration" element={<RegistrationForm/>}/>
-        <Route path="user/activation/waiting" element={<ConfirmationEmailWaiting/>}/>
-        <Route path="user/activation/:link" element={<ConfirmationEmailWaiting/>}/>
+        <Route path="user/activation-waiting" element={<ConfirmationEmailWaiting/>}/>
+        <Route path="user/activation" element={<EmailActivationAcknowledgePage />}/>
 
-        <Route path="change-password" element={<ChangePasswordRequest/>}/>
-        <Route path="change-password/:link" element={<ChangePasswordForm/>}/>
-
+        <Route path="/user/password-reset" element={<ChangePasswordRequest/>}/>
+        <Route path="/user/password-reset/:id" element={<ChangePasswordByLinkForm />}/>
 
         <Route path="private/" element={
             <RequireAuth>
@@ -59,10 +58,13 @@ const appRoutes = createBrowserRouter(createRoutesFromElements(
             <Route path="drill-tips" element={<DrillTips/>}/>
             <Route path="help" element={<Help/>}/>
 
+            <Route path="change-password" element={<ChangePasswordForm/>}/>
+
             <Route path="add_new_phrase_or_word" element={<AddNewWordOrPhrase/>}/>
             <Route path="phrases-to-remember" element={<PersonalTabs label={'Phrases'}/>}/>
 
             <Route path="grammar_route" element={<GrammarWrapper/>}/>
+            <Route path="grammar_route/:id" element={<LessonWrapper />}/>
 
             <Route path="themes_route" element={<ThemesWrapper/>}/>
         </Route>

@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Markdown from "markdown-to-jsx";
 import {Button} from "@mui/material";
 import '../../markdown/grammar/Styles.css'
-import {colour} from "../../StylesConstatns";
 
 function ShowMarkdown (props) {
 

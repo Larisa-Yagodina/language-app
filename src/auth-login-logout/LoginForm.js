@@ -12,13 +12,14 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Divider, IconButton, InputAdornment } from '@mui/material';
 import {useLocation, useNavigate} from "react-router-dom";
+import {appLinks} from "../routes/appLinks";
 
 
 const LoginForm = (props) => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const fromPage = location.state?.from?.pathname || '/';
+    const fromPage = location.state?.from?.pathname || '/private/my-lessons';
 
     const [showPassword, setShowPassword] = useState(false);
     const handleClickShowPassword = () => {
@@ -35,7 +36,9 @@ const LoginForm = (props) => {
     });
 
     const onSubmit = (formValues) => {
-        props.login(formValues.email.toLowerCase(), formValues.password, () => navigate(fromPage, {replace: true}));
+        props.login(formValues.email.toLowerCase(),
+            formValues.password,
+            () => navigate(fromPage, {replace: true}));
     };
 
 
@@ -102,14 +105,13 @@ const LoginForm = (props) => {
             </Button>
 
             <div style={{textAlign: 'right'}}>
-                <Link type='button' to="/refresh-password" style={{textDecoration: 'none', color: '#0277bd'}}>
+                <Link type='button' to={appLinks.resetPassword} style={{textDecoration: 'none', color: '#0277bd'}}>
                     Забыл пароль
                 </Link>
             </div>
             <Divider className="mt-4 mb-4">OR</Divider>
 
             <div
-                onClick={() => props.setOpenRegistrationForm(true)}
                  style={{textAlign: 'center'}}>
                 Нет аккаунта?
                 {' '}

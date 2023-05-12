@@ -1,10 +1,8 @@
-import React, {useEffect} from 'react';
-import {connect} from "react-redux";
-import {checkAuth} from "./redux/actionsAuthorisation";
+import React from 'react';
 import appRoutes from './routes/appRoutes'
 import {RouterProvider} from "react-router-dom";
 
-const App = (props) => {
+const App = () => {
 
 
     return (
@@ -12,14 +10,6 @@ const App = (props) => {
     );
 };
 
-const mapStateToProps = (state) => ({
-    user: state.currentUser
-})
 
-const mapDispatchToProps = (dispatch) => ({
-    checkAuth: () => dispatch(checkAuth())
-})
+export default App;
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
-
-//export default observer(App);

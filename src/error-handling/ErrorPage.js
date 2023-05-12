@@ -1,5 +1,5 @@
 import React from 'react';
-import {isRouteErrorResponse, Link, useRouteError} from "react-router-dom";
+import {isRouteErrorResponse, useRouteError} from "react-router-dom";
 
 const ErrorPage = () => {
 
@@ -15,12 +15,9 @@ const ErrorPage = () => {
         )
     }
 
-    return <div>Something goes wrong here!
-<br/>
-        <Link to='/login' >Login</Link>
+    return <div>Something goes wrong... Mind you, app is developing 😉
 
     </div>
-    //throw error
 };
 
 export default ErrorPage;

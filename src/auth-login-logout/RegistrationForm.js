@@ -1,8 +1,7 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import Box from '@mui/joy/Box';
 import Button from "@mui/material/Button";
-import {Link} from "react-router-dom";
-import LogoHeader from "./LogoHeader";
+import {Link, useNavigate} from "react-router-dom";
 import {connect} from "react-redux";
 import {registrationAction} from '../redux/actionsAuthorisation'
 import {useForm} from "react-hook-form";
@@ -32,14 +31,20 @@ const LoginForm = (props) => {
         handleSubmit,
         formState: { errors },
     } = useForm({
-        resolver: yupResolver(userRegisterSchema),
+        reValidateMode: 'onBlur',
         mode: 'onBlur',
+        resolver: yupResolver(userRegisterSchema),
     });
 
-    const onSubmit = (formValues) => {
-        props.registrateUser(formValues.email.toLowerCase(), formValues.password);
-    };
+    const navigate = useNavigate();
 
+    const onSubmit = (formValues) => {
+        props.registrateUser(
+            formValues.email.toLowerCase(),
+            formValues.password,
+            () => navigate('/user/activation-waiting', {replace: true})
+        );
+    };
 
     return (
 
@@ -56,6 +61,7 @@ const LoginForm = (props) => {
             component="form"
             onSubmit={handleSubmit(onSubmit)}
         >
+
             <h2>Start your adventure!</h2>
 
             <TextField
@@ -147,7 +153,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    registrateUser: (email, password) => dispatch(registrationAction(email, password)),
+    registrateUser: (email, password, callback) => dispatch(registrationAction(email, password, callback)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

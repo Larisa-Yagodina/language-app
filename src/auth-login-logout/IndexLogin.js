@@ -1,13 +1,13 @@
 import axios from "axios";
-import storeUser from './store/storeUser'
+import {useDispatch} from "react-redux";
+  // import storeUser from './store/storeUser'
 
-//export const API_URL = 'https://english-app-server.up.railway.app';
-export const API_URL = 'http://localhost:5000';
+export const API_URL = 'https://english-app-server.up.railway.app';
+//export const API_URL = 'http://localhost:5000';
 
 const $api = axios.create({
     withCredentials: true,
     baseURL: API_URL,
-    //baseURL: 'http://localhost:5000',
 })
 
 $api.interceptors.request.use((config) => {
@@ -28,10 +28,12 @@ $api.interceptors.response.use((config) => {
             return $api.request(originalRequest)
         } catch (e) {
             console.log('НЕ АВТОРИЗОВАН')
-            storeUser.setAuth(false)
+            const dispatch = useDispatch()
+            dispatch({type: 'DELETE_USER', payload: null})
         }
     }
     throw error;
 })
+
 
 export default $api;

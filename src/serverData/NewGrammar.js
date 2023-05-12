@@ -1,18 +1,13 @@
-export const initialGrammar = [
+export const newGrammar = [
+
     {
-        id: "fjlk234jdflskdjf",
-        title: 'all theory-and-drill-showing',
-        russianTitle: 'Вся грамматика',
-        description: '',
-        test: [],
-    },
-    {
-        id: "fsldkjf323235",
+        id: "what_is_grammar",
         title: 'What is Grammar',
         russianTitle: 'Что такое грамматика',
         theory: 'what_is_grammar.md',
         description: '',
-        test: [{
+        test: [
+            {
             question: "Что имеет отношение к грамматике?",
             answers: ['Какую форму слова использовать', 'Как соединять слова в предложении', 'И то, и другое'],
             rightAnswer: 'И то, и другое'
@@ -36,11 +31,10 @@ export const initialGrammar = [
             question: "Что делать, чтобы производить впечатление грамотного человека и доносить свои мысли",
             answers: ['Знакомиться с правилами', 'Отрабатывать правила на практике', 'И то, и другое'],
             rightAnswer: 'И то, и другое'
-        }
-        ]
+        }]
     },
     {
-        id: "lkdj34234kjkj",
+        id: "sentence_structure",
         title: 'sentence structure ',
         russianTitle: 'Как строить предложения',
         theory: 'how_to_create_sentences.md',
@@ -109,20 +103,12 @@ export const initialGrammar = [
             },
             {
                 english: 'We went hiking in the mountains this weekend.',
-                russian: 'Мы ходили в горы в поход на выходных.',
+                russian: 'Мы ходили в поход в горы на выходных.',
             }
         ]
     },
     {
-        id: "sdlfkj23498s7f",
-        title: 'conditionals',
-        russianTitle: 'Условные предложения',
-        theory: 'conditionals.md',
-        description: '',
-        test: [],
-    },
-    {
-        id: "kjsdf2834792837",
+        id: "conditional_1",
         title: 'conditional 1',
         russianTitle: 'Условные предложения 1',
         theory: 'first_conditionals.md',
@@ -148,7 +134,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "lsdjf298374",
+        id: "conditional_2",
         title: 'conditional 2',
         russianTitle: 'Условные предложения 2',
         theory: 'second-conditional.md',
@@ -178,7 +164,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "023984lskdjf",
+        id: "conditional_3",
         title: 'conditional 3',
         russianTitle: 'Условные предложения 3',
         theory: 'third-conditional.md',
@@ -212,7 +198,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "sldkfj238975",
+        id: "modal_verbs",
         title: 'modal verbs',
         russianTitle: 'Модальные глаголы',
         theory: 'modal_verbs.md',
@@ -220,12 +206,13 @@ export const initialGrammar = [
         test: [],
     },
     {
-        id: "fjkl3k480s9fsdf",
+        id: "what_is_tense",
         title: 'What is Tense',
         russianTitle: 'Что такое «время»',
         theory: 'what_is_tense.md',
         description: '',
-        test: [{
+        test: [
+            {
             question: "Что такое tense?",
             answers: ['Форма глагола, которая указывает на время', 'Это прошлое, настоящее и будущее', 'Time и tense означают одно и то же'],
             rightAnswer: 'Форма глагола, которая указывает на время'
@@ -241,16 +228,15 @@ export const initialGrammar = [
             question: "Можно ли с помощью определенной конструкции сделать акцент, что действие продолжалось какое-то время?",
             answers: ['Да', 'Нет', 'Не знаю'],
             rightAnswer: 'Да'
+        }, {
+            question: "Если разобраться с tense, будут ли вас лучше понимать носители?",
+            answers: ['Конечно да', 'Я буду лучше понимать английскую речь', 'И то, и другое'],
+            rightAnswer: 'И то, и другое'
         },
-            {
-                question: "Если разобраться с tense, будут ли вас лучше понимать носители?",
-                answers: ['Конечно да', 'Я буду лучше понимать английскую речь', 'И то, и другое'],
-                rightAnswer: 'И то, и другое'
-            },
         ],
     },
     {
-        id: "sdlkjf3487",
+        id: "present_simple",
         title: 'present simple',
         russianTitle: 'Настоящее простое время',
         theory: 'present_simple.md',
@@ -320,7 +306,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "lksj347924sdfh",
+        id: "present_simple_negative",
         title: 'present simple (negative statement)',
         russianTitle: 'Настоящее простое (отрицания)',
         theory: 'present_simple_negative.md',
@@ -414,7 +400,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "dlfkj234jlkj34",
+        id: "present_simple_question",
         title: 'present simple (question)',
         russianTitle: 'Настоящее простое (вопросы)',
         theory: 'present_simple_question.md',
@@ -537,7 +523,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "dlfkj234jlksdhe8",
+        id: "present_simple_question_with_prepositions",
         title: 'present simple (question with prepositions)',
         russianTitle: 'Настоящее простое (вопросы с предлогами)',
         theory: 'present_simple_question_with_prepositions.md',
@@ -599,7 +585,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "sdlkfjl3427fdjf",
+        id: "present_simple_when_should_we_use",
         title: 'present simple (when should we use)',
         russianTitle: 'Настоящее простое (когда использовать)',
         theory: 'present_simple_when_should_we_use.md',
@@ -694,7 +680,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "sdlkfj20398rlskdj",
+        id: "present_simple_when_should_we_use_2",
         title: 'present simple (when should we use — 2)',
         russianTitle: 'Настоящее простое (когда использовать — 2)',
         theory: 'present_simple_when_should_we_use_2.md',
@@ -756,7 +742,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "flksj38472983",
+        id: "future_simple",
         title: 'future simple',
         russianTitle: 'Будущее простое время',
         theory: 'future_simple.md',
@@ -807,7 +793,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "fklj342342kj",
+        id: "past_simple",
         title: 'past simple',
         russianTitle: 'Прошедшее простое время',
         theory: 'past_simple.md',
@@ -858,7 +844,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "flkj2342jh",
+        id: "present_continuous",
         title: 'present continuous',
         russianTitle: 'Настоящее продолженное',
         theory: 'present_continuous.md',
@@ -909,7 +895,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "slkj234234",
+        id: "present_perfect",
         title: 'present perfect',
         russianTitle: 'Настоящее совершенное',
         theory: 'present_perfect.md',
@@ -960,7 +946,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "sldkfj3247987",
+        id: "present_perfect_positive",
         title: 'present perfect (positive statement)',
         russianTitle: 'Настоящее совершенное (утвердительное)',
         theory: 'present_perfect_positive.md',
@@ -1011,7 +997,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "dkfwher9237fsdf",
+        id: "present_perfect_negative",
         title: 'present perfect (negative statement)',
         russianTitle: 'Настоящее совершенное (отрицательное)',
         theory: 'present_perfect_negative.md',
@@ -1062,7 +1048,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "djwlkej2387fsj3",
+        id: "present_perfect_questions",
         title: 'present perfect (questions)',
         russianTitle: 'Настоящее совершенное (вопросы)',
         theory: 'present_perfect_questions.md',
@@ -1113,7 +1099,7 @@ export const initialGrammar = [
         ]
     },
     {
-        id: "flkj3423423",
+        id: "imperative_mood",
         title: 'imperative mood',
         russianTitle: 'Повелительное наклонение',
         theory: "imperative_mood.md",

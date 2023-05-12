@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import LessonsToChoose from "./personal-block/lessons/LessonsToChoose";
+import LessonsToChoose from "../personal-block/lessons/LessonsToChoose";
 import Markdown from "markdown-to-jsx";
 import {connect} from "react-redux";
 
-const MainPage = (props) => {
+const ShowMarkdownFile = (props) => {
 
     const [text, setText] = useState('')
 
@@ -34,4 +34,4 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps)(MainPage);
+export default connect(mapStateToProps)(ShowMarkdownFile);
