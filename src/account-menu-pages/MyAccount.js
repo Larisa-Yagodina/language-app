@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {appLinks} from "../routes/appLinks";
+import Button from "@mui/material/Button";
+import {requestForActivationLinkMail} from "../redux/actionsAuthorisation";
 
 const MyAccount = (props) => {
 
@@ -9,8 +11,13 @@ const MyAccount = (props) => {
         <div style={{margin: '35px 20px'}}>
             <h1>My Account</h1>
             <h3>Email: {props.user.data.email}</h3>
-            { props.user.data.isActivated === "false" || props.user.data.isActivated === false &&
-                <p style={{color: 'red'}}>Ваш емэйл ожидает подтверждения. <button>Получить емэйл еще раз</button></p>
+            {!props.user.data.isActivated &&
+                <p style={{color: 'red'}}>Ваш емэйл ожидает подтверждения. {' '}
+                    <Button
+                        onClick={() => props.requestForActivationLinkMail(props.user.data.email)}
+                        variant="outlined"
+                    >Получить емэйл еще раз
+                    </Button></p>
             }
 
             <Link type='button' to={appLinks.changePassword}>
@@ -24,4 +31,8 @@ const mapStateToProps = (state) => ({
     user: state.currentUser
 })
 
-export default connect(mapStateToProps)(MyAccount);
+const mapDispatchToProps = (dispatch) => ({
+    requestForActivationLinkMail: (email) => dispatch(requestForActivationLinkMail(email))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(MyAccount);

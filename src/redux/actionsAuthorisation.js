@@ -1,7 +1,5 @@
 import {registration} from "../auth-login-logout/services/AuthServiceFunction";
 import AuthService from "../auth-login-logout/services/AuthService";
-import React from "react";
-
 
 export function registrationAction(email, password, callback) {
 
@@ -163,6 +161,29 @@ export function forgotPasswordReset(id, password) {
     return async (dispatch) => {
         try {
             const response = await AuthService.resetPasswordThroughEmail(id, password);
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {
+                    message: response.data,
+                    //message: 'password was changed successfully',
+                    alertColour: 'success'
+                },
+            })
+        } catch (e) {
+            const message = e.response.data;
+            dispatch({
+                type: 'OPEN_ALERT',
+                payload: {message, alertColour: 'error'},
+            })
+        }
+    }
+}
+
+
+export function requestForActivationLinkMail(email) {
+    return async (dispatch) => {
+        try {
+            const response = await AuthService.activateThroughEmail(email);
             dispatch({
                 type: 'OPEN_ALERT',
                 payload: {

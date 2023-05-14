@@ -28,4 +28,8 @@ export default class AuthService {
     static async resetPasswordThroughEmail(id, password){
         return $api.post(`/user/reset-password/${id}`, {id, password}, {withCredentials: true})
     }
+
+    static async activateThroughEmail(email){
+        return $api.post(`/user/activation_send_mail`, {email}, {withCredentials: true})
+    }
 }
