@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {Link} from "react-router-dom";
 import {appLinks} from "../routes/appLinks";
 import Button from "@mui/material/Button";
 import {requestForActivationLinkMail} from "../redux/actionsAuthorisation";
+import CustomLink from "../utils/CustomLink";
 
 const MyAccount = (props) => {
 
@@ -20,9 +20,9 @@ const MyAccount = (props) => {
                     </Button></p>
             }
 
-            <Link type='button' to={appLinks.changePassword}>
+            <CustomLink type='button' to={appLinks.changePassword}>
                 Сменить пароль
-            </Link>
+            </CustomLink>
         </div>
     );
 };

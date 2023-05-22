@@ -1,7 +1,10 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export const newGrammar = [
 
     {
-        id: "what_is_grammar",
+        id: uuidv4(),
+        sectionId: 'all_grammar',
         title: 'What is Grammar',
         russianTitle: 'Что такое грамматика',
         theory: 'what_is_grammar.md',
@@ -34,7 +37,8 @@ export const newGrammar = [
         }]
     },
     {
-        id: "sentence_structure",
+        id: uuidv4(),
+        sectionId: 'all_grammar',
         title: 'sentence structure ',
         russianTitle: 'Как строить предложения',
         theory: 'how_to_create_sentences.md',
@@ -108,7 +112,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "conditional_1",
+        id: uuidv4(),
+        sectionId: 'conditionals',
         title: 'conditional 1',
         russianTitle: 'Условные предложения 1',
         theory: 'first_conditionals.md',
@@ -134,7 +139,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "conditional_2",
+        id: uuidv4(),
+        sectionId: 'conditionals',
         title: 'conditional 2',
         russianTitle: 'Условные предложения 2',
         theory: 'second-conditional.md',
@@ -164,7 +170,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "conditional_3",
+        id: uuidv4(),
+        sectionId: 'conditionals',
         title: 'conditional 3',
         russianTitle: 'Условные предложения 3',
         theory: 'third-conditional.md',
@@ -198,7 +205,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "modal_verbs",
+        id: uuidv4(),
+        sectionId: 'modal_verbs',
         title: 'modal verbs',
         russianTitle: 'Модальные глаголы',
         theory: 'modal_verbs.md',
@@ -206,7 +214,8 @@ export const newGrammar = [
         test: [],
     },
     {
-        id: "what_is_tense",
+        id: uuidv4(),
+        sectionId: 'all_grammar',
         title: 'What is Tense',
         russianTitle: 'Что такое «время»',
         theory: 'what_is_tense.md',
@@ -236,7 +245,8 @@ export const newGrammar = [
         ],
     },
     {
-        id: "present_simple",
+        id: uuidv4(),
+        sectionId: 'present_simple',
         title: 'present simple',
         russianTitle: 'Настоящее простое время',
         theory: 'present_simple.md',
@@ -306,7 +316,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_simple_negative",
+        id: uuidv4(),
+        sectionId: 'present_simple',
         title: 'present simple (negative statement)',
         russianTitle: 'Настоящее простое (отрицания)',
         theory: 'present_simple_negative.md',
@@ -400,7 +411,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_simple_question",
+        id: uuidv4(),
+        sectionId: 'present_simple',
         title: 'present simple (question)',
         russianTitle: 'Настоящее простое (вопросы)',
         theory: 'present_simple_question.md',
@@ -523,7 +535,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_simple_question_with_prepositions",
+        id: uuidv4(),
+        sectionId: 'present_simple',
         title: 'present simple (question with prepositions)',
         russianTitle: 'Настоящее простое (вопросы с предлогами)',
         theory: 'present_simple_question_with_prepositions.md',
@@ -585,7 +598,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_simple_when_should_we_use",
+        id: uuidv4(),
+        sectionId: 'present_simple',
         title: 'present simple (when should we use)',
         russianTitle: 'Настоящее простое (когда использовать)',
         theory: 'present_simple_when_should_we_use.md',
@@ -680,8 +694,9 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_simple_when_should_we_use_2",
-        title: 'present simple (when should we use — 2)',
+        id: uuidv4(),
+        sectionId: 'present_simple',
+        vtitle: 'present simple (when should we use — 2)',
         russianTitle: 'Настоящее простое (когда использовать — 2)',
         theory: 'present_simple_when_should_we_use_2.md',
         description: '',
@@ -742,7 +757,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "future_simple",
+        id: uuidv4(),
+        sectionId: 'future_simple',
         title: 'future simple',
         russianTitle: 'Будущее простое время',
         theory: 'future_simple.md',
@@ -793,7 +809,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "past_simple",
+        id: uuidv4(),
+        sectionId: 'past_simple',
         title: 'past simple',
         russianTitle: 'Прошедшее простое время',
         theory: 'past_simple.md',
@@ -844,7 +861,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_continuous",
+        id: uuidv4(),
+        sectionId: "present_continuous",
         title: 'present continuous',
         russianTitle: 'Настоящее продолженное',
         theory: 'present_continuous.md',
@@ -895,7 +913,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_perfect",
+        id: uuidv4(),
+        sectionId: "present_perfect",
         title: 'present perfect',
         russianTitle: 'Настоящее совершенное',
         theory: 'present_perfect.md',
@@ -946,7 +965,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_perfect_positive",
+        id: uuidv4(),
+        sectionId: "present_perfect",
         title: 'present perfect (positive statement)',
         russianTitle: 'Настоящее совершенное (утвердительное)',
         theory: 'present_perfect_positive.md',
@@ -997,7 +1017,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_perfect_negative",
+        id: uuidv4(),
+        sectionId: "present_perfect",
         title: 'present perfect (negative statement)',
         russianTitle: 'Настоящее совершенное (отрицательное)',
         theory: 'present_perfect_negative.md',
@@ -1048,7 +1069,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "present_perfect_questions",
+        id: uuidv4(),
+        sectionId: "present_perfect",
         title: 'present perfect (questions)',
         russianTitle: 'Настоящее совершенное (вопросы)',
         theory: 'present_perfect_questions.md',
@@ -1099,7 +1121,8 @@ export const newGrammar = [
         ]
     },
     {
-        id: "imperative_mood",
+        id: uuidv4(),
+        sectionId: 'imperative_mood',
         title: 'imperative mood',
         russianTitle: 'Повелительное наклонение',
         theory: "imperative_mood.md",

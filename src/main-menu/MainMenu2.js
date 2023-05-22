@@ -23,7 +23,9 @@ function MainMenu2(props) {
         {name: 'Lessons', link: "/private/my-lessons"},
         {name: 'Phrases', link: '/private/phrases-to-remember'},
         {name: 'Grammar', link: '/private/grammar_route'},
-        {name: 'Themes', link: '/private/themes_route'}
+        {name: 'Themes', link: '/private/themes_route'},
+        {name: 'NEW_G', link: '/private/grammar/route_2'},
+        {name: 'NEW_T', link: '/private/themes/route_2'},
     ];
     const accountMenu2 = [
         {name: 'My account', link: '/private/my-account'},

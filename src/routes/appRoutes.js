@@ -29,6 +29,8 @@ import ErrorPage from "../error-handling/ErrorPage";
 import LessonWrapper from "../study-routes-block/theory-and-drill-showing/LessonWrapper";
 import EmailActivationAcknowledgePage from "../auth-login-logout/EmailActivationAcknowledgePage";
 import ChangePasswordByLinkForm from "../account-menu-pages/ChangePasswordByLinkForm";
+import RouteWrapper2 from "../study-routes-block-2/RouteWrapper2";
+import LessonWrapper2 from "../study-routes-block-2/LessonWrapper2";
 
 
 const appRoutes = createBrowserRouter(createRoutesFromElements(
@@ -67,6 +69,11 @@ const appRoutes = createBrowserRouter(createRoutesFromElements(
             <Route path="grammar_route/:id" element={<LessonWrapper />}/>
 
             <Route path="themes_route" element={<ThemesWrapper/>}/>
+
+            <Route path=":block/route_2" element={<RouteWrapper2/>}/>
+            <Route path=":block/route_2/:id" element={<LessonWrapper2 />}/>
+
+
         </Route>
         <Route path='*' element={<NotFoundPage/>}/>
     </Route>

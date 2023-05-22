@@ -4,16 +4,15 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import MenuItem from "@mui/material/MenuItem";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ShowMarkdown from "./ShowMarkdown";
-import DrillWrapper from "./drill/DrillWrapper";
-import TabPanel from "../../utils/TabPanel";
-import {initialGrammar} from "../../serverData/InitialGrammar";
-import {initialThemes} from "../../serverData/InitialThemes";
-import {useState} from "react";
-import Test from "./drill/Test";
+import ShowMarkdown from "../study-routes-block/theory-and-drill-showing/ShowMarkdown";
+import DrillWrapper from "../study-routes-block/theory-and-drill-showing/drill/DrillWrapper";
+import TabPanel from "../utils/TabPanel";
+import Test from "../study-routes-block/theory-and-drill-showing/drill/Test";
+import {newGrammar} from '../serverData/NewGrammar';
+import ShowMarkdown2 from "./ShowMarkdown2";
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -28,23 +27,23 @@ function a11yProps(index) {
     };
 }
 
-export default function LessonWrapper(props) {
+export default function LessonWrapper2(props) {
 
-    const userId = 'dlkfjl3487f9s';
+    const { block, id } = useParams(); // themes или grammar
+    console.log(block)
+    console.log(id)
 
-    const [value, setValue] = React.useState(props.option === 'lesson-grammar' || props.option === 'lesson-themes' ? 0 : 1);
+    const [value, setValue] = React.useState( 0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
-    const [data, setData] = useState(props.option === 'grammar' || props.option === 'lesson-grammar' ?
-        initialGrammar : initialThemes )
+    const data = newGrammar;
 
-    const isLesson = props.option === 'lesson-grammar' || props.option === 'lesson-themes';
-    const isGrammar = props.option === 'lesson-grammar' || props.option === 'grammar';
-    const isDrill = data.find(el => el.id === props.partOfGrammarId).test.length === 0;
-
+    const isLesson = true;
+    const isGrammar = false;
+    const isDrill = data.find(el => el.id === id).test.length === 0;
 
     return (
         <div>
@@ -71,14 +70,14 @@ export default function LessonWrapper(props) {
             </Box>
 
             <TabPanel value={value} index={isLesson ? 0 : 1}>
-                <ShowMarkdown handleChange={handleChange} goNextTo={isLesson ? 1 : 2} option={isGrammar ? 'grammar' : 'themes'} theory={data.filter(el => el.id === props.partOfGrammarId)}/>
+                <ShowMarkdown2 handleChange={handleChange} goNextTo={isLesson ? 1 : 2} option={block} theory={data.filter(el => el.id === id)}/>
             </TabPanel>
 
             <TabPanel value={value} index={isLesson ? 1 : 2}>
                 { isDrill ?
-                    <DrillWrapper theory={data.find(el => el.id === props.partOfGrammarId)}/> :
+                    <DrillWrapper theory={data.find(el => el.id === id)}/> :
 
-                    <Test handleChange={handleChange} goBackTo={isLesson ? 0 : 1} theory={data.filter(el => el.id === props.partOfGrammarId)} />
+                    <Test handleChange={handleChange} goBackTo={isLesson ? 0 : 1} theory={data.filter(el => el.id === id)} />
                 }
                 </TabPanel>
         </Box>

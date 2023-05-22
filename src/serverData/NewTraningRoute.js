@@ -2,12 +2,7 @@ export const initialTrainingRoute = [
     {
         id: 'grammar',
         orderNumber: 1,
-        title: "Грамматика"
-    },
-    {
-        id: 'sentences',
-        orderNumber: 2,
-        title: "Как строить предложения"
+        title: "Общая грамматика"
     },
     {
         id: 'present_simple',

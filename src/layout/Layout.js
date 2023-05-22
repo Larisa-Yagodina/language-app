@@ -12,7 +12,7 @@ const Layout = () => {
             {/*<button onClick={getUsers}>fetch users</button>*/}
 
             <Alerts/>
-            <main style={{margin: '2%'}}>
+            <main style={{margin: '3%'}}>
                 <Outlet/>
             </main>
 
