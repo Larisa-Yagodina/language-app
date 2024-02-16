@@ -1,16 +1,19 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {appLinks} from "../routes/appLinks";
+import {appLinks} from "../../routes/appLinks";
 import Button from "@mui/material/Button";
-import {requestForActivationLinkMail} from "../redux/actionsAuthorisation";
-import CustomLink from "../utils/CustomLink";
+import {requestForActivationLinkMail} from "../../redux/actionsAuthorisation";
+import CustomLink from "../../utils/UI/CustomLink";
 
 const MyAccount = (props) => {
 
     return (
         <div style={{margin: '35px 20px'}}>
+
             <h1>My Account</h1>
+
             <h3>Email: {props.user.data.email}</h3>
+
             {!props.user.data.isActivated &&
                 <p style={{color: 'red'}}>Ваш емэйл ожидает подтверждения. {' '}
                     <Button

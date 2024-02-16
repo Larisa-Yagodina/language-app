@@ -5,23 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import App from "./App";
 import {Provider} from "react-redux";
 import store from "./redux/store";
-import StoreUser from "./auth-login-logout/store/storeUser";
 
-const storeUser = new StoreUser();
-
-export const Context = createContext({
-    storeUser,
-})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    // <React.StrictMode>
         <Provider store={store}>
-            <Context.Provider value={{storeUser}}>
                     <App/>
-            </Context.Provider>
         </Provider>
-    // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

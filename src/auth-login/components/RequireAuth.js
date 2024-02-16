@@ -1,15 +1,15 @@
 import React, {useEffect} from 'react';
 import { useLocation, Navigate } from "react-router-dom";
 import {connect} from "react-redux";
-import {checkAuth} from "../redux/actionsAuthorisation";
+import {checkAuth} from "../../redux/actionsAuthorisation";
 
 const RequireAuth = ({children, user, checkAuth}) => {
 
     const location = useLocation();
 
-    useEffect(() => {
+    useEffect( () => {
         if (localStorage.getItem('token')) {
-            checkAuth()
+             checkAuth()
         }
     }, [])
 

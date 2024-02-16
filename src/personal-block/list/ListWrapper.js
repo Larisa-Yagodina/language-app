@@ -2,7 +2,7 @@ import * as React from 'react';
 import {useEffect, useState} from "react";
 import ItemsList from "./ItemsList";
 import {connect} from "react-redux";
-import {changeUserPhrase, } from "../../redux/actions";
+import {changeUserPhrase, } from "../../redux/actionsUserPhrases";
 
 function ListWrapper({mainUrl, title, userSentences, changeUserSentence, getAllUserSentences}) {
 

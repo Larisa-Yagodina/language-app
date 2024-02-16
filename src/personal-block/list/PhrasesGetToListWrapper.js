@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import ListWrapper from "./ListWrapper";
-import {getUserPhrases} from "../../redux/actions";
+import {getUserPhrases} from "../../redux/actionsUserPhrases";
 import {connect} from "react-redux";
 
 const PhrasesGetToListWrapper = (props) => {

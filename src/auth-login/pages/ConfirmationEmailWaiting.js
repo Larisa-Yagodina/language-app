@@ -1,13 +1,8 @@
 import React from 'react';
 import Box from '@mui/joy/Box';
-
-import LogoHeader from "./LogoHeader";
 import {connect} from "react-redux";
 
-
-const ConfirmationEmailWaiting = (props) => {
-
-
+const ConfirmationEmailWaiting = () => {
 
     return (
 

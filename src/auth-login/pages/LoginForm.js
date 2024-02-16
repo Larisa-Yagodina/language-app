@@ -3,16 +3,16 @@ import Box from '@mui/joy/Box';
 import Button from "@mui/material/Button";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
-import {registrationAction, login} from '../redux/actionsAuthorisation'
+import {registrationAction, login} from '../../redux/actionsAuthorisation'
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
-import {loginSchema} from "../utils/Validation";
+import {loginSchema} from "../../utils/Validation";
 import TextField from "@mui/material/TextField";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Divider, IconButton, InputAdornment } from '@mui/material';
 import {useLocation, useNavigate} from "react-router-dom";
-import {appLinks} from "../routes/appLinks";
+import {appLinks} from "../../routes/appLinks";
 
 
 const LoginForm = (props) => {
@@ -61,15 +61,12 @@ const LoginForm = (props) => {
                     <h2>Welcome back!</h2>
 
                     <TextField
-
                         margin="normal"
                         id="email"
                         helperText={errors.email?.message}
                         error={!!errors.email}
                         label="Email"
                         variant="outlined"
-                        // fullWidth
-                        // autoFocus
                         {...register('email')}
                     />
 

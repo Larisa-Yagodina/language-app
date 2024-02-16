@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Button, createTheme} from "@mui/material";
-import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
+import {initialTrainingRoute} from "../../data/serverData/InitialTrainingRoute";
 import ListItemText from "@mui/material/ListItemText";
 import {Link} from "react-router-dom";
 import {colour, muiDefaultColour} from '../../StylesConstatns';

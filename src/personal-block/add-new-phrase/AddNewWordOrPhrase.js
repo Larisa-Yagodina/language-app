@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {addUserPhrase, addUserPhraseWithCheckAuth} from "../../redux/actions";
+import {addUserPhrase, addUserPhraseWithCheckAuth} from "../../redux/actionsUserPhrases";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {appLinks} from "../../routes/appLinks";
@@ -108,7 +108,7 @@ const AddNewWordOrPhrase = (props) => {
                         {/*        label="Part of speech"*/}
                         {/*        {...register("partOfSpeech")}*/}
                         {/*    >*/}
-                        {/*        {partsOfSpeech.map(el => <MenuItem value={el}>{el}</MenuItem>)}*/}
+                        {/*        {partsOfSpeech.map(el => <AccountMenu value={el}>{el}</AccountMenu>)}*/}
                         {/*    </Select>*/}
                         {/*</FormControl>*/}
 

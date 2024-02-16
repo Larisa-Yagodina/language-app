@@ -1,4 +1,4 @@
-import {renewPasswordSchema} from "../utils/Validation";
+import {renewPasswordSchema} from "../../../utils/Validation";
 import {useForm} from "react-hook-form";
 import React, {useState} from 'react';
 import Button from '@mui/material/Button';
@@ -9,9 +9,11 @@ import {Visibility, VisibilityOff} from "@mui/icons-material";
 import IconButton from "@mui/material/IconButton";
 import {InputAdornment} from "@mui/material";
 import {connect} from "react-redux";
-import {resetPassword} from "../redux/actionsAuthorisation";
+import {forgotPasswordReset} from "../../../redux/actionsAuthorisation";
+import { useParams } from "react-router-dom";
+const ChangePasswordThroughMailForm = (props) => {
 
-const ChangePasswordForm = (props) => {
+    const { id } = useParams();
 
     const [showPassword, setShowPassword] = useState(false);
     const handleClickShowPassword = () => {
@@ -33,12 +35,11 @@ const ChangePasswordForm = (props) => {
     });
 
     const onSubmit = (data) => {
-        const {password, oldPassword} = data;
-        props.resetPassword(props.email, password, oldPassword)
+        const {password} = data;
+        props.forgotPasswordReset(id, password)
     };
 
     return (
-
                 <Box
                     sx={{
                         margin: '0 25% 5% 25%',
@@ -53,33 +54,7 @@ const ChangePasswordForm = (props) => {
                     onSubmit={handleSubmit(onSubmit)}
                 >
 
-                    <h2>Сменить пароль</h2>
-
-                    <TextField
-                        margin="normal"
-                        id="oldPassword"
-                        // helperText={errors.password?.message}
-                        // error={!!errors.password}
-                        label="Old Password"
-                        variant="outlined"
-                        fullWidth
-                        type={showPassword ? 'text' : 'password'}
-                        {...register('oldPassword')}
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <IconButton
-                                        aria-label="toggle password visibility"
-                                        onClick={handleClickShowPassword}
-                                        edge="end"
-                                        aria-describedby="component-error-text"
-                                    >
-                                        {showPassword ? <VisibilityOff /> : <Visibility />}
-                                    </IconButton>
-                                </InputAdornment>
-                            ),
-                        }}
-                    />
+                    <h2>Смена пароля</h2>
 
                     <TextField
                         margin="normal"
@@ -139,11 +114,9 @@ const ChangePasswordForm = (props) => {
     );
 };
 
-const mapStateToProps = (state) => ({
-    email: state.currentUser.data.email
-})
+
 const mapDispatchToProps = (dispatch) => ({
-    resetPassword: (email, password, oldPassword) => dispatch(resetPassword(email, password, oldPassword))
+    forgotPasswordReset: (id, password) => dispatch(forgotPasswordReset(id, password))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChangePasswordForm);
+export default connect(null, mapDispatchToProps)(ChangePasswordThroughMailForm);

@@ -1,11 +1,10 @@
-import {registration} from "../auth-login-logout/services/AuthServiceFunction";
-import AuthService from "../auth-login-logout/services/AuthService";
+import AuthService from "../API/AuthService";
 
 export function registrationAction(email, password, callback) {
 
     return async (dispatch) => {
         try {
-            const response = await registration(email, password)
+            const response = await AuthService.registration(email, password)
             localStorage.setItem('token', response.data.accessToken);
             dispatch({
                 type: 'SET_USER',
@@ -24,7 +23,7 @@ export function registrationAction(email, password, callback) {
             callback()
         } catch (e) {
             const message = e.response.data.includes('local recipient verification failed')
-                ? "Email doesn't exist"  : 'Something went wrong';
+                ? "Email doesn't exist"  : 'Something went wrong. Email might be registered already.';
             dispatch({
                 type: 'OPEN_ALERT',
                 payload: {message, alertColour: 'error'},
@@ -49,7 +48,7 @@ export function login(email, password, callback) {
             });
             callback();
         } catch (e) {
-            const message = e.response.data;
+            const message = e.response?.data;
             dispatch({
                 type: 'OPEN_ALERT',
                 payload: {message, alertColour: 'error'},

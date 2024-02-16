@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import ChoseSpeed from "../../drills/ChoseSpeed";
-import SentenceDrill from "../../drills/SentenceDrill";
+import ChoseSpeed from "../../utils/drills/ChoseSpeed";
+import SentenceDrill from "../../utils/drills/SentenceDrill";
 import {connect} from "react-redux";
 import '../../App.css'
 

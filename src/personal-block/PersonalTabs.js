@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import TabPanel from "../utils/TabPanel";
+import TabPanel from "../utils/UI/TabPanel";
 import DrillWrapper from "./drill/DrillWrapper";
 import Phrases from "./list/PhrasesGetToListWrapper";
 import AddNewWordOrPhrase from "./add-new-phrase/AddNewWordOrPhrase";

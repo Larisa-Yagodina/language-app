@@ -7,11 +7,10 @@ import MenuItem from "@mui/material/MenuItem";
 import {Link, useParams} from "react-router-dom";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ShowMarkdown from "../study-routes-block/theory-and-drill-showing/ShowMarkdown";
 import DrillWrapper from "../study-routes-block/theory-and-drill-showing/drill/DrillWrapper";
-import TabPanel from "../utils/TabPanel";
+import TabPanel from "../utils/UI/TabPanel";
 import Test from "../study-routes-block/theory-and-drill-showing/drill/Test";
-import {newGrammar} from '../serverData/NewGrammar';
+import {newGrammar} from '../data/serverData/NewGrammar';
 import ShowMarkdown2 from "./ShowMarkdown2";
 
 TabPanel.propTypes = {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useEffect, useState} from "react";
-import {initialTrainingRoute} from "../../serverData/InitialTrainingRoute";
+import {initialTrainingRoute} from "../../data/serverData/InitialTrainingRoute";
 import RouteList from "./RouteList";
 
 export default function RouteListWrapper({mainUrl, title, isGrammar}) {

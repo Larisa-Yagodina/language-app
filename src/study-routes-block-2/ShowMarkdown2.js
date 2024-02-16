@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Markdown from "markdown-to-jsx";
 import {Button} from "@mui/material";
-import '../markdown/grammar/Styles.css'
+import '../data/markdown/grammar/Styles.css'
 
 function ShowMarkdown2 (props) {
 
@@ -10,7 +10,7 @@ function ShowMarkdown2 (props) {
     const [theory, setTheory] = useState('')
 
     useEffect(( ) => {
-        import(`/src/markdown/${props.option === 'themes' ? 'themes' : 'grammar'}/${fileName}`)
+        import(`/src/data/markdown/${props.option === 'themes' ? 'themes' : 'grammar'}/${fileName}`)
             .then(res => {
                 fetch(res.default)
                     .then(res => res.text())

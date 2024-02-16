@@ -5,7 +5,7 @@ import {Box} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import {useState} from "react";
 import {connect} from "react-redux";
-import {changeUserPhrase, deleteUserPhrase} from "../../redux/actions";
+import {changeUserPhrase, deleteUserPhrase} from "../../redux/actionsUserPhrases";
 
 function ModalForDeleteUpdateItem(props) {
 

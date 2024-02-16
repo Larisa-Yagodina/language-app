@@ -3,18 +3,19 @@ import Box from '@mui/joy/Box';
 import Button from "@mui/material/Button";
 import {Link, useNavigate} from "react-router-dom";
 import {connect} from "react-redux";
-import {registrationAction} from '../redux/actionsAuthorisation'
+import {registrationAction} from '../../redux/actionsAuthorisation'
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
-import {userRegisterSchema} from "../utils/Validation";
+import {userRegisterSchema} from "../../utils/Validation";
 import TextField from "@mui/material/TextField";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { IconButton, InputAdornment } from '@mui/material';
 import Divider from "@mui/material/Divider";
+import {appLinks} from "../../routes/appLinks";
 
 
-const LoginForm = (props) => {
+const RegistrationForm = (props) => {
 
 
     const [showPassword, setShowPassword] = useState(false);
@@ -42,7 +43,7 @@ const LoginForm = (props) => {
         props.registrateUser(
             formValues.email.toLowerCase(),
             formValues.password,
-            () => navigate('/user/activation-waiting', {replace: true})
+            () => navigate(appLinks.activationWaiting, {replace: true})
         );
     };
 
@@ -144,7 +145,6 @@ const LoginForm = (props) => {
                 </Link>
             </div>
         </Box>
-
     );
 };
 
@@ -156,4 +156,4 @@ const mapDispatchToProps = (dispatch) => ({
     registrateUser: (email, password, callback) => dispatch(registrationAction(email, password, callback)),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+export default connect(mapStateToProps, mapDispatchToProps)(RegistrationForm);

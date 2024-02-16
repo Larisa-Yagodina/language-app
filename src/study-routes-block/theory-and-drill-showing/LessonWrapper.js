@@ -9,9 +9,9 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ShowMarkdown from "./ShowMarkdown";
 import DrillWrapper from "./drill/DrillWrapper";
-import TabPanel from "../../utils/TabPanel";
-import {initialGrammar} from "../../serverData/InitialGrammar";
-import {initialThemes} from "../../serverData/InitialThemes";
+import TabPanel from "../../utils/UI/TabPanel";
+import {initialGrammar} from "../../data/serverData/InitialGrammar";
+import {initialThemes} from "../../data/serverData/InitialThemes";
 import {useState} from "react";
 import Test from "./drill/Test";
 

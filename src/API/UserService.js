@@ -1,4 +1,4 @@
-import $api from "../IndexLogin";
+import $api from "./IndexLogin";
 
 
 export async function fetchUserPhrases() {

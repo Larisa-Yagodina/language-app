@@ -1,6 +1,6 @@
 import React from 'react';
 import {Outlet} from "react-router-dom";
-import MainMenu2 from "../main-menu/MainMenu2";
+import MainMenu2 from "../header-menu/HeaderAppBar";
 
 const PersonalWrapper = () => {
 

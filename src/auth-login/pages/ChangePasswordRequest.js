@@ -1,10 +1,10 @@
 import Box from '@mui/joy/Box';
 import Button from "@mui/material/Button";
 import {Link} from "react-router-dom";
-import { forgotPasswordSendEmail} from '../redux/actionsAuthorisation'
+import { forgotPasswordSendEmail} from '../../redux/actionsAuthorisation'
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
-import {resetPasswordSchema} from "../utils/Validation";
+import {resetPasswordSchema} from "../../utils/Validation";
 import TextField from "@mui/material/TextField";
 import { Divider } from '@mui/material';
 import {connect} from "react-redux";

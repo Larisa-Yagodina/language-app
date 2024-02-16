@@ -3,7 +3,7 @@ import {
     changeUserPhraseById,
     deleteUserPhraseById,
     fetchUserPhrases
-} from "../auth-login-logout/services/UserService";
+} from "../API/UserService";
 
 
 export function getUserPhrases() {
@@ -83,24 +83,7 @@ export function deleteUserPhrase(id) {
     }
 }
 
-// export function deleteUserPhrase(id) {
-//     return (dispatch) => {
-//         axios.delete(`${URI}/userPhrases/${id}`)
-//             .then(res => {
-//                 dispatch(getUserPhrases());
-//                 dispatch({
-//                     type: 'OPEN_ALERT',
-//                     payload: {message: "Phrase has been deleted successfully", alertColour: 'success'},
-//                 })
-//             })
-//             .catch(err =>
-//                 dispatch({
-//                     type: 'OPEN_ALERT',
-//                     payload: {message: "Phrase hasn't been delete", alertColour: 'error'},
-//                 })
-//             )
-//     }
-// }
+
 
 
 

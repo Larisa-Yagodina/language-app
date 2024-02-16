@@ -4,12 +4,10 @@ import {connect} from "react-redux";
 import List from "@mui/material/List";
 import ListItem2 from "./ListItem2";
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 
 const RouteWrapper2 = (props) => {
 
     const { block } = useParams(); // themes или grammar
-    console.log(block)
 
     return (
         <div>
